@@ -41,6 +41,7 @@ func handle(ctx context.Context, token string, name string) {
 				"c":          v.C,
 				"is_on_sale": v.IsOnSale,
 			})
+			resultMap[v.ProductId] = struct{}{}
 			if len(cacheAll) == 0 {
 				text = fmt.Sprintf("购买了《%s》总量%d个", v.ProductTitle, v.C)
 				FeiShuUrl(text, token)
@@ -63,7 +64,6 @@ func handle(ctx context.Context, token string, name string) {
 					FeiShuUrl(text, token)
 				}
 			}
-			resultMap[v.ProductId] = struct{}{}
 		}
 
 		cacheJson, err := cli.RedisClient.Get(ctx, name).Result()
