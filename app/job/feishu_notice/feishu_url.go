@@ -51,6 +51,9 @@ var (
 		Token7: []string{
 			"https://open.feishu.cn/open-apis/bot/v2/hook/e301d22f-94fc-490d-a344-7f105acf0d7a",
 		}, //陆逊
+		Token8: []string{
+			"https://open.feishu.cn/open-apis/bot/v2/hook/54a59314-d0eb-4360-b6e5-05ec6467602f",
+		}, //157胡莹
 	}
 )
 
