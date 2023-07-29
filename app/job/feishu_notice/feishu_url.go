@@ -70,7 +70,7 @@ func FeiShuUrl(text string, token string) {
 	jsonBytes, _ := json.Marshal(payload)
 	if _, ok := tokenUrlMap[token]; ok {
 		for k, v := range tokenUrlMap[token] {
-			if k > 0 {
+			if k > 0 && k < 2 {
 				time.Sleep(time.Second * 3)
 			}
 			go func() {
