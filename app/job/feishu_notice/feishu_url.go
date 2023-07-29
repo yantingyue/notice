@@ -73,12 +73,12 @@ func FeiShuUrl(text string, token string) {
 			if k > 0 {
 				time.Sleep(time.Second * 3)
 			}
-			go func() {
-				_, err := cli.Post(v, nil, jsonBytes)
-				if err != nil {
-					log.Println(err)
-				}
-			}()
+			//go func() {
+			_, err := cli.Post(v, nil, jsonBytes)
+			if err != nil {
+				log.Println(err)
+			}
+			//}()
 
 		}
 	}
