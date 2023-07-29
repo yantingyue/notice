@@ -133,7 +133,7 @@ func GenerateHeader1(token string) map[string]string {
 	}
 }
 
-// 生成32位MD5
+// 生成32位MD5 11
 func MD5(text string) string {
 	ctx := md5.New()
 	ctx.Write([]byte(text))
