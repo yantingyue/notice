@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"notice/internal/cli"
+	"time"
 )
 
 type FeishuReq struct {
@@ -68,11 +69,17 @@ func FeiShuUrl(text string, token string) {
 	}
 	jsonBytes, _ := json.Marshal(payload)
 	if _, ok := tokenUrlMap[token]; ok {
-		for _, v := range tokenUrlMap[token] {
-			_, err := cli.Post(v, nil, jsonBytes)
-			if err != nil {
-				log.Println(err)
+		for k, v := range tokenUrlMap[token] {
+			if k > 0 {
+				time.Sleep(time.Second * 3)
 			}
+			go func() {
+				_, err := cli.Post(v, nil, jsonBytes)
+				if err != nil {
+					log.Println(err)
+				}
+			}()
+
 		}
 	}
 }
