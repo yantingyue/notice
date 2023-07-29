@@ -71,15 +71,14 @@ func FeiShuUrl(text string, token string) {
 	if _, ok := tokenUrlMap[token]; ok {
 		for k, v := range tokenUrlMap[token] {
 			if k > 0 {
-				time.Sleep(time.Second * 3)
+				time.Sleep(time.Second * 2)
 			}
-			go func() {
-				log.Println(1111111111111111111)
-				_, err := cli.Post(v, nil, jsonBytes)
-				if err != nil {
-					log.Println(err)
-				}
-			}()
+			//go func() {
+			_, err := cli.Post(v, nil, jsonBytes)
+			if err != nil {
+				log.Println(err)
+			}
+			//}()
 
 		}
 	}
