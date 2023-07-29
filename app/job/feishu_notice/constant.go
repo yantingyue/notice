@@ -4,7 +4,7 @@ import "time"
 
 const (
 	Token1 = "21e23fa4467649b2bce29687cc037aba" //case
-	Token2 = "cc3ebaf43be44178a325aca0fa9bff51" //富豪
+	Token2 = "438750f7d42c4f19a41acfeffb16e8b3" //富豪
 	Token3 = "70147bbcd9704db2a9b48b25cc7fdca6" //145
 	Token4 = "7a62c29a88f244dbb1dbce5f77bb4d42" //谜语人
 	Token5 = "edf1c55bd0d54a92a02dfb7ed8870b84" //柴郡猫
