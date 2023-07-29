@@ -32,6 +32,10 @@ func handle(ctx context.Context, token string, name string) {
 	if vv && len(res.Data.Result) > 0 {
 		resultMap := make(map[uint64]struct{})
 		for _, v := range res.Data.Result {
+			resultMap[v.ProductId] = struct{}{}
+			if v.ProductId == 1019723 {
+				continue
+			}
 			noticeKey := fmt.Sprintf("%s:%d", name, v.ProductId)
 			cacheAll, err := cli.RedisClient.HGetAll(ctx, noticeKey).Result()
 			if err != nil && err != redis.Nil {
@@ -43,7 +47,6 @@ func handle(ctx context.Context, token string, name string) {
 				"is_on_sale": v.IsOnSale,
 				"product_id": v.ProductId,
 			})
-			resultMap[v.ProductId] = struct{}{}
 			if len(cacheAll) == 0 {
 				text = fmt.Sprintf("购买了《%s》总量%d个", v.ProductTitle, v.C)
 				FeiShuUrl(text, token)
