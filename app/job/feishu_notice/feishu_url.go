@@ -41,7 +41,7 @@ var (
 		Token5: []string{
 			"https://open.feishu.cn/open-apis/bot/v2/hook/7beb44ec-bf13-48f9-830f-e53537e1160a",
 			"https://open.feishu.cn/open-apis/bot/v2/hook/a249ce33-5251-4f2f-bfbc-502cff6c6ea8",
-			"https://open.feishu.cn/open-apis/bot/v2/hook/3cc9cb40-8d69-4cc3-bf20-381e353d609c",
+			"https://open.feishu.cn/open-apis/bot/v2/hook/f71eb637-b7a8-4d8c-bfa8-1ac896058904",
 		}, //柴郡猫
 		Token6: []string{
 			"https://open.feishu.cn/open-apis/bot/v2/hook/c117e413-0b7b-49a7-92da-f6f9b5f1e547",
