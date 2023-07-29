@@ -46,7 +46,7 @@ func handle(ctx context.Context, token string, name string) {
 			resultMap[v.ProductId] = struct{}{}
 			if len(cacheAll) == 0 {
 				text = fmt.Sprintf("购买了《%s》总量%d个", v.ProductTitle, v.C)
-				//FeiShuUrl(text, token)
+				FeiShuUrl(text, token)
 				continue
 			} else {
 				if v.IsOnSale != cast.ToUint32(cacheAll["is_on_sale"]) {
