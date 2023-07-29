@@ -52,6 +52,13 @@ func handle(ctx context.Context, token string, name string) {
 				FeiShuUrl(text, token)
 				continue
 			} else {
+				if v.C < cast.ToUint32(cacheAll["c"]) {
+					text = fmt.Sprintf("《%s》卖出了1个了,剩余%d个", v.ProductTitle, v.C)
+					FeiShuUrl(text, token)
+				} else if v.C > cast.ToUint32(cacheAll["c"]) {
+					text = fmt.Sprintf("购买了《%s》总量%d个", v.ProductTitle, v.C)
+					FeiShuUrl(text, token)
+				}
 				if v.IsOnSale != cast.ToUint32(cacheAll["is_on_sale"]) {
 					switch v.IsOnSale {
 					case 0:
@@ -59,13 +66,6 @@ func handle(ctx context.Context, token string, name string) {
 					case 1:
 						text = fmt.Sprintf("《%s》寄售中,剩余%d个", v.ProductTitle, v.C)
 					}
-					FeiShuUrl(text, token)
-				}
-				if v.C < cast.ToUint32(cacheAll["c"]) {
-					text = fmt.Sprintf("《%s》卖出了1个了,剩余%d个", v.ProductTitle, v.C)
-					FeiShuUrl(text, token)
-				} else if v.C > cast.ToUint32(cacheAll["c"]) {
-					text = fmt.Sprintf("购买了《%s》总量%d个", v.ProductTitle, v.C)
 					FeiShuUrl(text, token)
 				}
 			}
