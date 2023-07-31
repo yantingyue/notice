@@ -38,6 +38,7 @@ var (
 		Token4: []string{
 			"https://open.feishu.cn/open-apis/bot/v2/hook/dd60c8d2-b981-48dc-b6c9-3bb375d2f2c8",
 			"https://open.feishu.cn/open-apis/bot/v2/hook/b5b6800b-880f-4814-88ca-aa0a69f75220",
+			"https://open.feishu.cn/open-apis/bot/v2/hook/44923305-a834-442c-8cba-a4e56376d609",
 		}, //谜语人
 		Token5: []string{
 			"https://open.feishu.cn/open-apis/bot/v2/hook/7beb44ec-bf13-48f9-830f-e53537e1160a",
@@ -71,7 +72,7 @@ func FeiShuUrl(text string, token string) {
 	if _, ok := tokenUrlMap[token]; ok {
 		for k, v := range tokenUrlMap[token] {
 			if k > 0 && k < 2 {
-				time.Sleep(time.Second * 2)
+				time.Sleep(time.Second * 3)
 			}
 			//go func() {
 			_, err := cli.Post(v, nil, jsonBytes)
