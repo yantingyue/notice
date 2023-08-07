@@ -62,6 +62,7 @@ var (
 		}, //门童
 		Token10: []string{
 			"https://open.feishu.cn/open-apis/bot/v2/hook/cace9648-9897-45ac-8ba3-67f83f4bc401",
+			"https://open.feishu.cn/open-apis/bot/v2/hook/3b834a23-c6b9-4fc0-b322-d077b7700fc2",
 		}, //富豪小号
 	}
 )
