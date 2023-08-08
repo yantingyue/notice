@@ -17,17 +17,17 @@ func main() {
 
 func cronjob() {
 	c := cron.New()
-	if err := c.AddFunc("*/5 * * * * *", func() {
-		feishu_notice.MotorNotice(feishu_notice.Token1, "大佬")
-	}); err != nil {
-		panic(err)
-	}
+	//if err := c.AddFunc("*/5 * * * * *", func() {
+	//	feishu_notice.MotorNotice(feishu_notice.Token1, "大佬")
+	//}); err != nil {
+	//	panic(err)
+	//}
 
-	if err := c.AddFunc("*/5 * * * * *", func() {
-		feishu_notice.MotorNotice(feishu_notice.Token2, "富豪")
-	}); err != nil {
-		panic(err)
-	}
+	//if err := c.AddFunc("*/5 * * * * *", func() {
+	//	feishu_notice.MotorNotice(feishu_notice.Token2, "富豪")
+	//}); err != nil {
+	//	panic(err)
+	//}
 
 	if err := c.AddFunc("*/5 * * * * *", func() {
 		feishu_notice.MotorNotice(feishu_notice.Token3, "145")
