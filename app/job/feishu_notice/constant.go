@@ -3,7 +3,7 @@ package feishu_notice
 import "time"
 
 const (
-	Token1  = "21e23fa4467649b2bce29687cc037aba" //case
+	Token1  = "379d9144bd5f4ab6add1e944d9add135" //case
 	Token2  = "16bfdee054d9476fa5a1816a9e13ba0e" //富豪
 	Token3  = "2d4a2ad6c1384bb484a41242e604b870" //145
 	Token4  = "77e40b3d00f9417baf91df72c852e1fe" //谜语人
