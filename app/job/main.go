@@ -23,11 +23,11 @@ func cronjob() {
 	//	panic(err)
 	//}
 
-	//if err := c.AddFunc("*/5 * * * * *", func() {
-	//	feishu_notice.MotorNotice(feishu_notice.Token2, "富豪")
-	//}); err != nil {
-	//	panic(err)
-	//}
+	if err := c.AddFunc("*/5 * * * * *", func() {
+		feishu_notice.MotorNotice(feishu_notice.Token2, "富豪")
+	}); err != nil {
+		panic(err)
+	}
 
 	if err := c.AddFunc("*/5 * * * * *", func() {
 		feishu_notice.MotorNotice(feishu_notice.Token3, "145")
@@ -65,11 +65,11 @@ func cronjob() {
 		panic(err)
 	}
 
-	if err := c.AddFunc("*/5 * * * * *", func() {
-		feishu_notice.MotorNotice(feishu_notice.Token9, "门童")
-	}); err != nil {
-		panic(err)
-	}
+	//if err := c.AddFunc("*/5 * * * * *", func() {
+	//	feishu_notice.MotorNotice(feishu_notice.Token9, "门童")
+	//}); err != nil {
+	//	panic(err)
+	//}
 	if err := c.AddFunc("*/5 * * * * *", func() {
 		feishu_notice.MotorNotice(feishu_notice.Token10, "富豪小号")
 	}); err != nil {
