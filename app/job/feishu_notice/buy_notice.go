@@ -20,7 +20,7 @@ func MotorNotice(key string, name string) {
 
 func handle(ctx context.Context, token string, name string) {
 	body := map[string]interface{}{
-		"pageSize":   30,
+		"pageSize":   60,
 		"pageNumber": 1,
 		"page_type":  "art_create",
 	}
