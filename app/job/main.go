@@ -75,6 +75,11 @@ func cronjob() {
 	}); err != nil {
 		panic(err)
 	}
+	if err := c.AddFunc("*/5 * * * * *", func() {
+		feishu_notice.MotorNotice(feishu_notice.Token11, "蜥蜴绝缘体")
+	}); err != nil {
+		panic(err)
+	}
 
 	c.Start()
 }
