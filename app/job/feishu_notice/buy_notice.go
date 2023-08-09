@@ -19,8 +19,12 @@ func MotorNotice(key string, name string) {
 }
 
 func handle(ctx context.Context, token string, name string) {
+	pageSize := 50
+	if name == "蜥蜴绝缘体" {
+		pageSize = 100
+	}
 	body := map[string]interface{}{
-		"pageSize":   60,
+		"pageSize":   pageSize,
 		"pageNumber": 1,
 		"page_type":  "art_create",
 	}
@@ -33,7 +37,7 @@ func handle(ctx context.Context, token string, name string) {
 		resultMap := make(map[uint64]struct{})
 		for _, v := range res.Data.Result {
 			resultMap[v.ProductId] = struct{}{}
-			if v.ProductId == 1019723 || v.ProductId == 1019287 {
+			if v.ProductId == 1019723 || v.ProductId == 1019287 || v.ProductId == 1019119 {
 				continue
 			}
 			noticeKey := fmt.Sprintf("%s:%d", name, v.ProductId)
