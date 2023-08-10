@@ -13,7 +13,7 @@ const (
 	Token8  = "0c4090fcf6c44c46a2fdcddfd39f6cb9" //145(胡莹)
 	Token9  = "bf52a75f3109404a85fe4d708e3af579" //门童
 	Token10 = "891e817b1ab24c9c89c81efef2921888" //富豪小号
-	Token11 = "cec2ecd1b6ca41818b2299594bc31461" //蜥蜴绝缘体
+	Token11 = "5d1a3666deb14445b59ddb1e12a80826" //蜥蜴绝缘体
 )
 
 const (
