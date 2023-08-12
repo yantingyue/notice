@@ -66,6 +66,7 @@ var (
 		}, //富豪小号
 		Token11: []string{
 			"https://open.feishu.cn/open-apis/bot/v2/hook/cdd921a5-9da6-4c27-b7cc-211b456c4676",
+			"https://open.feishu.cn/open-apis/bot/v2/hook/9bfa3673-e04c-45a3-ab8f-102b7c963fb1",
 		}, //蜥蜴绝缘体
 	}
 )
