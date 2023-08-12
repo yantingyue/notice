@@ -7,7 +7,7 @@ const (
 	Token2  = "16bfdee054d9476fa5a1816a9e13ba0e" //富豪
 	Token3  = "2d4a2ad6c1384bb484a41242e604b870" //145
 	Token4  = "77e40b3d00f9417baf91df72c852e1fe" //谜语人
-	Token5  = "edf1c55bd0d54a92a02dfb7ed8870b84" //柴郡猫
+	Token5  = "913e40f4bee74c1aac6e0d9ed1e131f9" //柴郡猫
 	Token6  = "6d442761435a43169ca3c8ada2fc7b59" //配置
 	Token7  = "92cd4037b3d347869308f027e59f2551" //陆逊
 	Token8  = "0c4090fcf6c44c46a2fdcddfd39f6cb9" //145(胡莹)
