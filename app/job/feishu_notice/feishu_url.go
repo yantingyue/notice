@@ -70,7 +70,7 @@ var (
 		}, //蜥蜴绝缘体
 		Token12: []string{
 			"https://open.feishu.cn/open-apis/bot/v2/hook/6298f961-3779-4a69-b1b5-d7fbd4452d6d",
-			"https://open.feishu.cn/open-apis/bot/v2/hook/85e862e2-2dcc-431c-afdc-9fa1c4281acc",
+			"https://open.feishu.cn/open-apis/bot/v2/hook/79df0c62-9a2f-4ca4-b434-0e959de04cfc",
 		}, //法典人
 	}
 )
