@@ -68,6 +68,9 @@ var (
 			"https://open.feishu.cn/open-apis/bot/v2/hook/cdd921a5-9da6-4c27-b7cc-211b456c4676",
 			"https://open.feishu.cn/open-apis/bot/v2/hook/9bfa3673-e04c-45a3-ab8f-102b7c963fb1",
 		}, //蜥蜴绝缘体
+		Token12: []string{
+			"https://open.feishu.cn/open-apis/bot/v2/hook/6298f961-3779-4a69-b1b5-d7fbd4452d6d",
+		}, //法典人
 	}
 )
 

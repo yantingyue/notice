@@ -80,6 +80,11 @@ func cronjob() {
 	}); err != nil {
 		panic(err)
 	}
+	if err := c.AddFunc("*/7 * * * * *", func() {
+		feishu_notice.MotorNotice(feishu_notice.Token12, "法典人")
+	}); err != nil {
+		panic(err)
+	}
 
 	c.Start()
 }
