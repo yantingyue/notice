@@ -10,11 +10,11 @@ const (
 	Token5  = "913e40f4bee74c1aac6e0d9ed1e131f9" //柴郡猫
 	Token6  = "6d442761435a43169ca3c8ada2fc7b59" //配置
 	Token7  = "92cd4037b3d347869308f027e59f2551" //陆逊
-	Token8  = "0c4090fcf6c44c46a2fdcddfd39f6cb9" //145(胡莹)
+	Token8  = "5fac151427b143f985cc0ee81302d0b6" //145(胡莹)
 	Token9  = "daaf58be3fb64cba842ec858d81d5589" //门童
 	Token10 = "891e817b1ab24c9c89c81efef2921888" //富豪小号
 	Token11 = "233e4767dcdf4157a53e0dfa39ecf7c9" //蜥蜴绝缘体
-	Token12 = "fef14443f85145e8b41e0cbe6e1e6ec9" //法典人
+	Token12 = "c6095eb6c18d4a7d9048473fa372810e" //法典人
 )
 
 const (

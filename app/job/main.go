@@ -59,11 +59,11 @@ func cronjob() {
 	//	panic(err)
 	//}
 
-	//if err := c.AddFunc("*/5 * * * * *", func() {
-	//	feishu_notice.MotorNotice(feishu_notice.Token8, "145胡莹")
-	//}); err != nil {
-	//	panic(err)
-	//}
+	if err := c.AddFunc("*/5 * * * * *", func() {
+		feishu_notice.MotorNotice(feishu_notice.Token8, "145胡莹")
+	}); err != nil {
+		panic(err)
+	}
 
 	if err := c.AddFunc("*/5 * * * * *", func() {
 		feishu_notice.MotorNotice(feishu_notice.Token9, "门童")
