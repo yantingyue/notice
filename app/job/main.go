@@ -44,7 +44,7 @@ func cronjob() {
 	if err := c.AddFunc("*/5 *z * * * *", func() {
 		feishu_notice.MotorNotice(feishu_notice.Token5, "柴郡猫")
 	}); err != nil {
-		panic(err)
+		//panic(err)
 	}
 
 	if err := c.AddFunc("*/6 * * * * *", func() {
