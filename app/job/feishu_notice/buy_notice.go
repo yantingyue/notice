@@ -13,12 +13,24 @@ import (
 	"time"
 )
 
-func MotorNotice(key string, name string) {
+func MotorNotice(name string, userId uint64) {
 	ctx := context.Background()
-	handle(ctx, key, name)
+	token, _ := cli.RedisClient.Get(ctx, cast.ToString(userId)).Result()
+	fmt.Println(token)
+	if token == "" {
+		tokens := requestToken(userId)
+		if tokens == "" {
+			text := fmt.Sprintf("获取token失败了")
+			FeiShuUrl(text, userId)
+			return
+		}
+		cli.RedisClient.Set(ctx, cast.ToString(userId), tokens, 0)
+		token = tokens
+	}
+	handle(ctx, token, name, userId)
 }
 
-func handle(ctx context.Context, token string, name string) {
+func handle(ctx context.Context, token string, name string, userId uint64) {
 	pageSize := 50
 	if name == "蜥蜴绝缘体" {
 		pageSize = 100
@@ -30,7 +42,7 @@ func handle(ctx context.Context, token string, name string) {
 	}
 	var text string
 	fmt.Println("========================================", name, "=========================================")
-	vv, res := request(token, body)
+	vv, res := request(token, body, userId)
 	fmt.Println("========================================", name, "=============================================")
 	fmt.Println("\n")
 	if vv && len(res.Data.Result) > 0 {
@@ -53,15 +65,15 @@ func handle(ctx context.Context, token string, name string) {
 			})
 			if len(cacheAll) == 0 {
 				text = fmt.Sprintf("购买了《%s》总量%d个", v.ProductTitle, v.C)
-				FeiShuUrl(text, token)
+				FeiShuUrl(text, userId)
 				continue
 			} else {
 				if v.C < cast.ToUint32(cacheAll["c"]) {
 					text = fmt.Sprintf("《%s》卖出了1个了,剩余%d个", v.ProductTitle, v.C)
-					FeiShuUrl(text, token)
+					FeiShuUrl(text, userId)
 				} else if v.C > cast.ToUint32(cacheAll["c"]) {
 					text = fmt.Sprintf("购买了《%s》总量%d个", v.ProductTitle, v.C)
-					FeiShuUrl(text, token)
+					FeiShuUrl(text, userId)
 				}
 				if v.IsOnSale != cast.ToUint32(cacheAll["is_on_sale"]) {
 					switch v.IsOnSale {
@@ -70,7 +82,7 @@ func handle(ctx context.Context, token string, name string) {
 					case 1:
 						text = fmt.Sprintf("《%s》寄售中,剩余%d个", v.ProductTitle, v.C)
 					}
-					FeiShuUrl(text, token)
+					FeiShuUrl(text, userId)
 				}
 			}
 		}
@@ -87,7 +99,7 @@ func handle(ctx context.Context, token string, name string) {
 			for _, v := range nftList.Data.Result {
 				if _, ok := resultMap[v.ProductId]; !ok {
 					text = fmt.Sprintf("《%s》卖光了", v.ProductTitle)
-					FeiShuUrl(text, token)
+					FeiShuUrl(text, userId)
 				}
 			}
 		}
@@ -108,7 +120,7 @@ type NftList struct {
 	} `json:"data"`
 }
 
-func request(token string, body map[string]interface{}) (bool, NftList) {
+func request(token string, body map[string]interface{}, userId uint64) (bool, NftList) {
 	res := NftList{}
 	header := GenerateHeader1(token)
 	jsonBytes, _ := json.Marshal(body)
@@ -119,8 +131,9 @@ func request(token string, body map[string]interface{}) (bool, NftList) {
 	}
 	json.Unmarshal(resp, &res)
 	if res.Code == 401 {
+		cli.RedisClient.Del(context.Background(), cast.ToString(userId))
 		go func() {
-			FeiShuUrl("账号失效，请尽快处理", token)
+			FeiShuUrl("账号失效，请尽快处理", userId)
 		}()
 	}
 	if res.Code == 0 && res.Msg == "success" {
@@ -147,4 +160,33 @@ func MD5(text string) string {
 	ctx := md5.New()
 	ctx.Write([]byte(text))
 	return hex.EncodeToString(ctx.Sum(nil))
+}
+
+func requestToken(userId uint64) string {
+	head := make(map[string]string)
+	auth, _ := cli.RedisClient.Get(context.Background(), "auth").Result()
+	if auth == "" {
+		return ""
+	}
+	head["Authorization"] = auth
+	resp, _ := cli.Post(fmt.Sprintf("%s%d", "https://cmdb-api.aichaoliuapp.cn/api/get_prod_redis_value?key=", userId), head, nil)
+	log.Println(string(resp))
+	if len(resp) == 0 {
+		return ""
+	}
+	resSt := RespToken{}
+	json.Unmarshal(resp, &resSt)
+	if resSt.Code != 200 {
+		return ""
+	}
+	return resSt.Data.Value
+}
+
+type RespToken struct {
+	Code int32  `json:"code"`
+	Msg  string `json:"msg"`
+	Data struct {
+		Token string `json:"token"`
+		Value string `json:"value"`
+	} `json:"data"`
 }

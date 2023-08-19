@@ -18,6 +18,21 @@ const (
 )
 
 const (
+	//UserId1  = "379d9144bd5f4ab6add1e944d9add135" //case
+	UserId2  = 13571075636 //富豪
+	UserId3  = 6388806     //145
+	UserId4  = 13571354057 //谜语人
+	UserId5  = 5899381     //柴郡猫
+	UserId6  = 13570945772 //配置
+	UserId7  = 5915776     //145(胡莹)
+	UserId8  = 18896780094 //门童
+	UserId9  = 1111        //富豪小号
+	UserId10 = 19379815910 //蜥蜴绝缘体
+	UserId11 = 75958191117 //法典人
+	UserId12 = 13571051879 //test
+)
+
+const (
 	Host     = "https://api.aichaoliuapp.cn/"
 	timeOut  = 60 * time.Second
 	version  = "31850"
