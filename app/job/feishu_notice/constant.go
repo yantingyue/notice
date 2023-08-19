@@ -14,7 +14,7 @@ const (
 	Token9  = "daaf58be3fb64cba842ec858d81d5589" //门童
 	Token10 = "891e817b1ab24c9c89c81efef2921888" //富豪小号
 	Token11 = "07002f43e3d6411baaf325b92bda9fe3" //蜥蜴绝缘体
-	Token12 = "5ad5e7d50368435b9164aee05de8a59f" //法典人
+	Token12 = "15b4563ef2c64c4e8225e59790090446" //法典人
 )
 
 const (
