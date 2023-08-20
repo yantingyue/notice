@@ -99,6 +99,7 @@ func handle(ctx context.Context, token string, name string, userId uint64) {
 			for _, v := range nftList.Data.Result {
 				if _, ok := resultMap[v.ProductId]; !ok {
 					text = fmt.Sprintf("《%s》卖光了", v.ProductTitle)
+					cli.RedisClient.Del(ctx, fmt.Sprintf("%s:%d", name, v.ProductId))
 					FeiShuUrl(text, userId)
 				}
 			}
