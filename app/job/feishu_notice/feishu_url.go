@@ -69,6 +69,9 @@ var (
 			"https://open.feishu.cn/open-apis/bot/v2/hook/6298f961-3779-4a69-b1b5-d7fbd4452d6d",
 			"https://open.feishu.cn/open-apis/bot/v2/hook/4b554aad-8fda-48a6-92c5-3118da018bd1",
 		}, //法典人
+		UserId13: []string{
+			"https://open.feishu.cn/open-apis/bot/v2/hook/22178354-5148-43b6-b3df-4e7912982d51",
+		}, //145韩新枝
 	}
 )
 
