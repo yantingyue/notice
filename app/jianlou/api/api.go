@@ -47,8 +47,8 @@ var (
 )
 
 const (
-	TimeSpace        = 230
-	BuyNum           = 5
+	TimeSpace        = 180
+	BuyNum           = 10
 	BuyToken         = "8c131a620e0441b98fd0f4a3f6d946f4"
 	ProductId        = 1020294
 	NftProductSizeId = 2153
@@ -65,7 +65,7 @@ func Begin() {
 				"product_id":          ProductId,
 				"nft_product_size_id": NftProductSizeId,
 				"pageNumber":          1,
-				"pageSize":            1,
+				"pageSize":            BuyNum,
 				"unlock":              0,
 				"prop_pack":           0,
 				"order_by":            "price",
@@ -75,7 +75,7 @@ func Begin() {
 			}()
 			time.Sleep(time.Millisecond * TimeSpace)
 			i, _ := cli.RedisClient.Get(ctx, cast.ToString(ProductId)).Result()
-			if cast.ToInt(i) == BuyNum {
+			if cast.ToInt(i) >= BuyNum {
 				cli.RedisClient.Del(ctx, cast.ToString(ProductId))
 				os.Exit(1)
 			}
@@ -121,6 +121,11 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 					json.Unmarshal(payOrderResp, &paySuccess)
 					if paySuccess.Code == 0 {
 						cli.RedisClient.Incr(ctx, cast.ToString(ProductId))
+						i, _ := cli.RedisClient.Get(ctx, cast.ToString(ProductId)).Result()
+						if cast.ToInt(i) >= BuyNum {
+							cli.RedisClient.Del(ctx, cast.ToString(ProductId))
+							os.Exit(1)
+						}
 					}
 				}
 			}
