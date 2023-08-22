@@ -37,7 +37,7 @@ var (
 )
 
 const (
-	TimeSpace        = 300
+	TimeSpace        = 200
 	BuyNum           = 10
 	BuyToken         = "8c131a620e0441b98fd0f4a3f6d946f4"
 	ProductId        = 1020294
@@ -50,20 +50,16 @@ func Begin() {
 	}
 	ctx := context.Background()
 	for {
-		//pageNum := 1
 		for _, v := range TmpTokens {
 			body := map[string]interface{}{
 				"product_id":          ProductId,
 				"nft_product_size_id": NftProductSizeId,
 				"pageNumber":          1,
-				"pageSize":            BuyNum,
+				"pageSize":            1,
 				"unlock":              1,
 				"prop_pack":           0,
 				"order_by":            "price",
 			}
-			//goroutine.GoWithDefaultRecovery(ctx, func() {
-			//
-			//})
 			go func() {
 				Grab(ctx, v, body)
 			}()
@@ -73,7 +69,6 @@ func Begin() {
 				cli.RedisClient.Del(ctx, cast.ToString(ProductId))
 				os.Exit(1)
 			}
-			//pageNum++
 		}
 	}
 }
