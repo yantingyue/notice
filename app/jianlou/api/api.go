@@ -40,7 +40,6 @@ var (
 
 		"ca40789d6cac40f893a8b040e21ba43e",
 		"ff0bd579cf7c4ac189400c0f5b798b1a",
-		"d3a49e6856564f63b869b14e4b66a75d",
 	}
 	Urls = []string{
 		"/aiera/ai_match_trading/nft_second/sell_product/list", //寄售列表
