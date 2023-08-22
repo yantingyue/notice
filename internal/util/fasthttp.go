@@ -1,11 +1,12 @@
-package cli
+package util
 
 import (
 	"encoding/json"
 	"fmt"
+	"time"
+
 	"github.com/pkg/errors"
 	"github.com/valyala/fasthttp"
-	"time"
 )
 
 const (
@@ -44,8 +45,9 @@ func Post(host string, header map[string]string, payload []byte) (body []byte, e
 			req.Header.Set(k, v)
 		}
 	}
+
 	req.SetBody(payload)
-	fmt.Println("****************", string(payload))
+
 	resp := &fasthttp.Response{}
 	client := &fasthttp.Client{}
 	if err = client.DoTimeout(req, resp, timeOut); err != nil {
