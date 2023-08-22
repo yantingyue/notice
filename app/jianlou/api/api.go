@@ -65,7 +65,7 @@ func Begin() {
 				"product_id":          ProductId,
 				"nft_product_size_id": NftProductSizeId,
 				"pageNumber":          1,
-				"pageSize":            BuyNum,
+				"pageSize":            2,
 				"unlock":              0,
 				"prop_pack":           0,
 				"order_by":            "price",
