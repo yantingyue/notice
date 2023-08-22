@@ -26,6 +26,21 @@ var (
 		"bc14ff8966334b5fa812e8d9c3400349",
 		"13d012047f0448909a0a24e7b983d38d",
 		"5d5bdccd87fc40818ea9485b33827d10",
+
+		"a3f938bfc7db4eaeb19ed3edbcd3fcdd",
+		"6894e604f80c45d7b576ddd87686b016",
+		"72634006ac8341ada26d5c1dd62ced9d",
+		"ee9232c9e13340099e0e4da48b8f9838",
+		"a9f7a3be2f88433bbd1069dd4e6af593",
+		"492add2bc2994d67ad4ca21d082108ca",
+		"798103ced0724357ba80b526ad75184d",
+		"3f98fb7d96ac4bceae16e3800f132a0f",
+		"6ec2fb4205bc429e84919dbe36bcd474",
+		"04f3fa80067a4273989f3edd41e58a41",
+
+		"ca40789d6cac40f893a8b040e21ba43e",
+		"ff0bd579cf7c4ac189400c0f5b798b1a",
+		"d3a49e6856564f63b869b14e4b66a75d",
 	}
 	Urls = []string{
 		"/aiera/ai_match_trading/nft_second/sell_product/list", //寄售列表
@@ -37,7 +52,7 @@ var (
 )
 
 const (
-	TimeSpace        = 250
+	TimeSpace        = 180
 	BuyNum           = 10
 	BuyToken         = "8c131a620e0441b98fd0f4a3f6d946f4"
 	ProductId        = 1020294
@@ -122,7 +137,7 @@ func request(token string, body map[string]interface{}, url string) (resp []byte
 	header := util.GenerateHeader(token)
 	jsonBytes, _ := json.Marshal(body)
 	resp, _ = cli.Post(fmt.Sprintf("%s%s", Host, url), header, jsonBytes)
-	log.Println("------------------", string(resp))
+	log.Println("------------------", string(resp), token)
 	if len(resp) == 0 {
 		return resp
 	}
