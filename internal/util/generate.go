@@ -4,8 +4,8 @@ import (
 	"encoding/base64"
 	"time"
 
-	"demo/hd/constant"
 	"github.com/spf13/cast"
+	"notice/constant"
 )
 
 func GenerateHeader(token string) map[string]string {
