@@ -7,7 +7,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/spf13/cast"
-	"gitlab.aiera.tech/cloud/comm/goroutine"
 	"log"
 	"notice/internal/cli"
 	"notice/internal/util"
@@ -62,9 +61,12 @@ func Begin() {
 				"prop_pack":           0,
 				"order_by":            "price",
 			}
-			goroutine.GoWithDefaultRecovery(ctx, func() {
+			//goroutine.GoWithDefaultRecovery(ctx, func() {
+			//
+			//})
+			go func() {
 				Grab(ctx, v, body)
-			})
+			}()
 			time.Sleep(time.Millisecond * TimeSpace)
 			i, _ := cli.RedisClient.Get(ctx, cast.ToString(ProductId)).Result()
 			if cast.ToInt(i) == BuyNum {
