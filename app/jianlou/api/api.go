@@ -16,8 +16,19 @@ import (
 )
 
 var (
-	TmpTokens = []string{"24715fa709414f6eb364ffb6f8c13485"}
-	Urls      = []string{
+	TmpTokens = []string{
+		"88818b2970924542b5fff708ac483bea",
+		"f304f2f75a0e43169209474cc5989f70",
+		"a9921a79d89649fcb06c14ce051a8ea0",
+		"516e43bfbc654380a428e1cf270a9106",
+		"308dd5e23f2942fdbaf307bcbe8efd84",
+		"328a156b373e4357b810a4b8ca2a072f",
+		"7e5b07aad8ca43b59e9cbd338d0d5ff0",
+		"bc14ff8966334b5fa812e8d9c3400349",
+		"13d012047f0448909a0a24e7b983d38d",
+		"5d5bdccd87fc40818ea9485b33827d10",
+	}
+	Urls = []string{
 		"/aiera/ai_match_trading/nft_second/sell_product/list", //寄售列表
 		"/aiera/ai_match_trading/nft_second/sell_order/pay",    //下单
 		"/aiera/v2/hotdog/order/prepay",                        //预支付
@@ -27,11 +38,11 @@ var (
 )
 
 const (
-	TimeSpace        = 3000
-	BuyNum           = 1
+	TimeSpace        = 300
+	BuyNum           = 10
 	BuyToken         = "8c131a620e0441b98fd0f4a3f6d946f4"
-	ProductId        = 1019327
-	NftProductSizeId = 1321
+	ProductId        = 1020294
+	NftProductSizeId = 2153
 )
 
 func Begin() {
@@ -40,12 +51,12 @@ func Begin() {
 	}
 	ctx := context.Background()
 	for {
-		pageNum := 1
+		//pageNum := 1
 		for _, v := range TmpTokens {
 			body := map[string]interface{}{
 				"product_id":          ProductId,
 				"nft_product_size_id": NftProductSizeId,
-				"pageNumber":          pageNum,
+				"pageNumber":          1,
 				"pageSize":            BuyNum,
 				"unlock":              1,
 				"prop_pack":           0,
@@ -60,7 +71,7 @@ func Begin() {
 				cli.RedisClient.Del(ctx, cast.ToString(ProductId))
 				os.Exit(1)
 			}
-			pageNum++
+			//pageNum++
 		}
 	}
 }

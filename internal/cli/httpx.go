@@ -45,7 +45,6 @@ func Post(host string, header map[string]string, payload []byte) (body []byte, e
 		}
 	}
 	req.SetBody(payload)
-	fmt.Println("****************", string(payload))
 	resp := &fasthttp.Response{}
 	client := &fasthttp.Client{}
 	if err = client.DoTimeout(req, resp, timeOut); err != nil {
