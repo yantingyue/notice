@@ -55,7 +55,6 @@ var (
 		"b369f2b8bc994c55909f457f47ff3a9d", //lzx
 
 		"a3f938bfc7db4eaeb19ed3edbcd3fcdd",
-		"6894e604f80c45d7b576ddd87686b016",
 		"72634006ac8341ada26d5c1dd62ced9d",
 		"a9f7a3be2f88433bbd1069dd4e6af593",
 		"492add2bc2994d67ad4ca21d082108ca",
