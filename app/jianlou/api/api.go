@@ -30,7 +30,7 @@ var (
 		"24715fa709414f6eb364ffb6f8c13485",
 		"34a9ccce1e514809a7d9d327ed8ec1be",
 		"9ffc543b213849c793d2298df41b51d1",
-		//"939293c845ab46d598547ce1cff16c8e",
+		"939293c845ab46d598547ce1cff16c8e",
 
 		"a3f938bfc7db4eaeb19ed3edbcd3fcdd",
 		"6894e604f80c45d7b576ddd87686b016",
@@ -53,7 +53,7 @@ var (
 
 const (
 	TimeSpace        = 180
-	BuyNum           = 10
+	BuyNum           = 20
 	BuyToken         = "8c131a620e0441b98fd0f4a3f6d946f4"
 	ProductId        = 1020328
 	NftProductSizeId = 2183
