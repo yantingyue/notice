@@ -50,12 +50,10 @@ var (
 		"0bf42458aa124944b770b8906c182c63",
 		"8eca83e07c2c4d989fc709296b2dc2b0",
 		"260f7ce6a2ff4e5884a5ca701b71f8e0",
-		"6812374f1c8d4041a293140e50555862",
 		"c3441c8de8404573bfbe826d13444872",
 		"b12a29d7ef674e1b98bbf33043af0d38",
 		"5fd5556fd2c046d3bd7f33d65a2600cf",
 		"84efec1d4aa84729991ba0300f0e9ac9",
-		"10395c1aea4e46b188bee14dbd92e2bf",
 	}
 	Urls = []string{
 		"/aiera/ai_match_trading/nft_second/sell_product/list", //寄售列表
@@ -67,7 +65,7 @@ var (
 )
 
 const (
-	TimeSpace        = 200
+	TimeSpace        = 250
 	BuyNum           = 20
 	BuyToken         = "8c131a620e0441b98fd0f4a3f6d946f4"
 	ProductId        = 1020328
