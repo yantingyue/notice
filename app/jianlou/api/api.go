@@ -51,7 +51,6 @@ var (
 		"260f7ce6a2ff4e5884a5ca701b71f8e0",
 		"c3441c8de8404573bfbe826d13444872",
 		"b12a29d7ef674e1b98bbf33043af0d38",
-		"5fd5556fd2c046d3bd7f33d65a2600cf",
 		"84efec1d4aa84729991ba0300f0e9ac9",
 	}
 	Urls = []string{
@@ -64,11 +63,11 @@ var (
 )
 
 const (
-	TimeSpace        = 250
-	BuyNum           = 20
+	TimeSpace        = 200
+	BuyNum           = 2
 	BuyToken         = "8c131a620e0441b98fd0f4a3f6d946f4"
-	ProductId        = 1020328
-	NftProductSizeId = 2183
+	ProductId        = 1019939
+	NftProductSizeId = 1863
 )
 
 func Begin() {
