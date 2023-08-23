@@ -52,7 +52,6 @@ var (
 		"0bf42458aa124944b770b8906c182c63",
 		"8eca83e07c2c4d989fc709296b2dc2b0",
 		"b12673d85f9240c6b28c22513d493983",
-		"354093ce82434cc0be34f2d05d465164",
 		"260f7ce6a2ff4e5884a5ca701b71f8e0",
 		"6812374f1c8d4041a293140e50555862",
 		"c3441c8de8404573bfbe826d13444872",
@@ -71,7 +70,7 @@ var (
 )
 
 const (
-	TimeSpace        = 185
+	TimeSpace        = 200
 	BuyNum           = 20
 	BuyToken         = "8c131a620e0441b98fd0f4a3f6d946f4"
 	ProductId        = 1020328
