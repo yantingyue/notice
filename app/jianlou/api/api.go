@@ -82,11 +82,14 @@ var (
 )
 
 const (
-	TimeSpace        = 150
+	TimeSpace        = 170
 	BuyNum           = 1
 	BuyToken         = "8c131a620e0441b98fd0f4a3f6d946f4"
 	ProductId        = 1019939
 	NftProductSizeId = 1863
+
+	//ProductId        = 1019327
+	//NftProductSizeId = 1321
 )
 
 func Begin() {
@@ -215,7 +218,7 @@ func requestOrder(token string, body map[string]interface{}, url string) (resp [
 	header := util.GenerateCreateOrderHeader(token)
 	jsonBytes, _ := json.Marshal(body)
 	resp, _ = cli.Post(fmt.Sprintf("%s%s", Host, url), header, jsonBytes)
-	log.Println(string(resp))
+	log.Println(url, string(resp))
 	if len(resp) == 0 {
 		return resp
 	}
