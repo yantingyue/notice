@@ -31,6 +31,7 @@ var (
 		"34a9ccce1e514809a7d9d327ed8ec1be",
 		"9ffc543b213849c793d2298df41b51d1",
 		"939293c845ab46d598547ce1cff16c8e",
+		"b369f2b8bc994c55909f457f47ff3a9d", //lzx
 
 		"a3f938bfc7db4eaeb19ed3edbcd3fcdd",
 		"6894e604f80c45d7b576ddd87686b016",
