@@ -50,8 +50,8 @@ const (
 	TimeSpace        = 250
 	BuyNum           = 10
 	BuyToken         = "8c131a620e0441b98fd0f4a3f6d946f4"
-	ProductId        = 1020294
-	NftProductSizeId = 2153
+	ProductId        = 1020328
+	NftProductSizeId = 2183
 )
 
 func Begin() {
