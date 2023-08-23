@@ -84,7 +84,7 @@ var (
 )
 
 const (
-	TimeSpace        = 200
+	TimeSpace        = 150
 	BuyNum           = 1
 	BuyToken         = "8c131a620e0441b98fd0f4a3f6d946f4"
 	ProductId        = 1019939
