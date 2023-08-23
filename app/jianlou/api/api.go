@@ -16,16 +16,37 @@ import (
 
 var (
 	TmpTokens = []string{
-		"88818b2970924542b5fff708ac483bea",
-		"f304f2f75a0e43169209474cc5989f70",
-		"a9921a79d89649fcb06c14ce051a8ea0",
-		"516e43bfbc654380a428e1cf270a9106",
-		"308dd5e23f2942fdbaf307bcbe8efd84",
-		"328a156b373e4357b810a4b8ca2a072f",
-		"7e5b07aad8ca43b59e9cbd338d0d5ff0",
-		"bc14ff8966334b5fa812e8d9c3400349",
-		"13d012047f0448909a0a24e7b983d38d",
-		"5d5bdccd87fc40818ea9485b33827d10",
+		//"88818b2970924542b5fff708ac483bea",
+		//"f304f2f75a0e43169209474cc5989f70",
+		//"a9921a79d89649fcb06c14ce051a8ea0",
+		//"516e43bfbc654380a428e1cf270a9106",
+		//"308dd5e23f2942fdbaf307bcbe8efd84",
+		//"328a156b373e4357b810a4b8ca2a072f",
+		//"7e5b07aad8ca43b59e9cbd338d0d5ff0",
+		//"bc14ff8966334b5fa812e8d9c3400349",
+		//"13d012047f0448909a0a24e7b983d38d",
+		//"5d5bdccd87fc40818ea9485b33827d10",
+
+		"cac29068ad1d45db88eb410c0ecdbafe",
+		"4ece3f0db50148ecbb59923b34982f4f",
+		"d1cd1ee21d7a40809ec3f655f720d744",
+		"7f814785a5b5446fbb65f90564115d9b",
+		"2a62e05347454fdf9d82c0b73f5eb5ea",
+		"69a153491cc549c8a679aedf239e6d87",
+		"8dfcb52533c949df9595613f25e82f85",
+		"ccafbbd5a5f14485b7b3864e3a1acfb1",
+		"265b6448e0824170a078dd877496db58",
+		"f66e6f14ed5747d5b2895aafc34b85e1",
+		"c06c766d13ac4ec4b659adba9997daa7",
+		"2cf24880dce84da28deb5d48ca631103",
+		"2398bbacf9ee439680899b28891d2f5c",
+		"269defb055694470b8c9d2e5ddf24302",
+		"10a7c1121fc748d2b651b53955dd3716",
+		"c58495a0acb84e66adfc6cedd1ede3c0",
+		"ff47ddd17e7d45bbad521a4bddf93669",
+		"77fc1d99f36f443b9306f322760e42f2",
+		"7cf891e406884ee6978d97d3cc2654d1",
+		"918055f31a114417b0dc0a4d7605e94f",
 
 		"24715fa709414f6eb364ffb6f8c13485",
 		"34a9ccce1e514809a7d9d327ed8ec1be",
@@ -54,17 +75,17 @@ var (
 		"84efec1d4aa84729991ba0300f0e9ac9",
 	}
 	Urls = []string{
-		"/aiera/ai_match_trading/nft_second/sell_product/list", //寄售列表
-		"/aiera/ai_match_trading/nft_second/sell_order/pay",    //下单
-		"/aiera/v2/hotdog/order/prepay",                        //预支付
-		"/aiera/v2/hotdog/payment/kft/confirm",                 //支付
-
+		"/aiera/ai_match_trading/nft_second/sell_product/list",       //寄售列表
+		"/aiera/ai_match_trading/nft_second/sell_order/pay",          //下单
+		"/aiera/v2/hotdog/order/prepay",                              //快付通预支付
+		"/aiera/v2/hotdog/payment/kft/confirm",                       //快付通支付
+		"/aiera/ai_match_trading/nft_second/sell_order/wallet_order", //零钱支付
 	}
 )
 
 const (
 	TimeSpace        = 200
-	BuyNum           = 2
+	BuyNum           = 1
 	BuyToken         = "8c131a620e0441b98fd0f4a3f6d946f4"
 	ProductId        = 1019939
 	NftProductSizeId = 1863
@@ -106,49 +127,82 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 	json.Unmarshal(resp, &sellList)
 	if sellList.Code == 0 && len(sellList.Data.Res) > 0 {
 		for _, sellInfo := range sellList.Data.Res {
-			crOrderReq := map[string]interface{}{
-				"operate_type":   "buy",
-				"second_id":      sellInfo.SecondId,
-				"user_coupon_id": 0,
-			}
-			//下单
-			crOrderResp := requestOrder(BuyToken, crOrderReq, Urls[1])
-			createOrderResp := CreateOrderResp{}
-			json.Unmarshal(crOrderResp, &createOrderResp)
-			if createOrderResp.Code == 0 && createOrderResp.Data.OrderId > 0 {
-				//预支付
-				prePayReq := map[string]interface{}{
-					"pay_channel": 4,
-					"order_id":    createOrderResp.Data.OrderId,
-				}
-				prePayResp := request(BuyToken, prePayReq, Urls[2])
-				prePayOrderResp := PrePayOrderResp{}
-				json.Unmarshal(prePayResp, &prePayOrderResp)
-				if prePayOrderResp.Code == 0 && prePayOrderResp.Data.OrderNo != "" {
-					//支付
-					payReq := map[string]interface{}{
-						"order_no":     prePayOrderResp.Data.OrderNo,
-						"confirm_flag": "1",
-						"pay_channel":  4,
-						"pay_pwd":      "DVqBnIG8tFOmfbFp+tIXisluxkZDahm5Gk6MVvg4tY9td7tfjTvu5JiCDBmW39mUhgjY0z6zzlfj6Jc0/YDyaGLLB8n/wRXHoPRv6qlOyMleQw1iU5Y10MfF0jYylh2EJtiVd8VQWwOWgAuYmCIYUNqoy4IhjYxMs9Bj82l/rts=",
-					}
-					payOrderResp := request(BuyToken, payReq, Urls[3])
-					paySuccess := PayOrderResp{}
-					json.Unmarshal(payOrderResp, &paySuccess)
-					if paySuccess.Code == 0 {
-						cli.RedisClient.Incr(ctx, cast.ToString(ProductId))
-						i, _ := cli.RedisClient.Get(ctx, cast.ToString(ProductId)).Result()
-						if cast.ToInt(i) >= BuyNum {
-							cli.RedisClient.Del(ctx, cast.ToString(ProductId))
-							os.Exit(1)
-						}
-					}
-				}
+			//CreateOrderKft(ctx, sellInfo.SecondId)
+			CreateOrderWallet(ctx, sellInfo.SecondId)
+		}
+	}
+}
+func CreateOrderWallet(ctx context.Context, secondId uint64) {
+	crOrderReq := map[string]interface{}{
+		"operate_type":   "buy",
+		"second_id":      secondId,
+		"user_coupon_id": 0,
+	}
+	//下单
+	crOrderResp := requestOrder(BuyToken, crOrderReq, Urls[1])
+	createOrderResp := CreateOrderResp{}
+	json.Unmarshal(crOrderResp, &createOrderResp)
+	if createOrderResp.Code == 0 && createOrderResp.Data.OrderId > 0 {
+		//零钱支付
+		payReq := map[string]interface{}{
+			"pay_pwd":  "DVqBnIG8tFOmfbFp+tIXisluxkZDahm5Gk6MVvg4tY9td7tfjTvu5JiCDBmW39mUhgjY0z6zzlfj6Jc0/YDyaGLLB8n/wRXHoPRv6qlOyMleQw1iU5Y10MfF0jYylh2EJtiVd8VQWwOWgAuYmCIYUNqoy4IhjYxMs9Bj82l/rts=",
+			"order_id": createOrderResp.Data.OrderId,
+		}
+		payResp := request(BuyToken, payReq, Urls[4])
+		paySuccess := PayOrderResp{}
+		json.Unmarshal(payResp, &paySuccess)
+		if paySuccess.Code == 0 {
+			cli.RedisClient.Incr(ctx, cast.ToString(ProductId))
+			i, _ := cli.RedisClient.Get(ctx, cast.ToString(ProductId)).Result()
+			if cast.ToInt(i) >= BuyNum {
+				cli.RedisClient.Del(ctx, cast.ToString(ProductId))
+				os.Exit(1)
 			}
 		}
 	}
 }
 
+func CreateOrderKft(ctx context.Context, secondId uint64) {
+	crOrderReq := map[string]interface{}{
+		"operate_type":   "buy",
+		"second_id":      secondId,
+		"user_coupon_id": 0,
+	}
+	//下单
+	crOrderResp := requestOrder(BuyToken, crOrderReq, Urls[1])
+	createOrderResp := CreateOrderResp{}
+	json.Unmarshal(crOrderResp, &createOrderResp)
+	if createOrderResp.Code == 0 && createOrderResp.Data.OrderId > 0 {
+		//预支付
+		prePayReq := map[string]interface{}{
+			"pay_channel": 4,
+			"order_id":    createOrderResp.Data.OrderId,
+		}
+		prePayResp := request(BuyToken, prePayReq, Urls[2])
+		prePayOrderResp := PrePayOrderResp{}
+		json.Unmarshal(prePayResp, &prePayOrderResp)
+		if prePayOrderResp.Code == 0 && prePayOrderResp.Data.OrderNo != "" {
+			//支付
+			payReq := map[string]interface{}{
+				"order_no":     prePayOrderResp.Data.OrderNo,
+				"confirm_flag": "1",
+				"pay_channel":  4,
+				"pay_pwd":      "DVqBnIG8tFOmfbFp+tIXisluxkZDahm5Gk6MVvg4tY9td7tfjTvu5JiCDBmW39mUhgjY0z6zzlfj6Jc0/YDyaGLLB8n/wRXHoPRv6qlOyMleQw1iU5Y10MfF0jYylh2EJtiVd8VQWwOWgAuYmCIYUNqoy4IhjYxMs9Bj82l/rts=",
+			}
+			payOrderResp := request(BuyToken, payReq, Urls[3])
+			paySuccess := PayOrderResp{}
+			json.Unmarshal(payOrderResp, &paySuccess)
+			if paySuccess.Code == 0 {
+				cli.RedisClient.Incr(ctx, cast.ToString(ProductId))
+				i, _ := cli.RedisClient.Get(ctx, cast.ToString(ProductId)).Result()
+				if cast.ToInt(i) >= BuyNum {
+					cli.RedisClient.Del(ctx, cast.ToString(ProductId))
+					os.Exit(1)
+				}
+			}
+		}
+	}
+}
 func request(token string, body map[string]interface{}, url string) (resp []byte) {
 	header := util.GenerateHeader(token)
 	jsonBytes, _ := json.Marshal(body)
