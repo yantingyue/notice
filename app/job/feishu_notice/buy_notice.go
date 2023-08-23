@@ -85,6 +85,7 @@ func handle(ctx context.Context, token string, name string, userId uint64) {
 					FeiShuUrl(text, userId)
 				}
 			}
+
 		}
 
 		cacheJson, err := cli.RedisClient.Get(ctx, name).Result()
