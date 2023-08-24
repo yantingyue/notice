@@ -118,7 +118,6 @@ var (
 		"976660617b644b129d47fdb124e8c501",
 		"8eca83e07c2c4d989fc709296b2dc2b0",
 		"260f7ce6a2ff4e5884a5ca701b71f8e0",
-		"c3441c8de8404573bfbe826d13444872",
 		"b12a29d7ef674e1b98bbf33043af0d38",
 		"84efec1d4aa84729991ba0300f0e9ac9",
 	}
@@ -132,14 +131,14 @@ var (
 )
 
 const (
-	TimeSpace = 150
-	BuyNum    = 20
-	BuyToken  = "8c131a620e0441b98fd0f4a3f6d946f4"
-	//ProductId        = 1019939
-	//NftProductSizeId = 1863
+	TimeSpace        = 140
+	BuyNum           = 50
+	BuyToken         = "8c131a620e0441b98fd0f4a3f6d946f4"
+	ProductId        = 1020177
+	NftProductSizeId = 2065
 
-	ProductId        = 1020307
-	NftProductSizeId = 2162
+	//ProductId        = 1020338
+	//NftProductSizeId = 2193
 )
 
 func Begin() {
@@ -153,7 +152,7 @@ func Begin() {
 				"product_id":          ProductId,
 				"nft_product_size_id": NftProductSizeId,
 				"pageNumber":          1,
-				"pageSize":            2,
+				"pageSize":            5,
 				"unlock":              0,
 				"prop_pack":           0,
 				"order_by":            "price",
@@ -179,7 +178,9 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 	if sellList.Code == 0 && len(sellList.Data.Res) > 0 {
 		for _, sellInfo := range sellList.Data.Res {
 			//CreateOrderKft(ctx, sellInfo.SecondId)
-			CreateOrderWallet(ctx, sellInfo.SecondId)
+			go func() {
+				CreateOrderWallet(ctx, sellInfo.SecondId)
+			}()
 		}
 	}
 }
@@ -202,14 +203,14 @@ func CreateOrderWallet(ctx context.Context, secondId uint64) {
 		payResp := request(BuyToken, payReq, Urls[4])
 		paySuccess := PayOrderResp{}
 		json.Unmarshal(payResp, &paySuccess)
-		if paySuccess.Code == 0 {
-			cli.RedisClient.Incr(ctx, cast.ToString(ProductId))
-			i, _ := cli.RedisClient.Get(ctx, cast.ToString(ProductId)).Result()
-			if cast.ToInt(i) >= BuyNum {
-				cli.RedisClient.Del(ctx, cast.ToString(ProductId))
-				os.Exit(1)
-			}
-		}
+		//if paySuccess.Code == 0 {
+		//	cli.RedisClient.Incr(ctx, cast.ToString(ProductId))
+		//	i, _ := cli.RedisClient.Get(ctx, cast.ToString(ProductId)).Result()
+		//	if cast.ToInt(i) >= BuyNum {
+		//		cli.RedisClient.Del(ctx, cast.ToString(ProductId))
+		//		os.Exit(1)
+		//	}
+		//}
 	}
 }
 
