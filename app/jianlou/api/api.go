@@ -112,7 +112,7 @@ var (
 
 const (
 	TimeSpace        = 140
-	BuyNum           = 100
+	BuyNum           = 3
 	BuyToken         = "8c131a620e0441b98fd0f4a3f6d946f4"
 	ProductId        = 1020177
 	NftProductSizeId = 2065
