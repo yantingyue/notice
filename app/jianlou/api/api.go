@@ -132,7 +132,7 @@ var (
 
 const (
 	TimeSpace        = 140
-	BuyNum           = 50
+	BuyNum           = 2
 	BuyToken         = "8c131a620e0441b98fd0f4a3f6d946f4"
 	ProductId        = 1020177
 	NftProductSizeId = 2065
@@ -152,7 +152,7 @@ func Begin() {
 				"product_id":          ProductId,
 				"nft_product_size_id": NftProductSizeId,
 				"pageNumber":          1,
-				"pageSize":            5,
+				"pageSize":            2,
 				"unlock":              0,
 				"prop_pack":           0,
 				"order_by":            "price",
