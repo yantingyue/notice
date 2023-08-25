@@ -111,15 +111,14 @@ var (
 )
 
 const (
-	TimeSpace        = 140
-	BuyNum           = 20
-	BuyToken         = "8c131a620e0441b98fd0f4a3f6d946f4"
-	ProductId        = 1020330
-	NftProductSizeId = 2185
+	TimeSpace = 140
+	BuyNum    = 20
+	BuyToken  = "8c131a620e0441b98fd0f4a3f6d946f4"
+	//ProductId        = 1020330
+	//NftProductSizeId = 2185
 
-	//ProductId        = 1019960
-	//NftProductSizeId = 1884
-
+	ProductId        = 1019960
+	NftProductSizeId = 1884
 )
 
 func Begin() {
