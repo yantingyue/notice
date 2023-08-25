@@ -20,7 +20,7 @@ const (
 const (
 	//UserId1  = "379d9144bd5f4ab6add1e944d9add135" //case
 	UserId2  = 13571075636 //富豪
-	UserId3  = 6388806     //145
+	UserId3  = 5243239     //145
 	UserId4  = 13571354057 //谜语人
 	UserId5  = 5899381     //柴郡猫
 	UserId6  = 13570945772 //配置
