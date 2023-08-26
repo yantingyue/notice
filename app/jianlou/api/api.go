@@ -161,12 +161,12 @@ const (
 	TimeSpace = 80
 	BuyNum    = 100
 	//BuyToken         = "e64d46a00099410daa6186c907988f96"
-	BuyToken         = "24b9fe58d01f4374be37623c36f48f2a"
-	ProductId        = 1020330
-	NftProductSizeId = 2185
+	BuyToken = "24b9fe58d01f4374be37623c36f48f2a"
+	//ProductId        = 1020330
+	//NftProductSizeId = 2185
 
-	//ProductId        = 1019960
-	//NftProductSizeId = 1884
+	ProductId        = 1019960
+	NftProductSizeId = 1884
 )
 
 func Begin() {
