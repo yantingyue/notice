@@ -131,7 +131,6 @@ var (
 		"e96e08122cd8477387fd872a8d7ba885",
 
 		"24715fa709414f6eb364ffb6f8c13485",
-		"34a9ccce1e514809a7d9d327ed8ec1be",
 		"9ffc543b213849c793d2298df41b51d1",
 		"939293c845ab46d598547ce1cff16c8e",
 
@@ -159,7 +158,7 @@ var (
 )
 
 const (
-	TimeSpace        = 90
+	TimeSpace        = 80
 	BuyNum           = 100
 	BuyToken         = "e64d46a00099410daa6186c907988f96"
 	ProductId        = 1020330
@@ -225,7 +224,8 @@ func CreateOrderWallet(ctx context.Context, secondId uint64) {
 	if createOrderResp.Code == 0 && createOrderResp.Data.OrderId > 0 {
 		//零钱支付
 		payReq := map[string]interface{}{
-			"pay_pwd":  "DVqBnIG8tFOmfbFp+tIXisluxkZDahm5Gk6MVvg4tY9td7tfjTvu5JiCDBmW39mUhgjY0z6zzlfj6Jc0/YDyaGLLB8n/wRXHoPRv6qlOyMleQw1iU5Y10MfF0jYylh2EJtiVd8VQWwOWgAuYmCIYUNqoy4IhjYxMs9Bj82l/rts=",
+			//"pay_pwd":  "DVqBnIG8tFOmfbFp+tIXisluxkZDahm5Gk6MVvg4tY9td7tfjTvu5JiCDBmW39mUhgjY0z6zzlfj6Jc0/YDyaGLLB8n/wRXHoPRv6qlOyMleQw1iU5Y10MfF0jYylh2EJtiVd8VQWwOWgAuYmCIYUNqoy4IhjYxMs9Bj82l/rts=",
+			"pay_pwd":  "d3UK0cd+ysUwfOBryOMHyPUChiMMr0JtzGqtDSk2bJq3qsbHAaalQlVpBS96Dr1BvG5+wSZ38gR3Q9mZuFfg/1HSg/9ifeia3sp0fHEr+1LMZVLq/sjUW3z3RSEyizwBsFADg5jNfH18iG4nFF46OCfi2hBNZT7XmGkS+TmLF+w=",
 			"order_id": createOrderResp.Data.OrderId,
 		}
 		payResp := request(BuyToken, payReq, Urls[4])
