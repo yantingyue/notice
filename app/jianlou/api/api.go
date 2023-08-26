@@ -226,7 +226,7 @@ func CreateOrderWallet(ctx context.Context, secondId uint64) {
 		//零钱支付
 		payReq := map[string]interface{}{
 			//"pay_pwd": "DVqBnIG8tFOmfbFp+tIXisluxkZDahm5Gk6MVvg4tY9td7tfjTvu5JiCDBmW39mUhgjY0z6zzlfj6Jc0/YDyaGLLB8n/wRXHoPRv6qlOyMleQw1iU5Y10MfF0jYylh2EJtiVd8VQWwOWgAuYmCIYUNqoy4IhjYxMs9Bj82l/rts=",
-			"pay_pwd":  "d3UK0cd+ysUwfOBryOMHyPUChiMMr0JtzGqtDSk2bJq3qsbHAaalQlVpBS96Dr1BvG5+wSZ38gR3Q9mZuFfg/1HSg/9ifeia3sp0fHEr+1LMZVLq/sjUW3z3RSEyizwBsFADg5jNfH18iG4nFF46OCfi2hBNZT7XmGkS+TmLF+w=",
+			"pay_pwd":  "ghXflyHXt9/hDR2OldE8MxBTKaapmlF2sVkE29wQdftP++FjHk1F5w3hZhqrIYyrLy/sdpyMOvj1+LYg4kwchshIDPnFP64sai6ia/Vb8LaAfShHdwnutqDzYGAzq9QP95fO2N8xE2ZpcV1AfHcUdgG8rKNyHyWzWJ2W5Glwn4I=",
 			"order_id": createOrderResp.Data.OrderId,
 		}
 		payResp := request(BuyToken, payReq, Urls[4])
