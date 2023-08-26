@@ -162,7 +162,7 @@ var (
 const (
 	TimeSpace = 90
 	BuyNum    = 1
-	BuyToken  = "33569060ee9f4f938248a4f39ffe7a39"
+	BuyToken  = "24b9fe58d01f4374be37623c36f48f2a"
 	//ProductId        = 1020330
 	//NftProductSizeId = 2185
 
