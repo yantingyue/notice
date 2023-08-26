@@ -232,14 +232,10 @@ func CreateOrderWallet(ctx context.Context, secondId uint64) {
 		payResp := request(BuyToken, payReq, Urls[4])
 		paySuccess := PayOrderResp{}
 		json.Unmarshal(payResp, &paySuccess)
-		//if paySuccess.Code == 0 {
-		//	cli.RedisClient.Incr(ctx, cast.ToString(ProductId))
-		//	i, _ := cli.RedisClient.Get(ctx, cast.ToString(ProductId)).Result()
-		//	if cast.ToInt(i) >= BuyNum {
-		//		cli.RedisClient.Del(ctx, cast.ToString(ProductId))
-		//		os.Exit(1)
-		//	}
-		//}
+		if paySuccess.Code == 0 {
+			cli.RedisClient.Incr(ctx, cast.ToString(ProductId))
+			i, _ := cli.RedisClient.Get(ctx, cast.ToString(ProductId)).Result()
+		}
 	}
 }
 
