@@ -159,13 +159,14 @@ var (
 
 const (
 	TimeSpace = 80
-	BuyNum    = 3
-	BuyToken  = "24b9fe58d01f4374be37623c36f48f2a"
-	//ProductId        = 1020330
-	//NftProductSizeId = 2185
+	BuyNum    = 80
+	//BuyToken         = "24b9fe58d01f4374be37623c36f48f2a"
+	BuyToken         = "e64d46a00099410daa6186c907988f96" //zqq
+	ProductId        = 1020188
+	NftProductSizeId = 2076
 
-	ProductId        = 1020350
-	NftProductSizeId = 2205
+	//ProductId        = 1020350
+	//NftProductSizeId = 2205
 )
 
 func Begin() {
@@ -224,8 +225,8 @@ func CreateOrderWallet(ctx context.Context, secondId uint64) {
 	if createOrderResp.Code == 0 && createOrderResp.Data.OrderId > 0 {
 		//零钱支付
 		payReq := map[string]interface{}{
-			"pay_pwd": "DVqBnIG8tFOmfbFp+tIXisluxkZDahm5Gk6MVvg4tY9td7tfjTvu5JiCDBmW39mUhgjY0z6zzlfj6Jc0/YDyaGLLB8n/wRXHoPRv6qlOyMleQw1iU5Y10MfF0jYylh2EJtiVd8VQWwOWgAuYmCIYUNqoy4IhjYxMs9Bj82l/rts=",
-			//"pay_pwd":  "d3UK0cd+ysUwfOBryOMHyPUChiMMr0JtzGqtDSk2bJq3qsbHAaalQlVpBS96Dr1BvG5+wSZ38gR3Q9mZuFfg/1HSg/9ifeia3sp0fHEr+1LMZVLq/sjUW3z3RSEyizwBsFADg5jNfH18iG4nFF46OCfi2hBNZT7XmGkS+TmLF+w=",
+			//"pay_pwd": "DVqBnIG8tFOmfbFp+tIXisluxkZDahm5Gk6MVvg4tY9td7tfjTvu5JiCDBmW39mUhgjY0z6zzlfj6Jc0/YDyaGLLB8n/wRXHoPRv6qlOyMleQw1iU5Y10MfF0jYylh2EJtiVd8VQWwOWgAuYmCIYUNqoy4IhjYxMs9Bj82l/rts=",
+			"pay_pwd":  "d3UK0cd+ysUwfOBryOMHyPUChiMMr0JtzGqtDSk2bJq3qsbHAaalQlVpBS96Dr1BvG5+wSZ38gR3Q9mZuFfg/1HSg/9ifeia3sp0fHEr+1LMZVLq/sjUW3z3RSEyizwBsFADg5jNfH18iG4nFF46OCfi2hBNZT7XmGkS+TmLF+w=",
 			"order_id": createOrderResp.Data.OrderId,
 		}
 		payResp := request(BuyToken, payReq, Urls[4])
