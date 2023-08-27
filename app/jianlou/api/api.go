@@ -120,11 +120,6 @@ func CreateOrderKft(ctx context.Context, secondId uint64) {
 			json.Unmarshal(payOrderResp, &paySuccess)
 			if paySuccess.Code == 0 {
 				cli.RedisClient.Incr(ctx, cast.ToString(ProductId))
-				i, _ := cli.RedisClient.Get(ctx, cast.ToString(ProductId)).Result()
-				if cast.ToInt(i) >= BuyNum {
-					cli.RedisClient.Del(ctx, cast.ToString(ProductId))
-					os.Exit(1)
-				}
 			}
 		}
 	}
