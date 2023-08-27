@@ -8,5 +8,4 @@ const (
 	Channel  = "010100"
 	Platform = "ios"
 	Appname  = "aiera.sneaker.snkrs.shoe"
-	Pwd      = "/W7ChiJt8grBpLQM04/4DyqUjEl6vbZY/Sat7H43WOlnq4YIo6Tq7ZusvWPCSY="
 )
