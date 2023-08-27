@@ -159,7 +159,7 @@ var (
 
 const (
 	TimeSpace = 80
-	BuyNum    = 3
+	BuyNum    = 30
 	BuyToken  = "24b9fe58d01f4374be37623c36f48f2a"
 	//BuyToken         = "e64d46a00099410daa6186c907988f96" //zqq
 	ProductId        = 1020205
