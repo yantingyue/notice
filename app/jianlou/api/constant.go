@@ -152,7 +152,7 @@ const (
 	//ProductId        = 1020320
 	//NftProductSizeId = 2175
 	PageSize = 2
-	PayType  = 1 //1零钱2快付通
+	PayType  = 2 //1零钱2快付通
 	Pwd      = "DVqBnIG8tFOmfbFp+tIXisluxkZDahm5Gk6MVvg4tY9td7tfjTvu5JiCDBmW39mUhgjY0z6zzlfj6Jc0/YDyaGLLB8n/wRXHoPRv6qlOyMleQw1iU5Y10MfF0jYylh2EJtiVd8VQWwOWgAuYmCIYUNqoy4IhjYxMs9Bj82l/rts="
 	//Pwd = "d3UK0cd+ysUwfOBryOMHyPUChiMMr0JtzGqtDSk2bJq3qsbHAaalQlVpBS96Dr1BvG5+wSZ38gR3Q9mZuFfg/1HSg/9ifeia3sp0fHEr+1LMZVLq/sjUW3z3RSEyizwBsFADg5jNfH18iG4nFF46OCfi2hBNZT7XmGkS+TmLF+w="
 )
