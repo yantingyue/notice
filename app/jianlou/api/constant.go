@@ -2,16 +2,16 @@ package api
 
 var (
 	TmpTokens = []string{
-		"88818b2970924542b5fff708ac483bea",
-		"f304f2f75a0e43169209474cc5989f70",
-		"a9921a79d89649fcb06c14ce051a8ea0",
-		"516e43bfbc654380a428e1cf270a9106",
-		"308dd5e23f2942fdbaf307bcbe8efd84",
-		"328a156b373e4357b810a4b8ca2a072f",
-		"7e5b07aad8ca43b59e9cbd338d0d5ff0",
-		"bc14ff8966334b5fa812e8d9c3400349",
-		"13d012047f0448909a0a24e7b983d38d",
-		"5d5bdccd87fc40818ea9485b33827d10",
+		//"88818b2970924542b5fff708ac483bea",
+		//"f304f2f75a0e43169209474cc5989f70",
+		//"a9921a79d89649fcb06c14ce051a8ea0",
+		//"516e43bfbc654380a428e1cf270a9106",
+		//"308dd5e23f2942fdbaf307bcbe8efd84",
+		//"328a156b373e4357b810a4b8ca2a072f",
+		//"7e5b07aad8ca43b59e9cbd338d0d5ff0",
+		//"bc14ff8966334b5fa812e8d9c3400349",
+		//"13d012047f0448909a0a24e7b983d38d",
+		//"5d5bdccd87fc40818ea9485b33827d10",
 
 		"cac29068ad1d45db88eb410c0ecdbafe",
 		"4ece3f0db50148ecbb59923b34982f4f",
@@ -143,7 +143,7 @@ var (
 )
 
 const (
-	TimeSpace = 70                                 //间隔时间
+	TimeSpace = 100                                //间隔时间
 	BuyNum    = 30                                 //购买数量
 	BuyToken  = "24b9fe58d01f4374be37623c36f48f2a" //购买token
 	//BuyToken         = "e64d46a00099410daa6186c907988f96" //购买token
