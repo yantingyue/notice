@@ -41,7 +41,7 @@ var (
 			"https://open.feishu.cn/open-apis/bot/v2/hook/e1b91772-461c-4de4-bdd6-37236ff68fe5",
 		}, //谜语人
 		UserId5: []string{
-			"https://open.feishu.cn/open-apis/bot/v2/hook/bc05ffbb-f5f6-4e4a-9c0d-e4c02d3a3154",
+			"https://open.feishu.cn/open-apis/bot/v2/hook/def27b09-8181-44b3-b438-d29ce2668342",
 			"https://open.feishu.cn/open-apis/bot/v2/hook/c8164378-7cb0-4a14-89f0-0a64e85666b2",
 			"https://open.feishu.cn/open-apis/bot/v2/hook/4259fbcb-9452-40f1-b466-76fe04e0c775",
 		}, //柴郡猫
