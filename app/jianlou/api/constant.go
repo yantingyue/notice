@@ -149,6 +149,7 @@ const (
 	BuyToken         = "24b9fe58d01f4374be37623c36f48f2a" //购买token
 	ProductId        = 1020205
 	NftProductSizeId = 2093
+	PageSize         = 2
 	PayType          = 1 //1零钱2快付通
 	Pwd              = "DVqBnIG8tFOmfbFp+tIXisluxkZDahm5Gk6MVvg4tY9td7tfjTvu5JiCDBmW39mUhgjY0z6zzlfj6Jc0/YDyaGLLB8n/wRXHoPRv6qlOyMleQw1iU5Y10MfF0jYylh2EJtiVd8VQWwOWgAuYmCIYUNqoy4IhjYxMs9Bj82l/rts="
 )
