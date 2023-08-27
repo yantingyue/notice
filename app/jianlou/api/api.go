@@ -84,6 +84,9 @@ func CreateOrderWallet(ctx context.Context, secondId uint64) {
 		json.Unmarshal(payResp, &paySuccess)
 		if paySuccess.Code == 0 {
 			cli.RedisClient.Incr(ctx, cast.ToString(ProductId))
+			go func() {
+				FeiShuUrl()
+			}()
 		}
 	}
 }
@@ -120,6 +123,9 @@ func CreateOrderKft(ctx context.Context, secondId uint64) {
 			json.Unmarshal(payOrderResp, &paySuccess)
 			if paySuccess.Code == 0 {
 				cli.RedisClient.Incr(ctx, cast.ToString(ProductId))
+				go func() {
+					FeiShuUrl()
+				}()
 			}
 		}
 	}
