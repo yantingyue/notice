@@ -14,6 +14,8 @@ import (
 	"time"
 )
 
+var SecondIdMap = make(map[uint64]struct{})
+
 func Begin() {
 	if len(TmpTokens) == 0 {
 		return
@@ -50,6 +52,9 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 	json.Unmarshal(resp, &sellList)
 	if sellList.Code == 0 && len(sellList.Data.Res) > 0 {
 		for _, sellInfo := range sellList.Data.Res {
+			if _, ok := SecondIdMap[sellInfo.SecondId]; ok {
+				continue
+			}
 			switch PayType {
 			case 1:
 				go func() {
@@ -60,9 +65,10 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 					CreateOrderKft(ctx, sellInfo.SecondId)
 				}()
 			}
+			SecondIdMap[sellInfo.SecondId] = struct{}{}
 		}
 	} else {
-		
+
 	}
 
 }
