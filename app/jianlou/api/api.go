@@ -53,9 +53,10 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 	if sellList.Code == 0 && len(sellList.Data.Res) > 0 {
 		for _, sellInfo := range sellList.Data.Res {
 			sellInfo := sellInfo
-			fmt.Println(SecondIdMap)
-			fmt.Println(1111111111)
 			if _, ok := SecondIdMap[sellInfo.SecondId]; ok {
+				if len(SecondIdMap) >= 20 {
+					SecondIdMap = nil
+				}
 				continue
 			}
 			switch PayType {
