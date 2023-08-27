@@ -126,7 +126,7 @@ func CreateOrderKft(ctx context.Context, secondId uint64) {
 				"order_no":     prePayOrderResp.Data.OrderNo,
 				"confirm_flag": "1",
 				"pay_channel":  4,
-				"pay_pwd":      "DVqBnIG8tFOmfbFp+tIXisluxkZDahm5Gk6MVvg4tY9td7tfjTvu5JiCDBmW39mUhgjY0z6zzlfj6Jc0/YDyaGLLB8n/wRXHoPRv6qlOyMleQw1iU5Y10MfF0jYylh2EJtiVd8VQWwOWgAuYmCIYUNqoy4IhjYxMs9Bj82l/rts=",
+				"pay_pwd":      Pwd,
 			}
 			payOrderResp := request(BuyToken, payReq, Urls[3])
 			paySuccess := PayOrderResp{}
