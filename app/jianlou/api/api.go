@@ -52,9 +52,9 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 		for _, sellInfo := range sellList.Data.Res {
 			switch PayType {
 			case 1:
-				go func() {
-					CreateOrderWallet(ctx, sellInfo.SecondId)
-				}()
+				//go func() {
+				CreateOrderWallet(ctx, sellInfo.SecondId)
+				//}()
 			case 2:
 				go func() {
 					CreateOrderKft(ctx, sellInfo.SecondId)
