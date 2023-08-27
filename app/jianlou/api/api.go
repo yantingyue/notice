@@ -90,7 +90,7 @@ var (
 		"8299101598864e30869363c2fb1e9723",
 		"e5f9a377205f44c3b0c5f3003ea36820",
 		"ec12f5b7dbb84408b3db5a9b958db206",
-		"b4e42119d41047b482d3032f771bd679",
+		//"b4e42119d41047b482d3032f771bd679",
 		"1c3ec550483e4ec2b66ea9566ffb7bf2",
 		"7d18d75cc4014f7a93dfc47fc9626013",
 		"62dd0ce5b2f34a5cb9808413655ec9df",
@@ -162,11 +162,11 @@ const (
 	BuyNum    = 3
 	BuyToken  = "24b9fe58d01f4374be37623c36f48f2a"
 	//BuyToken         = "e64d46a00099410daa6186c907988f96" //zqq
-	//ProductId        = 1020188
-	//NftProductSizeId = 2076
-
-	ProductId        = 1020350
-	NftProductSizeId = 2205
+	ProductId        = 1020205
+	NftProductSizeId = 2093
+	//
+	//ProductId        = 1020350
+	//NftProductSizeId = 2205
 )
 
 func Begin() {
