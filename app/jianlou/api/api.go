@@ -53,20 +53,20 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 	if sellList.Code == 0 && len(sellList.Data.Res) > 0 {
 		for _, sellInfo := range sellList.Data.Res {
 			if _, ok := SecondIdMap[sellInfo.SecondId]; ok {
-				fmt.Println(1111111111111)
 				continue
 			}
 			switch PayType {
 			case 1:
 				go func() {
+					SecondIdMap[sellInfo.SecondId] = struct{}{}
 					CreateOrderWallet(ctx, sellInfo.SecondId)
 				}()
 			case 2:
 				go func() {
+					SecondIdMap[sellInfo.SecondId] = struct{}{}
 					CreateOrderKft(ctx, sellInfo.SecondId)
 				}()
 			}
-			SecondIdMap[sellInfo.SecondId] = struct{}{}
 		}
 	} else {
 
