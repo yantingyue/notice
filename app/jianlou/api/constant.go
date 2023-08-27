@@ -147,8 +147,8 @@ const (
 	BuyNum    = 30                                 //购买数量
 	BuyToken  = "24b9fe58d01f4374be37623c36f48f2a" //购买token
 	//BuyToken         = "e64d46a00099410daa6186c907988f96" //购买token
-	ProductId        = 1019985
-	NftProductSizeId = 1909
+	ProductId        = 1019735
+	NftProductSizeId = 1687
 	//ProductId        = 1020320
 	//NftProductSizeId = 2175
 	PageSize = 2
