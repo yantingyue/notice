@@ -55,7 +55,8 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 			sellInfo := sellInfo
 			if _, ok := SecondIdMap[sellInfo.SecondId]; ok {
 				if len(SecondIdMap) >= 20 {
-					SecondIdMap = make(map[uint64]struct{})
+					//SecondIdMap = make(map[uint64]struct{})
+					SecondIdMap = nil
 				}
 				continue
 			}
