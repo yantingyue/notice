@@ -71,7 +71,6 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 				}()
 			}
 			SecondIdMap[sellInfo.SecondId] = struct{}{}
-			fmt.Println(SecondIdMap)
 		}
 	}
 }
