@@ -4,7 +4,7 @@ var (
 	TmpTokens = []string{
 		"88818b2970924542b5fff708ac483bea",
 		"f304f2f75a0e43169209474cc5989f70",
-		"a9921a79d89649fcb06c14ce051a8ea0",
+		//"a9921a79d89649fcb06c14ce051a8ea0",
 		"516e43bfbc654380a428e1cf270a9106",
 		"308dd5e23f2942fdbaf307bcbe8efd84",
 		"328a156b373e4357b810a4b8ca2a072f",
@@ -150,6 +150,7 @@ const (
 	//BuyToken = "51f09f3d83104e7d950decd10dbf224b" //购买token ytf
 	//ProductId        = 1020320
 	//NftProductSizeId = 2175
+
 	ProductId        = 1020372
 	NftProductSizeId = 2225
 	PageSize         = 5
