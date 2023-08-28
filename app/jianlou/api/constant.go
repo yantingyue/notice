@@ -144,7 +144,7 @@ var (
 
 const (
 	TimeSpace = 80                                 //间隔时间
-	BuyNum    = 1                                  //购买数量
+	BuyNum    = 8                                  //购买数量
 	BuyToken  = "24b9fe58d01f4374be37623c36f48f2a" //购买token
 	//BuyToken = "aca96890fb76450d8835625c254e8041" //购买token
 	//BuyToken = "51f09f3d83104e7d950decd10dbf224b" //购买token ytf
