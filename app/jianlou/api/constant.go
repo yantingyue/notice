@@ -148,8 +148,8 @@ const (
 	//BuyToken  = "24b9fe58d01f4374be37623c36f48f2a" //购买token
 	//BuyToken = "aca96890fb76450d8835625c254e8041" //购买token
 	BuyToken         = "51f09f3d83104e7d950decd10dbf224b" //购买token ytf
-	ProductId        = 1020388
-	NftProductSizeId = 2241
+	ProductId        = 1020359
+	NftProductSizeId = 2213
 
 	//ProductId        = 1020372
 	//NftProductSizeId = 2225
