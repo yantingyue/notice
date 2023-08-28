@@ -14,7 +14,10 @@ import (
 	"time"
 )
 
-var SecondIdMap = make(map[uint64]struct{})
+var (
+	SecondIdMap = make(map[uint64]struct{})
+	buyNum      int
+)
 
 func Begin() {
 	if len(TmpTokens) == 0 {
@@ -36,9 +39,7 @@ func Begin() {
 				Grab(ctx, v, body)
 			}()
 			time.Sleep(time.Millisecond * TimeSpace)
-			i, _ := cli.RedisClient.Get(ctx, cast.ToString(ProductId)).Result()
-			if cast.ToInt(i) >= BuyNum {
-				cli.RedisClient.Del(ctx, cast.ToString(ProductId))
+			if buyNum >= BuyNum {
 				os.Exit(1)
 			}
 		}
@@ -94,7 +95,7 @@ func CreateOrderWallet(ctx context.Context, secondId uint64) {
 		paySuccess := PayOrderResp{}
 		json.Unmarshal(payResp, &paySuccess)
 		if paySuccess.Code == 0 {
-			cli.RedisClient.Incr(ctx, cast.ToString(ProductId))
+			buyNum++
 			go func() {
 				FeiShuUrl()
 			}()
