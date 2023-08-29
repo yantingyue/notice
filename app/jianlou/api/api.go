@@ -15,7 +15,7 @@ import (
 )
 
 var (
-	SecondIdMap = make(map[uint64]struct{})
+	SecondIdMap = make(map[uint64]int)
 	buyNum      int
 )
 
@@ -56,9 +56,11 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 			sellInfo := sellInfo
 			if _, ok := SecondIdMap[sellInfo.SecondId]; ok {
 				if len(SecondIdMap) >= 20 {
-					SecondIdMap = make(map[uint64]struct{})
+					SecondIdMap = make(map[uint64]int)
 				}
-				continue
+				if SecondIdMap[sellInfo.SecondId] >= 2 {
+					continue
+				}
 			}
 			switch PayType {
 			case 1:
@@ -70,7 +72,7 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 					CreateOrderKft(ctx, sellInfo.SecondId)
 				}()
 			}
-			//SecondIdMap[sellInfo.SecondId] = struct{}{}
+			SecondIdMap[sellInfo.SecondId] += 1
 		}
 	}
 }
