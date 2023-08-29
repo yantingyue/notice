@@ -49,6 +49,9 @@ var (
 	id uint64
 )
 
+func init() {
+	cli.InitRedisClient()
+}
 func main() {
 	ctx := context.Background()
 	i, _ := cli.RedisClient.Get(ctx, "act").Result()
