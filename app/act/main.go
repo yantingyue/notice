@@ -1,17 +1,18 @@
 package main
 
 import (
+	"context"
 	"crypto/md5"
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
-	"log"
-	"sync"
-	"time"
-
 	"github.com/pkg/errors"
 	"github.com/spf13/cast"
 	"github.com/valyala/fasthttp"
+	"log"
+	"notice/internal/cli"
+	"sync"
+	"time"
 )
 
 type ReplaceResp struct {
@@ -44,13 +45,22 @@ type ResponseData struct {
 	} `json:"data"`
 }
 
+var (
+	id uint64
+)
+
 func main() {
-	for {
-		if b == 1 {
-			Fj()
-		}
-		if b == 2 {
-			Rp()
+	ctx := context.Background()
+	i, _ := cli.RedisClient.Get(ctx, "act").Result()
+	if i != "" {
+		id = cast.ToUint64(i)
+		for {
+			if b == 1 {
+				Fj()
+			}
+			if b == 2 {
+				Rp()
+			}
 		}
 	}
 }
@@ -63,15 +73,15 @@ const (
 )
 
 func Fj() {
-	orderInfo := GetOrderId(actId, tokenYanTingYue)
+	orderInfo := GetOrderId(id, tokenYanTingYue)
 	if orderInfo.Code == 0 && orderInfo.Msg == "success" && len(orderInfo.Data) > 0 {
 		for {
-			if FjDetail(actId, tokenYanTingYue) {
+			if FjDetail(id, tokenYanTingYue) {
 				break
 			}
 		}
 		for _, v := range orderInfo.Data {
-			go Replace(actId, v.OrderID, tokenYanTingYue)
+			go Replace(id, v.OrderID, tokenYanTingYue)
 			time.Sleep(time.Millisecond * 2000)
 		}
 	}
@@ -79,15 +89,15 @@ func Fj() {
 }
 
 func Rp() {
-	orderInfo := GetOrderId(actId, tokenYanTingYue)
+	orderInfo := GetOrderId(id, tokenYanTingYue)
 	if orderInfo.Code == 0 && orderInfo.Msg == "success" && len(orderInfo.Data) > 0 {
 		for {
-			if ReplaceDetail(actId, tokenYanTingYue) {
+			if ReplaceDetail(id, tokenYanTingYue) {
 				break
 			}
 		}
 		for _, v := range orderInfo.Data {
-			go Replace(actId, v.OrderID, tokenYanTingYue)
+			go Replace(id, v.OrderID, tokenYanTingYue)
 			time.Sleep(time.Millisecond * 2000)
 		}
 	}
