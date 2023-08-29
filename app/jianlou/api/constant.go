@@ -142,22 +142,22 @@ var (
 )
 
 const (
-	TimeSpace = 80                                 //间隔时间
-	BuyNum    = 1                                  //购买数量
-	BuyToken  = "24b9fe58d01f4374be37623c36f48f2a" //购买token
-	//BuyToken = "aca96890fb76450d8835625c254e8041" //购买token
+	TimeSpace = 80 //间隔时间
+	BuyNum    = 1  //购买数量
+	//BuyToken  = "24b9fe58d01f4374be37623c36f48f2a" //购买token
+	BuyToken = "aca96890fb76450d8835625c254e8041" //购买token
 	//BuyToken         = "51f09f3d83104e7d950decd10dbf224b" //购买token ytf
 	//ProductId        = 1020372
 	//NftProductSizeId = 2225
 
-	//ProductId        = 1020403
-	//NftProductSizeId = 2256
+	ProductId        = 1020403
+	NftProductSizeId = 2256
 
-	ProductId        = 1020395
-	NftProductSizeId = 2248
-	PageSize         = 5
-	PayType          = 1 //1零钱2快付通
-	Pwd              = "DVqBnIG8tFOmfbFp+tIXisluxkZDahm5Gk6MVvg4tY9td7tfjTvu5JiCDBmW39mUhgjY0z6zzlfj6Jc0/YDyaGLLB8n/wRXHoPRv6qlOyMleQw1iU5Y10MfF0jYylh2EJtiVd8VQWwOWgAuYmCIYUNqoy4IhjYxMs9Bj82l/rts="
-	//Pwd = "kSmIyvNXdGWlnTJBfmhtkTmvJc/sB8Bu78UrgHpj4+I3DsNaUpLRQccpEaBpKpG9+DeJOsgCwrK9iL1JG99GjUxaL+loiCDcm/UM1EZDPmveXq1XQeyLhMjbyPEGGUnJUp0fwZUAddRpQ9Zanbq6gk4/lEftFxFWz4wIHsfgJQI="
+	//ProductId        = 1020395
+	//NftProductSizeId = 2248
+	PageSize = 5
+	PayType  = 2 //1零钱2快付通
+	//Pwd              = "DVqBnIG8tFOmfbFp+tIXisluxkZDahm5Gk6MVvg4tY9td7tfjTvu5JiCDBmW39mUhgjY0z6zzlfj6Jc0/YDyaGLLB8n/wRXHoPRv6qlOyMleQw1iU5Y10MfF0jYylh2EJtiVd8VQWwOWgAuYmCIYUNqoy4IhjYxMs9Bj82l/rts="
+	Pwd = "kSmIyvNXdGWlnTJBfmhtkTmvJc/sB8Bu78UrgHpj4+I3DsNaUpLRQccpEaBpKpG9+DeJOsgCwrK9iL1JG99GjUxaL+loiCDcm/UM1EZDPmveXq1XQeyLhMjbyPEGGUnJUp0fwZUAddRpQ9Zanbq6gk4/lEftFxFWz4wIHsfgJQI="
 	//Pwd = "oYM0g+TEQ7ToqmcDXpBKbEspk3H/buLHmBNu3Y5mqFuVPx57gjznAI6HYzCv+evM1DbKjdWHmHirGX0KhNkuk+Wjp6gw+0Jz2AeRLz8u5ChQHv+SHW9Ff1CaNUOyusBtJcg2JDDA17KCaJ0vCFYjVdQXJCX+BWWUwBP7zjHrUNI="
 )
