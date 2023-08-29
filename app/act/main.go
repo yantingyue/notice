@@ -75,7 +75,7 @@ func Fj() {
 			time.Sleep(time.Millisecond * 2000)
 		}
 	}
-	time.Sleep(time.Millisecond * 2000)
+	time.Sleep(time.Millisecond * 1000)
 }
 
 func Rp() {
