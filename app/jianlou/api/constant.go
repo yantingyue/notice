@@ -153,8 +153,11 @@ const (
 	//ProductId        = 1020403
 	//NftProductSizeId = 2256
 
-	ProductId        = 1020395
-	NftProductSizeId = 2248
+	//ProductId        = 1020395
+	//NftProductSizeId = 2248
+
+	ProductId        = 1020320
+	NftProductSizeId = 2175
 	PageSize         = 5
 	PayType          = 1 //1零钱2快付通
 	Pwd              = "DVqBnIG8tFOmfbFp+tIXisluxkZDahm5Gk6MVvg4tY9td7tfjTvu5JiCDBmW39mUhgjY0z6zzlfj6Jc0/YDyaGLLB8n/wRXHoPRv6qlOyMleQw1iU5Y10MfF0jYylh2EJtiVd8VQWwOWgAuYmCIYUNqoy4IhjYxMs9Bj82l/rts="
