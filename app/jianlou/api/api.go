@@ -56,19 +56,16 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 		for _, sellInfo := range sellList.Data.Res {
 			sellInfo := sellInfo
 			if _, ok := SecondIdMap[sellInfo.SecondId]; ok {
-				if _, ok := SecondIdMap2[sellInfo.SecondId]; ok {
-					continue
-				} else {
+				if _, ok := SecondIdMap2[sellInfo.SecondId]; !ok {
 					SecondIdMap2[sellInfo.SecondId] = struct{}{}
 					goto Begin
 				}
-				if len(SecondIdMap) >= 20 {
-					SecondIdMap = make(map[uint64]struct{})
-				}
-				if len(SecondIdMap2) >= 20 {
-					SecondIdMap2 = make(map[uint64]struct{})
-				}
-				continue
+			}
+			if len(SecondIdMap) >= 20 {
+				SecondIdMap = make(map[uint64]struct{})
+			}
+			if len(SecondIdMap2) >= 20 {
+				SecondIdMap2 = make(map[uint64]struct{})
 			}
 		Begin:
 			switch PayType {
