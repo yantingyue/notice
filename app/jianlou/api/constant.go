@@ -203,8 +203,8 @@ const (
 	//ProductId        = 1020403
 	//NftProductSizeId = 2256
 
-	ProductId        = 1020392
-	NftProductSizeId = 2245
+	ProductId        = 1020403
+	NftProductSizeId = 2256
 
 	//ProductId        = 1020320
 	//NftProductSizeId = 2175
