@@ -143,7 +143,7 @@ var (
 
 const (
 	TimeSpace = 80                                 //间隔时间
-	BuyNum    = 5                                  //购买数量
+	BuyNum    = 2                                  //购买数量
 	BuyToken  = "24b9fe58d01f4374be37623c36f48f2a" //购买token
 	//BuyToken = "aca96890fb76450d8835625c254e8041" //购买token
 	//BuyToken         = "51f09f3d83104e7d950decd10dbf224b" //购买token ytf
@@ -153,8 +153,8 @@ const (
 	//ProductId        = 1020403
 	//NftProductSizeId = 2256
 
-	ProductId        = 1020355
-	NftProductSizeId = 2210
+	ProductId        = 1019985
+	NftProductSizeId = 1909
 
 	//ProductId        = 1020320
 	//NftProductSizeId = 2175
