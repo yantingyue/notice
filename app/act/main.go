@@ -71,7 +71,7 @@ func main() {
 const (
 	b                 = 1                                  //1是分解 2是置换
 	actId             = 532                                //活动id
-	tokenYanTingYue   = "24b9fe58d01f4374be37623c36f48f2a" //颜庭跃
+	tokenYanTingYue   = "3662106dd9b749d3995348c5f2884a5b" //颜庭跃
 	tokenYanTingYueDa = "24715fa709414f6eb364ffb6f8c13485" //颜庭跃
 )
 
