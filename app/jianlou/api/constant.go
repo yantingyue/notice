@@ -142,7 +142,7 @@ var (
 )
 
 const (
-	TimeSpace = 80                                 //间隔时间
+	TimeSpace = 120                                //间隔时间
 	BuyNum    = 2                                  //购买数量
 	BuyToken  = "24b9fe58d01f4374be37623c36f48f2a" //购买token
 	//BuyToken = "aca96890fb76450d8835625c254e8041" //购买token
