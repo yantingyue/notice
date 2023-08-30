@@ -55,6 +55,7 @@ func init() {
 func main() {
 	ctx := context.Background()
 	i, _ := cli.RedisClient.Get(ctx, "act").Result()
+	i = "532"
 	if i != "" {
 		id = cast.ToUint64(i)
 		for {
@@ -69,8 +70,8 @@ func main() {
 }
 
 const (
-	b                 = 1                                  //1是分解 2是置换
-	actId             = 532                                //活动id
+	b                 = 2                                  //1是分解 2是置换
+	actId             = 535                                //活动id
 	tokenYanTingYue   = "3662106dd9b749d3995348c5f2884a5b" //颜庭跃
 	tokenYanTingYueDa = "24715fa709414f6eb364ffb6f8c13485" //颜庭跃
 )
