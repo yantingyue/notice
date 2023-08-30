@@ -55,7 +55,6 @@ func init() {
 func main() {
 	ctx := context.Background()
 	i, _ := cli.RedisClient.Get(ctx, "act").Result()
-	i = "532"
 	if i != "" {
 		id = cast.ToUint64(i)
 		for {
