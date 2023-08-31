@@ -2,11 +2,10 @@ package main
 
 import (
 	"notice/app/jianlou/api"
-	"notice/internal/cli"
 )
 
 func init() {
-	cli.InitRedisClient()
+	//cli.InitRedisClient()
 }
 func main() {
 	api.Begin()
