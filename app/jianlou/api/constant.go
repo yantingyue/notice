@@ -180,7 +180,6 @@ var (
 		"b12a29d7ef674e1b98bbf33043af0d38",
 		"84efec1d4aa84729991ba0300f0e9ac9",
 
-
 		//"0cffa5bbb48b40bba599c40e7e407e0f",
 		//"3f6afe3f3aa243bea7cf44bb21065efd",
 		//"f8b5fd685e97489ab88541cf431d79b0",
@@ -292,24 +291,24 @@ var (
 )
 
 const (
-	TimeSpace = 50 //间隔时间
-	BuyNum    = 20 //购买数量
-	//BuyToken  = "8a84e8361c2a4ce5a0ca4965c8349540" //购买token
+	TimeSpace = 90                                 //间隔时间
+	BuyNum    = 1                                  //购买数量
+	BuyToken  = "8a84e8361c2a4ce5a0ca4965c8349540" //购买token
 	//BuyToken = "7b1a916684f749d19328666330f35f9d" //购买token
 	//BuyToken         = "51f09f3d83104e7d950decd10dbf224b" //购买token ytf
-	BuyToken = "0e67e76e8409434a9e3371f84b8cfee3" //购买token pz
-	//ProductId        = 1020337
-	//NftProductSizeId = 2192
+	//BuyToken = "0e67e76e8409434a9e3371f84b8cfee3" //购买token pz
+	ProductId        = 1020337
+	NftProductSizeId = 2192
 
 	//ProductId        = 1019851
 	//NftProductSizeId = 1787
 
-	ProductId        = 1020321
-	NftProductSizeId = 2176
-	PageSize         = 5
-	PayType          = 1 //1零钱2快付通
-	//Pwd      = "DVqBnIG8tFOmfbFp+tIXisluxkZDahm5Gk6MVvg4tY9td7tfjTvu5JiCDBmW39mUhgjY0z6zzlfj6Jc0/YDyaGLLB8n/wRXHoPRv6qlOyMleQw1iU5Y10MfF0jYylh2EJtiVd8VQWwOWgAuYmCIYUNqoy4IhjYxMs9Bj82l/rts="
+	//ProductId        = 1020321
+	//NftProductSizeId = 2176
+	PageSize = 5
+	PayType  = 1 //1零钱2快付通
+	Pwd      = "DVqBnIG8tFOmfbFp+tIXisluxkZDahm5Gk6MVvg4tY9td7tfjTvu5JiCDBmW39mUhgjY0z6zzlfj6Jc0/YDyaGLLB8n/wRXHoPRv6qlOyMleQw1iU5Y10MfF0jYylh2EJtiVd8VQWwOWgAuYmCIYUNqoy4IhjYxMs9Bj82l/rts="
 	//Pwd = "kSmIyvNXdGWlnTJBfmhtkTmvJc/sB8Bu78UrgHpj4+I3DsNaUpLRQccpEaBpKpG9+DeJOsgCwrK9iL1JG99GjUxaL+loiCDcm/UM1EZDPmveXq1XQeyLhMjbyPEGGUnJUp0fwZUAddRpQ9Zanbq6gk4/lEftFxFWz4wIHsfgJQI="
 	//Pwd = "oYM0g+TEQ7ToqmcDXpBKbEspk3H/buLHmBNu3Y5mqFuVPx57gjznAI6HYzCv+evM1DbKjdWHmHirGX0KhNkuk+Wjp6gw+0Jz2AeRLz8u5ChQHv+SHW9Ff1CaNUOyusBtJcg2JDDA17KCaJ0vCFYjVdQXJCX+BWWUwBP7zjHrUNI="
-	Pwd = "JLI38dg4HN9dAnw89eChytrWE+PmWQfxAf8u2tgIlAmZ2u/WCxYiB0p1MoeMH/qosVwXzY53Ck+zfK58Ox8Sl+MY+0kGstkApiLema+rAbPA0inMU6jlFGTtpUOKHaw0Wts6AjMTSG6aXyReh/3LuZFQfcGLyczTlF1egqZDsgk="
+	//Pwd = "JLI38dg4HN9dAnw89eChytrWE+PmWQfxAf8u2tgIlAmZ2u/WCxYiB0p1MoeMH/qosVwXzY53Ck+zfK58Ox8Sl+MY+0kGstkApiLema+rAbPA0inMU6jlFGTtpUOKHaw0Wts6AjMTSG6aXyReh/3LuZFQfcGLyczTlF1egqZDsgk="
 )
