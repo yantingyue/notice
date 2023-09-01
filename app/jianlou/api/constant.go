@@ -193,7 +193,7 @@ var (
 const (
 	TimeSpace = 90                                 //间隔时间
 	BuyNum    = 1                                  //购买数量
-	BuyToken  = "24b9fe58d01f4374be37623c36f48f2a" //购买token
+	BuyToken  = "8a84e8361c2a4ce5a0ca4965c8349540" //购买token
 	//BuyToken = "7b1a916684f749d19328666330f35f9d" //购买token
 	//BuyToken         = "51f09f3d83104e7d950decd10dbf224b" //购买token ytf
 	ProductId        = 1020337
