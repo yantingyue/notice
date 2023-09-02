@@ -291,13 +291,13 @@ var (
 
 const (
 	TimeSpace = 70                                 //间隔时间
-	BuyNum    = 2                                  //购买数量
+	BuyNum    = 1                                  //购买数量
 	BuyToken  = "8a84e8361c2a4ce5a0ca4965c8349540" //购买token
 	//BuyToken = "7b1a916684f749d19328666330f35f9d" //购买token
 	//BuyToken         = "51f09f3d83104e7d950decd10dbf224b" //购买token ytf
 	//BuyToken = "0e67e76e8409434a9e3371f84b8cfee3" //购买token pz
-	ProductId        = 1020293
-	NftProductSizeId = 2152
+	ProductId        = 1020157
+	NftProductSizeId = 2045
 
 	//ProductId        = 1019851
 	//NftProductSizeId = 1787
