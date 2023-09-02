@@ -291,7 +291,7 @@ var (
 
 const (
 	TimeSpace = 100                                //间隔时间
-	BuyNum    = 8                                  //购买数量
+	BuyNum    = 2                                  //购买数量
 	BuyToken  = "8a84e8361c2a4ce5a0ca4965c8349540" //购买token
 	//BuyToken = "7b1a916684f749d19328666330f35f9d" //购买token
 	//BuyToken         = "51f09f3d83104e7d950decd10dbf224b" //购买token ytf
@@ -305,7 +305,7 @@ const (
 	//ProductId        = 1020321
 	//NftProductSizeId = 2176
 	PageSize = 5
-	PayType  = 1 //1零钱2快付通
+	PayType  = 2 //1零钱2快付通
 	Pwd      = "DVqBnIG8tFOmfbFp+tIXisluxkZDahm5Gk6MVvg4tY9td7tfjTvu5JiCDBmW39mUhgjY0z6zzlfj6Jc0/YDyaGLLB8n/wRXHoPRv6qlOyMleQw1iU5Y10MfF0jYylh2EJtiVd8VQWwOWgAuYmCIYUNqoy4IhjYxMs9Bj82l/rts="
 	//Pwd = "kSmIyvNXdGWlnTJBfmhtkTmvJc/sB8Bu78UrgHpj4+I3DsNaUpLRQccpEaBpKpG9+DeJOsgCwrK9iL1JG99GjUxaL+loiCDcm/UM1EZDPmveXq1XQeyLhMjbyPEGGUnJUp0fwZUAddRpQ9Zanbq6gk4/lEftFxFWz4wIHsfgJQI="
 	//Pwd = "oYM0g+TEQ7ToqmcDXpBKbEspk3H/buLHmBNu3Y5mqFuVPx57gjznAI6HYzCv+evM1DbKjdWHmHirGX0KhNkuk+Wjp6gw+0Jz2AeRLz8u5ChQHv+SHW9Ff1CaNUOyusBtJcg2JDDA17KCaJ0vCFYjVdQXJCX+BWWUwBP7zjHrUNI="
