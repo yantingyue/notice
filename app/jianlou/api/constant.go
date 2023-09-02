@@ -297,8 +297,8 @@ const (
 	//BuyToken = "7b1a916684f749d19328666330f35f9d" //购买token
 	//BuyToken         = "51f09f3d83104e7d950decd10dbf224b" //购买token ytf
 	//BuyToken = "0e67e76e8409434a9e3371f84b8cfee3" //购买token pz
-	ProductId        = 1020337
-	NftProductSizeId = 2192
+	ProductId        = 1020399
+	NftProductSizeId = 2252
 
 	//ProductId        = 1019851
 	//NftProductSizeId = 1787
