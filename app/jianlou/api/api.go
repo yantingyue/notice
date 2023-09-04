@@ -64,13 +64,13 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 			}
 			switch PayType {
 			case 1:
-				go func() {
-					CreateOrderWallet(ctx, sellInfo.SecondId)
-				}()
+				//go func() {
+				CreateOrderWallet(ctx, sellInfo.SecondId)
+				//}()
 			case 2:
-				go func() {
-					CreateOrderKft(ctx, sellInfo.SecondId)
-				}()
+				//go func() {
+				CreateOrderKft(ctx, sellInfo.SecondId)
+				//}()
 			}
 			SecondIdMap[sellInfo.SecondId] += 1
 		}

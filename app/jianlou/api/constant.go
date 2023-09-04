@@ -296,8 +296,8 @@ const (
 	//BuyToken = "7b1a916684f749d19328666330f35f9d" //购买token
 	//BuyToken         = "51f09f3d83104e7d950decd10dbf224b" //购买token ytf
 	//BuyToken = "0e67e76e8409434a9e3371f84b8cfee3" //购买token pz
-	ProductId        = 1020469
-	NftProductSizeId = 2313
+	ProductId        = 1020202
+	NftProductSizeId = 2090
 
 	PageSize = 5
 	PayType  = 2 //1零钱2快付通
