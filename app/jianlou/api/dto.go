@@ -33,3 +33,13 @@ type PayOrderResp struct {
 	Code int32  `json:"code"`
 	Msg  string `json:"msg"`
 }
+
+type SerachResp struct {
+	Code int32  `json:"code"`
+	Msg  string `json:"msg"`
+	Data []struct {
+		ProductId   uint64 `json:"product_id"`
+		Id          uint64 `json:"id"`
+		ProductName string `json:"product_name"`
+	} `json:"data"`
+}

@@ -23,12 +23,39 @@ func Begin() {
 	if len(TmpTokens) == 0 {
 		return
 	}
+	searchReq := map[string]interface{}{
+		"page":      1,
+		"keyword":   ProductName,
+		"page_size": 2,
+	}
+	searchResp := request(BuyToken, searchReq, Urls[5])
+	sResp := SerachResp{}
+	json.Unmarshal(searchResp, &sResp)
+	if len(sResp.Data) == 0 {
+		log.Println("------------------商品不存在")
+		return
+	}
+	var (
+		productId        uint64
+		nftProductSizeId uint64
+	)
+	for _, v := range sResp.Data {
+		if v.ProductName == ProductName {
+			productId = v.ProductId
+			nftProductSizeId = v.Id
+			break
+		}
+	}
+	if productId == 0 || nftProductSizeId == 0 {
+		log.Println("------------------商品不存在")
+		return
+	}
 	ctx := context.Background()
 	for {
 		for _, v := range TmpTokens {
 			body := map[string]interface{}{
-				"product_id":          ProductId,
-				"nft_product_size_id": NftProductSizeId,
+				"product_id":          productId,
+				"nft_product_size_id": nftProductSizeId,
 				"pageNumber":          1,
 				"pageSize":            PageSize,
 				"unlock":              0,
