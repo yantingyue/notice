@@ -6,7 +6,6 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
-	"github.com/spf13/cast"
 	"log"
 	"notice/internal/cli"
 	"notice/internal/util"
@@ -162,7 +161,6 @@ func CreateOrderKft(ctx context.Context, secondId uint64) {
 			paySuccess := PayOrderResp{}
 			json.Unmarshal(payOrderResp, &paySuccess)
 			if paySuccess.Code == 0 {
-				cli.RedisClient.Incr(ctx, cast.ToString(ProductId))
 				go func() {
 					FeiShuUrl()
 				}()
