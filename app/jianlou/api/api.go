@@ -95,9 +95,9 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 					CreateOrderWallet(ctx, sellInfo.SecondId)
 				}()
 			case 2:
-				go func() {
-					CreateOrderKft(ctx, sellInfo.SecondId)
-				}()
+				//go func() {
+				CreateOrderKft(ctx, sellInfo.SecondId)
+				//}()
 			}
 			SecondIdMap[sellInfo.SecondId] += 1
 		}
