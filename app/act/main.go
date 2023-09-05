@@ -48,8 +48,8 @@ const (
 	b                 = 1                                  //1是分解 2是置换
 	actId             = 549                                //活动id
 	thread            = 2                                  //并发数
-	tokenCommon       = "8a84e8361c2a4ce5a0ca4965c8349540" //勿删
-	tokenYanTingYue   = "8a84e8361c2a4ce5a0ca4965c8349540" //颜庭跃
+	tokenCommon       = "0e67e76e8409434a9e3371f84b8cfee3" //勿删
+	tokenYanTingYue   = "0e67e76e8409434a9e3371f84b8cfee3" //颜庭跃
 	tokenYanTingYueDa = "24715fa709414f6eb364ffb6f8c13485" //颜庭跃
 
 )
