@@ -2,16 +2,16 @@ package api
 
 var (
 	TmpTokens = []string{
-		"88818b2970924542b5fff708ac483bea",
-		"f304f2f75a0e43169209474cc5989f70",
-		//"a9921a79d89649fcb06c14ce051a8ea0",
-		"516e43bfbc654380a428e1cf270a9106",
-		"308dd5e23f2942fdbaf307bcbe8efd84",
-		"328a156b373e4357b810a4b8ca2a072f",
-		"7e5b07aad8ca43b59e9cbd338d0d5ff0",
-		"bc14ff8966334b5fa812e8d9c3400349",
-		"13d012047f0448909a0a24e7b983d38d",
-		"5d5bdccd87fc40818ea9485b33827d10",
+		//"88818b2970924542b5fff708ac483bea",
+		//"f304f2f75a0e43169209474cc5989f70",
+		////"a9921a79d89649fcb06c14ce051a8ea0",
+		//"516e43bfbc654380a428e1cf270a9106",
+		//"308dd5e23f2942fdbaf307bcbe8efd84",
+		//"328a156b373e4357b810a4b8ca2a072f",
+		//"7e5b07aad8ca43b59e9cbd338d0d5ff0",
+		//"bc14ff8966334b5fa812e8d9c3400349",
+		//"13d012047f0448909a0a24e7b983d38d",
+		//"5d5bdccd87fc40818ea9485b33827d10",
 
 		"cac29068ad1d45db88eb410c0ecdbafe",
 		"4ece3f0db50148ecbb59923b34982f4f",
@@ -294,7 +294,7 @@ const (
 	TimeSpace   = 80                                 //间隔时间
 	BuyNum      = 1                                  //购买数量
 	BuyToken    = "8a84e8361c2a4ce5a0ca4965c8349540" //购买token
-	ProductName = "行与做"                              //商品名称
+	ProductName = "题菊花"                              //商品名称
 	//BuyToken = "7b1a916684f749d19328666330f35f9d" //购买token
 	//BuyToken         = "51f09f3d83104e7d950decd10dbf224b" //购买token ytf
 	//BuyToken = "0e67e76e8409434a9e3371f84b8cfee3" //购买token pz
