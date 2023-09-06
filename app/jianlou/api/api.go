@@ -85,20 +85,20 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 					SecondIdMap = make(map[uint64]int)
 				}
 				if SecondIdMap[sellInfo.SecondId] >= 2 {
-					continue
+					break
 				}
 			}
+			SecondIdMap[sellInfo.SecondId] += 1
 			switch PayType {
 			case 1:
-				//go func() {
-				CreateOrderWallet(ctx, sellInfo.SecondId)
-				//}()
+				go func() {
+					CreateOrderWallet(ctx, sellInfo.SecondId)
+				}()
 			case 2:
 				//go func() {
 				CreateOrderKft(ctx, sellInfo.SecondId)
 				//}()
 			}
-			SecondIdMap[sellInfo.SecondId] += 1
 		}
 	}
 }
