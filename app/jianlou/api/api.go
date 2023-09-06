@@ -94,9 +94,9 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 					CreateOrderWallet(ctx, sellInfo.SecondId)
 				}()
 			case 2:
-				//go func() {
-				CreateOrderKft(ctx, sellInfo.SecondId)
-				//}()
+				go func() {
+					CreateOrderKft(ctx, sellInfo.SecondId)
+				}()
 			}
 			SecondIdMap[sellInfo.SecondId] += 1
 		}
@@ -161,6 +161,7 @@ func CreateOrderKft(ctx context.Context, secondId uint64) {
 			paySuccess := PayOrderResp{}
 			json.Unmarshal(payOrderResp, &paySuccess)
 			if paySuccess.Code == 0 {
+				buyNum++
 				go func() {
 					FeiShuUrl()
 				}()
