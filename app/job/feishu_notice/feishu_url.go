@@ -75,6 +75,9 @@ var (
 		UserId14: []string{
 			"https://open.feishu.cn/open-apis/bot/v2/hook/485792e4-444a-4983-b01b-b35fec842e09",
 		}, //陈凯歌
+		UserId15: []string{
+			"https://open.feishu.cn/open-apis/bot/v2/hook/c9936575-2ba9-44cf-b34c-4dc903d02204",
+		},
 	}
 )
 
