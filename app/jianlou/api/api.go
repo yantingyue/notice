@@ -66,6 +66,7 @@ func Begin() {
 			}()
 			time.Sleep(time.Millisecond * TimeSpace)
 			if buyNum >= BuyNum {
+				time.Sleep(time.Millisecond * 2000)
 				os.Exit(1)
 			}
 		}
