@@ -50,17 +50,17 @@ func Begin() {
 		return
 	}
 	ctx := context.Background()
+	body := map[string]interface{}{
+		"product_id":          productId,
+		"nft_product_size_id": nftProductSizeId,
+		"pageNumber":          1,
+		"pageSize":            PageSize,
+		"unlock":              0,
+		"prop_pack":           0,
+		"order_by":            "price",
+	}
 	for {
 		for _, v := range TmpTokens {
-			body := map[string]interface{}{
-				"product_id":          productId,
-				"nft_product_size_id": nftProductSizeId,
-				"pageNumber":          1,
-				"pageSize":            PageSize,
-				"unlock":              0,
-				"prop_pack":           0,
-				"order_by":            "price",
-			}
 			go func() {
 				Grab(ctx, v, body)
 			}()
