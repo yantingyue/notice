@@ -191,7 +191,7 @@ func request(token string, body map[string]interface{}, url string) (resp []byte
 	header := util.GenerateHeader(token)
 	jsonBytes, _ := json.Marshal(body)
 	resp, _ = cli.Post(fmt.Sprintf("%s%s", Host, url), header, jsonBytes)
-	log.Println("------------------", string(resp), token)
+	//log.Println("------------------", string(resp), token)
 	if len(resp) == 0 {
 		return resp
 	}
@@ -201,7 +201,9 @@ func requestOrder(token string, body map[string]interface{}, url string) (resp [
 	header := util.GenerateCreateOrderHeader(token)
 	jsonBytes, _ := json.Marshal(body)
 	resp, _ = cli.Post(fmt.Sprintf("%s%s", Host, url), header, jsonBytes)
-	log.Println(url, string(resp))
+	go func() {
+		log.Println(url, string(resp))
+	}()
 	if len(resp) == 0 {
 		return resp
 	}
