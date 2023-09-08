@@ -16,6 +16,7 @@ import (
 var (
 	SecondIdMap = make(map[uint64]int)
 	buyNum      int
+	ch          = make(chan uint64)
 )
 
 func Begin() {
@@ -61,10 +62,18 @@ func Begin() {
 	}
 	for {
 		for _, v := range TmpTokens {
-			go func() {
-				Grab(ctx, v, body)
-			}()
-			time.Sleep(time.Millisecond * TimeSpace)
+			for {
+				go func() {
+					Grab(ctx, v, body)
+				}()
+				select {
+				case <-ch:
+					goto next
+				default:
+				}
+				time.Sleep(time.Millisecond * TimeSpace)
+			}
+		next:
 			if buyNum >= BuyNum {
 				time.Sleep(time.Millisecond * 2000)
 				os.Exit(1)
@@ -78,6 +87,9 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 	resp := request(token, body, Urls[0])
 	sellList := SellListResp{}
 	json.Unmarshal(resp, &sellList)
+	if sellList.Code == 410 {
+		ch <- 1
+	}
 	if sellList.Code == 0 && len(sellList.Data.Res) > 0 {
 		for _, sellInfo := range sellList.Data.Res {
 			sellInfo := sellInfo
