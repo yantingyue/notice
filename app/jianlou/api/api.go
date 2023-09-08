@@ -62,17 +62,21 @@ func Begin() {
 		"order_by":            "price",
 	}
 	for {
+		tempTokenMap := make(map[string]struct{})
 		for _, v := range TmpTokens {
+			tempToken = v
 			for {
 				go func() {
 					Grab(ctx, v, body)
 				}()
-				time.Sleep(time.Millisecond * TimeSpace)
 				select {
 				case <-ch:
-					goto next
+					if _, ok := tempTokenMap[v]; !ok {
+						goto next
+					}
 				default:
 				}
+				time.Sleep(time.Millisecond * TimeSpace)
 			}
 		next:
 			if buyNum >= BuyNum {
@@ -88,11 +92,8 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 	resp := request(token, body, Urls[0])
 	sellList := SellListResp{}
 	json.Unmarshal(resp, &sellList)
-	if sellList.Code == 410 {
-		if tempToken != token {
-			tempToken = token
-			ch <- 1
-		}
+	if sellList.Code == 410 && tempToken == token {
+		ch <- 1
 	}
 	if sellList.Code == 0 && len(sellList.Data.Res) > 0 {
 		for _, sellInfo := range sellList.Data.Res {
