@@ -401,7 +401,7 @@ var (
 const (
 	TimeSpace   = 90                                 //间隔时间
 	BuyNum      = 2                                  //购买数量
-	ProductName = "题菊花"                              //商品名称
+	ProductName = "酒肆当垆维生计"                          //商品名称
 	BuyToken    = "8a84e8361c2a4ce5a0ca4965c8349540" //购买token
 	//BuyToken = "7b1a916684f749d19328666330f35f9d" //购买token
 	//BuyToken = "0db20208ef454d0aae633319b4863dae" //购买token ytf
