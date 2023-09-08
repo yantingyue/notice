@@ -17,6 +17,7 @@ var (
 	SecondIdMap = make(map[uint64]int)
 	buyNum      int
 	ch          = make(chan uint64)
+	tempToken   string
 )
 
 func Begin() {
@@ -88,7 +89,10 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 	sellList := SellListResp{}
 	json.Unmarshal(resp, &sellList)
 	if sellList.Code == 410 {
-		ch <- 1
+		if tempToken != token {
+			tempToken = token
+			ch <- 1
+		}
 	}
 	if sellList.Code == 0 && len(sellList.Data.Res) > 0 {
 		for _, sellInfo := range sellList.Data.Res {
