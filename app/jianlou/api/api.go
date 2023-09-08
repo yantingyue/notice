@@ -66,12 +66,12 @@ func Begin() {
 				go func() {
 					Grab(ctx, v, body)
 				}()
+				time.Sleep(time.Millisecond * TimeSpace)
 				select {
 				case <-ch:
 					goto next
 				default:
 				}
-				time.Sleep(time.Millisecond * TimeSpace)
 			}
 		next:
 			if buyNum >= BuyNum {
