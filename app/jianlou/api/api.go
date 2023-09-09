@@ -85,7 +85,7 @@ func Begin() {
 					}
 				default:
 				}
-				time.Sleep(time.Millisecond * TimeSpace)
+				//time.Sleep(time.Millisecond * TimeSpace)
 			}
 		next:
 			if buyNum >= BuyNum {
