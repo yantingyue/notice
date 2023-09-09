@@ -122,8 +122,13 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 					CreateOrderWallet(ctx, sellInfo.SecondId)
 				}()
 			case 2:
+				for i := 0; i < 3; i++ {
+					go func() {
+						CreateOrderKft(ctx, sellInfo.SecondId)
+					}()
+				}
 				//go func() {
-				CreateOrderKft(ctx, sellInfo.SecondId)
+				//CreateOrderKft(ctx, sellInfo.SecondId)
 				//}()
 			}
 		}
