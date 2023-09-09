@@ -85,7 +85,7 @@ func Begin() {
 					}
 				default:
 				}
-				//time.Sleep(time.Millisecond * TimeSpace)
+				time.Sleep(time.Millisecond * TimeSpace)
 			}
 		next:
 			if buyNum >= BuyNum {
@@ -122,7 +122,7 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 					CreateOrderWallet(ctx, sellInfo.SecondId)
 				}()
 			case 2:
-				for i := 0; i < 3; i++ {
+				for i := 0; i < 2; i++ {
 					go func() {
 						CreateOrderKft(ctx, sellInfo.SecondId)
 					}()
