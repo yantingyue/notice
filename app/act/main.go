@@ -46,10 +46,10 @@ type ResponseData struct {
 
 const (
 	b               = 1                                  //1是分解 2是置换
-	actId           = 571                                //活动id
+	actId           = 582                                //活动id
 	thread          = 2                                  //并发数
-	tokenCommon     = "8a84e8361c2a4ce5a0ca4965c8349540" //勿删
-	tokenYanTingYue = "8a84e8361c2a4ce5a0ca4965c8349540" //颜庭跃
+	tokenCommon     = "f594825823eb4d01810877bac4f40d74" //勿删
+	tokenYanTingYue = "f594825823eb4d01810877bac4f40d74" //颜庭跃
 	//tokenCommon       = "06f4158745ba4030a5a154191e8ae1aa" //勿删
 	//tokenYanTingYue   = "06f4158745ba4030a5a154191e8ae1aa" //颜庭跃
 	tokenYanTingYueDa = "24715fa709414f6eb364ffb6f8c13485" //颜庭跃
