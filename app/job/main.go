@@ -25,11 +25,11 @@ func cronjob() {
 	//	panic(err)
 	//}
 
-	//if err := c.AddFunc("*/5 * * * * *", func() {
-	//	feishu_notice.MotorNotice("145", feishu_notice.UserId3)
-	//}); err != nil {
-	//	panic(err)
-	//}
+	if err := c.AddFunc("*/5 * * * * *", func() {
+		feishu_notice.MotorNotice("145", feishu_notice.UserId3)
+	}); err != nil {
+		panic(err)
+	}
 
 	if err := c.AddFunc("*/5 * * * * *", func() {
 		feishu_notice.MotorNotice("谜语人", feishu_notice.UserId4)
