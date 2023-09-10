@@ -18,14 +18,10 @@ func MotorNotice(name string, userId uint64) {
 	token, _ := cli.RedisClient.Get(ctx, cast.ToString(userId)).Result()
 	fmt.Println(token)
 	if token == "" {
-		tokens := requestToken(userId)
-		if tokens == "" {
-			text := fmt.Sprintf("获取token失败了")
-			FeiShuUrl(text, userId)
-			return
-		}
-		cli.RedisClient.Set(ctx, cast.ToString(userId), tokens, 0)
-		token = tokens
+		//tokens := requestToken(userId)
+		text := fmt.Sprintf("获取token失败了")
+		FeiShuUrl(text, userId)
+		return
 	}
 	handle(ctx, token, name, userId)
 }
