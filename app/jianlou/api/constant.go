@@ -399,7 +399,7 @@ var (
 )
 
 const (
-	TimeSpace   = 0                                  //间隔时间
+	TimeSpace   = 10                                 //间隔时间
 	BuyNum      = 8                                  //购买数量
 	ProductName = "沙海魔巢"                             //商品名称
 	BuyToken    = "d038919ad0f947298bd20b382bd9bfab" //购买token
