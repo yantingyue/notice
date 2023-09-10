@@ -346,12 +346,12 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 			SecondIdMap[sellInfo.SecondId] += 1
 			switch PayType {
 			case 1:
+				for i := 0; i < 1; i++ {
+					go func() {
+						CreateOrderWallet(ctx, sellInfo.SecondId)
+					}()
+				}
 				CreateOrderWallet(ctx, sellInfo.SecondId)
-				//for i := 0; i < 2; i++ {
-				//	go func() {
-				//		CreateOrderWallet(ctx, sellInfo.SecondId)
-				//	}()
-				//}
 			case 2:
 				for i := 0; i < 2; i++ {
 					go func() {
