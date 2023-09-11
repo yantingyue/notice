@@ -71,11 +71,11 @@ func cronjob() {
 	//}); err != nil {
 	//	panic(err)
 	//}
-	//if err := c.AddFunc("*/7 * * * * *", func() {
-	//	feishu_notice.MotorNotice("法典人", feishu_notice.UserId11)
-	//}); err != nil {
-	//	panic(err)
-	//}
+	if err := c.AddFunc("*/7 * * * * *", func() {
+		feishu_notice.MotorNotice("法典人", feishu_notice.UserId11)
+	}); err != nil {
+		panic(err)
+	}
 	if err := c.AddFunc("*/5 * * * * *", func() {
 		feishu_notice.MotorNotice("145韩新枝", feishu_notice.UserId13)
 	}); err != nil {
