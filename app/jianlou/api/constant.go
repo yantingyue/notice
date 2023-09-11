@@ -396,12 +396,13 @@ var (
 		"/aiera/ai_match_trading/nft_second/sell_order/wallet_order", //零钱支付
 		"/aiera/v2/hotdog/search/product/search",                     //搜索
 	}
+	//BuyToken = []string{}
 )
 
 const (
 	TimeSpace   = 20                                 //间隔时间
-	BuyNum      = 4                                  //购买数量
-	ProductName = "沙海魔巢"                             //商品名称
+	BuyNum      = 2                                  //购买数量
+	ProductName = "初春麦田"                             //商品名称
 	BuyToken    = "d038919ad0f947298bd20b382bd9bfab" //购买token
 	//BuyToken = "7b1a916684f749d19328666330f35f9d" //购买token
 	//BuyToken = "0db20208ef454d0aae633319b4863dae" //购买token ytf
