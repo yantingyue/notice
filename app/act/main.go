@@ -34,19 +34,20 @@ type ResponseData struct {
 	Code int    `json:"code"`
 	Msg  string `json:"msg"`
 	Data []struct {
-		OrderID    uint64 `json:"order_id"`
-		Title      string `json:"title"`
-		Picture    string `json:"picture"`
-		UpdateTime string `json:"update_time"`
-		SubTitle   string `json:"sub_title"`
-		Type       string `json:"type"`
-		Weight     int    `json:"weight"`
+		OrderID      uint64 `json:"order_id"`
+		Title        string `json:"title"`
+		Picture      string `json:"picture"`
+		UpdateTime   string `json:"update_time"`
+		SubTitle     string `json:"sub_title"`
+		PropUserUuid string `json:"prop_user_uuid"`
+		Type         string `json:"type"`
+		Weight       int    `json:"weight"`
 	} `json:"data"`
 }
 
 const (
 	b               = 1                                  //1是分解 2是置换
-	actId           = 589                                //活动id
+	actId           = 590                                //活动id
 	thread          = 2                                  //并发数
 	tokenCommon     = "d038919ad0f947298bd20b382bd9bfab" //勿删
 	tokenYanTingYue = "d038919ad0f947298bd20b382bd9bfab" //颜庭跃
@@ -90,8 +91,14 @@ func Fj() {
 							//颜庭跃
 							go func() {
 								for k, v := range orderInfo.Data {
-									if Replace(actId, v.OrderID, tokenYanTingYue) {
-										orderInfo.Data = orderInfo.Data[k+1:]
+									if v.Type == "prop" {
+										if ReplaceProp(actId, v.PropUserUuid, tokenYanTingYue) {
+											orderInfo.Data = orderInfo.Data[k+1:]
+										}
+									} else {
+										if Replace(actId, v.OrderID, tokenYanTingYue) {
+											orderInfo.Data = orderInfo.Data[k+1:]
+										}
 									}
 								}
 							}()
@@ -204,6 +211,26 @@ func Replace(id, orderId uint64, token string) bool {
 	resp, _ := Post("https://api.aichaoliuapp.cn/aiera/ai_match_trading/nft/replace/active/exchange", header, jsonBytes)
 
 	log.Println(orderId, string(resp))
+	if len(resp) == 0 {
+		return false
+	}
+	res := ReplaceResp{}
+	json.Unmarshal(resp, &res)
+	if res.Code == 0 && res.Msg == "success" {
+		return true
+	}
+	return false
+}
+func ReplaceProp(id int, propUUid string, token string) bool {
+	header := GenerateHeader1(token)
+	body := map[string]interface{}{
+		"replace_prop_uuid": propUUid,
+		"replace_id":        id,
+	}
+	jsonBytes, _ := json.Marshal(body)
+	resp, _ := Post("https://api.aichaoliuapp.cn/aiera/ai_match_trading/nft/replace/active/exchange", header, jsonBytes)
+
+	log.Println(propUUid, string(resp))
 	if len(resp) == 0 {
 		return false
 	}
