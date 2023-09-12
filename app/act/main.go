@@ -47,7 +47,7 @@ type ResponseData struct {
 
 const (
 	b               = 1                                  //1是分解 2是置换
-	actId           = 592                                //活动id
+	actId           = 595                                //活动id
 	thread          = 2                                  //并发数
 	tokenCommon     = "d038919ad0f947298bd20b382bd9bfab" //勿删
 	tokenYanTingYue = "d038919ad0f947298bd20b382bd9bfab" //颜庭跃
