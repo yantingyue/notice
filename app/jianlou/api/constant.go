@@ -402,7 +402,7 @@ var (
 const (
 	TimeSpace   = 20                                 //间隔时间
 	BuyNum      = 1                                  //购买数量
-	ProductName = "白帝下江陵"                            //商品名称
+	ProductName = "凌云宫"                              //商品名称
 	BuyToken    = "d038919ad0f947298bd20b382bd9bfab" //购买token
 	//BuyToken = "7b1a916684f749d19328666330f35f9d" //购买token
 	//BuyToken = "0db20208ef454d0aae633319b4863dae" //购买token ytf
