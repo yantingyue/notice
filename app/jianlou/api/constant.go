@@ -401,15 +401,15 @@ var (
 
 const (
 	TimeSpace   = 20                                 //间隔时间
-	BuyNum      = 1                                  //购买数量
-	ProductName = "凌云宫"                              //商品名称
-	BuyToken    = "d038919ad0f947298bd20b382bd9bfab" //购买token
+	BuyNum      = 4                                  //购买数量
+	ProductName = "常曦沐月"                             //商品名称
+	BuyToken    = "fda260d011714a2aa74db69cf3390814" //购买token
 	//BuyToken = "7b1a916684f749d19328666330f35f9d" //购买token
 	//BuyToken = "0db20208ef454d0aae633319b4863dae" //购买token ytf
 	//BuyToken = "0e67e76e8409434a9e3371f84b8cfee3" //购买token pz
 
 	PageSize = 2
-	PayType  = 1 //1零钱2快付通
+	PayType  = 2 //1零钱2快付通
 	Pwd      = "DVqBnIG8tFOmfbFp+tIXisluxkZDahm5Gk6MVvg4tY9td7tfjTvu5JiCDBmW39mUhgjY0z6zzlfj6Jc0/YDyaGLLB8n/wRXHoPRv6qlOyMleQw1iU5Y10MfF0jYylh2EJtiVd8VQWwOWgAuYmCIYUNqoy4IhjYxMs9Bj82l/rts="
 	//Pwd = "kSmIyvNXdGWlnTJBfmhtkTmvJc/sB8Bu78UrgHpj4+I3DsNaUpLRQccpEaBpKpG9+DeJOsgCwrK9iL1JG99GjUxaL+loiCDcm/UM1EZDPmveXq1XQeyLhMjbyPEGGUnJUp0fwZUAddRpQ9Zanbq6gk4/lEftFxFWz4wIHsfgJQI="
 	//Pwd = "oYM0g+TEQ7ToqmcDXpBKbEspk3H/buLHmBNu3Y5mqFuVPx57gjznAI6HYzCv+evM1DbKjdWHmHirGX0KhNkuk+Wjp6gw+0Jz2AeRLz8u5ChQHv+SHW9Ff1CaNUOyusBtJcg2JDDA17KCaJ0vCFYjVdQXJCX+BWWUwBP7zjHrUNI="
