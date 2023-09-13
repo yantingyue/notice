@@ -80,7 +80,7 @@ var (
 		},
 		UserId16: []string{
 			"https://open.feishu.cn/open-apis/bot/v2/hook/735993c3-0ee3-47ee-8eb1-da7eac69e208",
-			"https://open.feishu.cn/open-apis/bot/v2/hook/bac13199-32de-4600-86c3-33dc4acb596c",
+			"https://open.feishu.cn/open-apis/bot/v2/hook/06d4201e-9a56-4047-9cdf-0cad96e6f0ae",
 		},
 		UserId17: []string{
 			"https://open.feishu.cn/open-apis/bot/v2/hook/14910cd3-e362-4f92-a208-47ca43ceb5a1",
