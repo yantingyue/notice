@@ -71,6 +71,7 @@ var (
 		}, //法典人
 		UserId13: []string{
 			"https://open.feishu.cn/open-apis/bot/v2/hook/bc05ffbb-f5f6-4e4a-9c0d-e4c02d3a3154",
+			"https://open.feishu.cn/open-apis/bot/v2/hook/8af7c7c8-e91d-420f-8a4e-3c7e3eaab705",
 		}, //145韩新枝
 		UserId14: []string{
 			"https://open.feishu.cn/open-apis/bot/v2/hook/485792e4-444a-4983-b01b-b35fec842e09",
