@@ -47,10 +47,10 @@ type ResponseData struct {
 
 const (
 	b               = 1                                  //1是分解 2是置换
-	actId           = 609                                //活动id
+	actId           = 617                                //活动id
 	thread          = 2                                  //并发数
-	tokenCommon     = "9aa6e04796be48c2845c941f5930cdde" //勿删
-	tokenYanTingYue = "9aa6e04796be48c2845c941f5930cdde" //颜庭跃
+	tokenCommon     = "da01634063c446659313a5a1e013f86c" //勿删
+	tokenYanTingYue = "da01634063c446659313a5a1e013f86c" //颜庭跃
 )
 
 var (
@@ -71,6 +71,7 @@ func Begin() {
 		if len(orderInfo.Data) > 0 {
 			break
 		}
+		fmt.Println("材料不足")
 		time.Sleep(time.Millisecond * 1000)
 	}
 
