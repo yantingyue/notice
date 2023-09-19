@@ -355,13 +355,17 @@ func Fj() {
 									for j, item := range v.Data {
 										if item.Type == "prop" {
 											if ReplaceProp(actId, item.PropUserUuid, k) {
-												v.Data = orderInfo[k].Data[j+1:]
-												orderInfo[k] = v
+												if len(orderInfo[k].Data) > 1 {
+													v.Data = orderInfo[k].Data[j+1:]
+													orderInfo[k] = v
+												}
 											}
 										} else {
 											if Replace(actId, item.OrderID, k) {
-												v.Data = orderInfo[k].Data[j+1:]
-												orderInfo[k] = v
+												if len(orderInfo[k].Data) > 1 {
+													v.Data = orderInfo[k].Data[j+1:]
+													orderInfo[k] = v
+												}
 											}
 										}
 									}
