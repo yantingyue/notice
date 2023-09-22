@@ -19,8 +19,8 @@ func MotorNotice(name string, userId uint64) {
 	fmt.Println(token)
 	if token == "" {
 		//tokens := requestToken(userId)
-		text := fmt.Sprintf("获取token失败了")
-		FeiShuUrl(text, userId)
+		//text := fmt.Sprintf("获取token失败了")
+		//FeiShuUrl(text, userId)
 		return
 	}
 	handle(ctx, token, name, userId)
