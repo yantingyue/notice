@@ -96,7 +96,7 @@ func FeiShuUrl(text string, userId uint64) {
 	if _, ok := tokenUrlMap[int(userId)]; ok {
 		for k, v := range tokenUrlMap[int(userId)] {
 			if k > 0 && k < 2 {
-				time.Sleep(time.Second * 3)
+				time.Sleep(time.Second * 6)
 			}
 			//go func() {
 			_, err := cli.Post(v, nil, jsonBytes)
