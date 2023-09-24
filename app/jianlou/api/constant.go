@@ -402,7 +402,7 @@ var (
 const (
 	TimeSpace   = 20                                 //间隔时间
 	BuyNum      = 4                                  //购买数量
-	ProductName = "常曦沐月"                             //商品名称
+	ProductName = "月母之国"                             //商品名称
 	BuyToken    = "40772eb518eb443c8c0dfefc6e604c41" //购买token
 	//BuyToken = "7b1a916684f749d19328666330f35f9d" //购买token
 	//BuyToken = "0db20208ef454d0aae633319b4863dae" //购买token ytf
