@@ -35,6 +35,7 @@ const (
 	UserId15 = 75959512682 //145小号
 	UserId16 = 75959188086 //夏雪莹
 	UserId17 = 6665768     //水镜先生
+	UserId18 = 12345678    //test
 )
 
 const (
