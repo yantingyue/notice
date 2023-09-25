@@ -96,10 +96,10 @@ func cronjob() {
 	}); err != nil {
 		panic(err)
 	}
-	if err := c.AddFunc("*/7 * * * * *", func() {
-		feishu_notice.MotorNotice("test", feishu_notice.UserId18)
-	}); err != nil {
-		panic(err)
-	}
+	//if err := c.AddFunc("*/7 * * * * *", func() {
+	//	feishu_notice.MotorNotice("test", feishu_notice.UserId18)
+	//}); err != nil {
+	//	panic(err)
+	//}
 	c.Start()
 }
