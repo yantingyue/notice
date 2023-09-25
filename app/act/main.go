@@ -383,16 +383,14 @@ func Fj() {
 						if ReplaceDetail(actId, token) {
 							//颜庭跃
 							for k, v := range orderInfo {
-								go func() {
-									for j, item := range v.Data {
-										if Replace(actId, item.OrderID, k) {
-											newOrderInfo := make(map[string]ResponseData)
-											copy(newOrderInfo[k].Data[:j], orderInfo[k].Data[:j])
-											copy(newOrderInfo[k].Data[j:], orderInfo[k].Data[j+1:])
-											orderInfo[k] = newOrderInfo[k]
+								for j, item := range v.Data {
+									if Replace(actId, item.OrderID, k) {
+										if len(orderInfo[k].Data) > 1 {
+											v.Data = orderInfo[k].Data[j+1:]
+											orderInfo[k] = v
 										}
 									}
-								}()
+								}
 							}
 						}
 					}()
