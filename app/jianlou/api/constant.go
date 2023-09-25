@@ -400,7 +400,7 @@ var (
 )
 
 const (
-	TimeSpace   = 20    //间隔时间
+	TimeSpace   = 50    //间隔时间
 	BuyNum      = 1     //购买数量
 	ProductName = "百眼窟" //商品名称
 	//BuyToken    = "da01634063c446659313a5a1e013f86c" //购买token
