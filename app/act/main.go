@@ -46,6 +46,7 @@ type ResponseData struct {
 }
 
 var (
+	rwMut     sync.RWMutex
 	id        uint64
 	orderInfo = make(map[string]ResponseData)
 	tokens    = []string{
@@ -309,14 +310,14 @@ var (
 	}
 	buyTokens = []string{
 		"da01634063c446659313a5a1e013f86c", //yty
-		"b86a373641414866912d2cb93c71f6c7", //pz
+		//"b86a373641414866912d2cb93c71f6c7", //pz
 		"29720b3f8529452fbf2831f738d2a9ec", //zqq
 	}
 )
 
 const (
 	b     = 1   //1是分解 2是置换
-	actId = 709 //活动id
+	actId = 708 //活动id
 )
 
 func main() {
@@ -357,17 +358,21 @@ func Fj() {
 									for j, item := range v.Data {
 										if item.Type == "prop" {
 											if ReplaceProp(actId, item.PropUserUuid, k) {
+												rwMut.Lock() // 加写锁
 												if len(orderInfo[k].Data) > 1 {
 													v.Data = orderInfo[k].Data[j+1:]
 													orderInfo[k] = v
 												}
+												rwMut.Unlock() // 解写锁
 											}
 										} else {
 											if Replace(actId, item.OrderID, k) {
+												rwMut.Lock() // 加写锁
 												if len(orderInfo[k].Data) > 1 {
 													v.Data = orderInfo[k].Data[j+1:]
 													orderInfo[k] = v
 												}
+												rwMut.Unlock() // 解写锁
 											}
 										}
 									}
@@ -386,10 +391,23 @@ func Fj() {
 							//颜庭跃
 							for k, v := range orderInfo {
 								for j, item := range v.Data {
-									if Replace(actId, item.OrderID, k) {
-										if len(orderInfo[k].Data) > 1 {
-											v.Data = orderInfo[k].Data[j+1:]
-											orderInfo[k] = v
+									if item.Type == "prop" {
+										if ReplaceProp(actId, item.PropUserUuid, k) {
+											rwMut.Lock() // 加写锁
+											if len(orderInfo[k].Data) > 1 {
+												v.Data = orderInfo[k].Data[j+1:]
+												orderInfo[k] = v
+											}
+											rwMut.Unlock() // 解写锁
+										}
+									} else {
+										if Replace(actId, item.OrderID, k) {
+											rwMut.Lock() // 加写锁
+											if len(orderInfo[k].Data) > 1 {
+												v.Data = orderInfo[k].Data[j+1:]
+												orderInfo[k] = v
+											}
+											rwMut.Unlock() // 解写锁
 										}
 									}
 								}
@@ -408,7 +426,7 @@ func GetOrderInfo(id uint64, token string) (res ResponseData) {
 	body := map[string]interface{}{
 		"replace_id": id,
 		"pageNumber": 1,
-		"pageSize":   5,
+		"pageSize":   50,
 	}
 	jsonBytes, _ := json.Marshal(body)
 	resp, _ := Post("https://api.aichaoliuapp.cn/aiera/ai_match_trading/nft/combination/choice/material", header, jsonBytes)
@@ -468,7 +486,7 @@ func ReplaceDetail(id uint64, token string) bool {
 	//resDetail.Data.StartTimeTimestamp = 1689605160000
 	diffTime := resDetail.Data.StartTimeTimestamp - resTime.CurrentMilliTime
 	log.Println(resDetail.Data.StartTimeTimestamp, resTime.CurrentMilliTime, diffTime)
-	if diffTime < 150 && diffTime > 0 {
+	if diffTime < 100 && diffTime > 0 {
 		//time.Sleep(time.Millisecond * time.Duration(diffTime))
 		log.Println(diffTime, resTime.CurrentMilliTime, resDetail.Data.StartTimeTimestamp, time.Now().UnixMilli())
 		return true
@@ -507,7 +525,7 @@ func ReplaceProp(id int, propUUid string, token string) bool {
 	jsonBytes, _ := json.Marshal(body)
 	resp, _ := Post("https://api.aichaoliuapp.cn/aiera/ai_match_trading/nft/replace/active/exchange", header, jsonBytes)
 
-	log.Println(propUUid, string(resp))
+	log.Println(propUUid, string(resp), token)
 	if len(resp) == 0 {
 		return false
 	}
