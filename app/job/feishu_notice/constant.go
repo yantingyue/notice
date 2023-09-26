@@ -38,6 +38,7 @@ const (
 	//UserId18 = 7595868837  //法典小号
 	UserId18 = 75958688373 //法典小号
 	UserId19 = 4737193     //jerry
+	UserId20 = 5182733     //jerry
 )
 
 const (
