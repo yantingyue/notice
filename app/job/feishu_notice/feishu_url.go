@@ -85,11 +85,7 @@ var (
 			"https://open.feishu.cn/open-apis/bot/v2/hook/14910cd3-e362-4f92-a208-47ca43ceb5a1",
 		},
 		UserId18: []string{
-<<<<<<< HEAD
 			"https://open.feishu.cn/open-apis/bot/v2/hook/42244005-a26d-4682-8320-f5f1e4dcc610",
-=======
-			"https://open.feishu.cn/open-apis/bot/v2/hook/679db88d-7e31-4990-837c-52e88c83861d",
->>>>>>> a521738bd292570b751339fa2722b65d9ae31be0
 		},
 	}
 )
