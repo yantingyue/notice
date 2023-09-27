@@ -39,6 +39,7 @@ const (
 	UserId18 = 75958688373 //法典小号
 	UserId19 = 4737193     //jerry
 	UserId20 = 5182733     //jerry
+	UserId21 = 75959685490 //蜥蜴小号
 )
 
 const (
