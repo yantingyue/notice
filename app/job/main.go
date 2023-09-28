@@ -20,7 +20,7 @@ func cronjob() {
 	c := cron.New()
 
 	if err := c.AddFunc("*/5 * * * * *", func() {
-		feishu_notice.MotorNotice("富豪", feishu_notice.UserId2)
+		feishu_notice.MotorNotice("fuhao", feishu_notice.UserId2)
 	}); err != nil {
 		panic(err)
 	}
@@ -32,19 +32,19 @@ func cronjob() {
 	}
 
 	if err := c.AddFunc("*/5 * * * * *", func() {
-		feishu_notice.MotorNotice("谜语人", feishu_notice.UserId4)
+		feishu_notice.MotorNotice("miyuren", feishu_notice.UserId4)
 	}); err != nil {
 		panic(err)
 	}
 
 	if err := c.AddFunc("*/5 * * * * *", func() {
-		feishu_notice.MotorNotice("柴郡猫", feishu_notice.UserId5)
+		feishu_notice.MotorNotice("chaijunmao", feishu_notice.UserId5)
 	}); err != nil {
 		panic(err)
 	}
 
 	if err := c.AddFunc("*/6 * * * * *", func() {
-		feishu_notice.MotorNotice("配置", feishu_notice.UserId6)
+		feishu_notice.MotorNotice("peizhi", feishu_notice.UserId6)
 	}); err != nil {
 		panic(err)
 	}
@@ -67,37 +67,37 @@ func cronjob() {
 	//}
 
 	if err := c.AddFunc("*/7 * * * * *", func() {
-		feishu_notice.MotorNotice("蜥蜴绝缘体", feishu_notice.UserId10)
+		feishu_notice.MotorNotice("xiyijueyuanti", feishu_notice.UserId10)
 	}); err != nil {
 		panic(err)
 	}
 	if err := c.AddFunc("*/7 * * * * *", func() {
-		feishu_notice.MotorNotice("法典人", feishu_notice.UserId11)
+		feishu_notice.MotorNotice("fadian", feishu_notice.UserId11)
 	}); err != nil {
 		panic(err)
 	}
 	if err := c.AddFunc("*/5 * * * * *", func() {
-		feishu_notice.MotorNotice("145韩新枝", feishu_notice.UserId13)
+		feishu_notice.MotorNotice("145hanxinzhi", feishu_notice.UserId13)
 	}); err != nil {
 		panic(err)
 	}
 	if err := c.AddFunc("*/5 * * * * *", func() {
-		feishu_notice.MotorNotice("陈凯歌", feishu_notice.UserId14)
+		feishu_notice.MotorNotice("chenkaige", feishu_notice.UserId14)
 	}); err != nil {
 		panic(err)
 	}
 	if err := c.AddFunc("*/5 * * * * *", func() {
-		feishu_notice.MotorNotice("夏雪莹", feishu_notice.UserId16)
+		feishu_notice.MotorNotice("xiaxueying", feishu_notice.UserId16)
 	}); err != nil {
 		panic(err)
 	}
 	if err := c.AddFunc("*/5 * * * * *", func() {
-		feishu_notice.MotorNotice("145小小号", feishu_notice.UserId15)
+		feishu_notice.MotorNotice("145xiaoxiaohao", feishu_notice.UserId15)
 	}); err != nil {
 		panic(err)
 	}
 	if err := c.AddFunc("*/6 * * * * *", func() {
-		feishu_notice.MotorNotice("法典小号", feishu_notice.UserId18)
+		feishu_notice.MotorNotice("fadianxiaohao", feishu_notice.UserId18)
 	}); err != nil {
 		panic(err)
 	}
@@ -107,12 +107,12 @@ func cronjob() {
 		panic(err)
 	}
 	if err := c.AddFunc("*/6 * * * * *", func() {
-		feishu_notice.MotorNotice("冰琪琳", feishu_notice.UserId20)
+		feishu_notice.MotorNotice("bingqiling", feishu_notice.UserId20)
 	}); err != nil {
 		panic(err)
 	}
 	if err := c.AddFunc("*/6 * * * * *", func() {
-		feishu_notice.MotorNotice("蜥蜴小号", feishu_notice.UserId21)
+		feishu_notice.MotorNotice("xiyixiaohao", feishu_notice.UserId21)
 	}); err != nil {
 		panic(err)
 	}
