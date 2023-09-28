@@ -352,14 +352,14 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 					}()
 				}
 			case 2:
-				for i := 0; i < 2; i++ {
-					go func() {
-						CreateOrderKft(ctx, sellInfo.SecondId)
-					}()
-				}
-				//go func() {
-				//CreateOrderKft(ctx, sellInfo.SecondId)
-				//}()
+				//for i := 0; i < 2; i++ {
+				//	go func() {
+				//		CreateOrderKft(ctx, sellInfo.SecondId)
+				//	}()
+				//}
+				go func() {
+					CreateOrderKft(ctx, sellInfo.SecondId)
+				}()
 			}
 		}
 	}
