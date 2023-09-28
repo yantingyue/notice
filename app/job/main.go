@@ -19,23 +19,23 @@ func cronjob() {
 
 	c := cron.New()
 
-	if err := c.AddFunc("*/5 * * * * *", func() {
-		feishu_notice.MotorNotice("fuhao", feishu_notice.UserId2)
-	}); err != nil {
-		panic(err)
-	}
-
-	if err := c.AddFunc("*/5 * * * * *", func() {
-		feishu_notice.MotorNotice("145", feishu_notice.UserId3)
-	}); err != nil {
-		panic(err)
-	}
-
-	if err := c.AddFunc("*/5 * * * * *", func() {
-		feishu_notice.MotorNotice("miyuren", feishu_notice.UserId4)
-	}); err != nil {
-		panic(err)
-	}
+	//if err := c.AddFunc("*/5 * * * * *", func() {
+	//	feishu_notice.MotorNotice("fuhao", feishu_notice.UserId2)
+	//}); err != nil {
+	//	panic(err)
+	//}
+	//
+	//if err := c.AddFunc("*/5 * * * * *", func() {
+	//	feishu_notice.MotorNotice("145", feishu_notice.UserId3)
+	//}); err != nil {
+	//	panic(err)
+	//}
+	//
+	//if err := c.AddFunc("*/5 * * * * *", func() {
+	//	feishu_notice.MotorNotice("miyuren", feishu_notice.UserId4)
+	//}); err != nil {
+	//	panic(err)
+	//}
 
 	if err := c.AddFunc("*/5 * * * * *", func() {
 		feishu_notice.MotorNotice("chaijunmao", feishu_notice.UserId5)
@@ -66,21 +66,21 @@ func cronjob() {
 	//	panic(err)
 	//}
 
-	if err := c.AddFunc("*/7 * * * * *", func() {
-		feishu_notice.MotorNotice("xiyijueyuanti", feishu_notice.UserId10)
-	}); err != nil {
-		panic(err)
-	}
+	//if err := c.AddFunc("*/7 * * * * *", func() {
+	//	feishu_notice.MotorNotice("xiyijueyuanti", feishu_notice.UserId10)
+	//}); err != nil {
+	//	panic(err)
+	//}
 	if err := c.AddFunc("*/7 * * * * *", func() {
 		feishu_notice.MotorNotice("fadian", feishu_notice.UserId11)
 	}); err != nil {
 		panic(err)
 	}
-	if err := c.AddFunc("*/5 * * * * *", func() {
-		feishu_notice.MotorNotice("145hanxinzhi", feishu_notice.UserId13)
-	}); err != nil {
-		panic(err)
-	}
+	//if err := c.AddFunc("*/5 * * * * *", func() {
+	//	feishu_notice.MotorNotice("145hanxinzhi", feishu_notice.UserId13)
+	//}); err != nil {
+	//	panic(err)
+	//}
 	if err := c.AddFunc("*/5 * * * * *", func() {
 		feishu_notice.MotorNotice("chenkaige", feishu_notice.UserId14)
 	}); err != nil {
@@ -91,11 +91,11 @@ func cronjob() {
 	}); err != nil {
 		panic(err)
 	}
-	if err := c.AddFunc("*/5 * * * * *", func() {
-		feishu_notice.MotorNotice("145xiaoxiaohao", feishu_notice.UserId15)
-	}); err != nil {
-		panic(err)
-	}
+	//if err := c.AddFunc("*/5 * * * * *", func() {
+	//	feishu_notice.MotorNotice("145xiaoxiaohao", feishu_notice.UserId15)
+	//}); err != nil {
+	//	panic(err)
+	//}
 	if err := c.AddFunc("*/6 * * * * *", func() {
 		feishu_notice.MotorNotice("fadianxiaohao", feishu_notice.UserId18)
 	}); err != nil {

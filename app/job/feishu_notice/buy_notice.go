@@ -28,7 +28,7 @@ func MotorNotice(name string, userId uint64) {
 
 func handle(ctx context.Context, token string, name string, userId uint64) {
 	pageSize := 50
-	if name == "蜥蜴绝缘体" {
+	if name == "xiyijueyuanti" {
 		pageSize = 100
 	}
 	body := map[string]interface{}{
