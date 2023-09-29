@@ -45,7 +45,7 @@ func handle(ctx context.Context, token string, name string, userId uint64) {
 		resultMap := make(map[uint64]struct{})
 		for _, v := range res.Data.Result {
 			resultMap[v.ProductId] = struct{}{}
-			if v.ProductId == 1019723 || v.ProductId == 1019287 || v.ProductId == 1019119 || v.ProductId == 1019555 {
+			if v.ProductId == 1019723 || v.ProductId == 1019287 || v.ProductId == 1019119 || v.ProductId == 1019555 || v.ProductId == 1020901 {
 				continue
 			}
 			noticeKey := fmt.Sprintf("%s:%d", name, v.ProductId)
