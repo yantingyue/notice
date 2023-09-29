@@ -461,12 +461,12 @@ const (
 //	return hex.EncodeToString(ctx.Sum(nil))
 //}
 
-const (
-	Host     = "https://api.aichaoliuapp.cn"
-	timeOut  = 60 * time.Second
-	version  = "31850"
-	channel  = "010100"
-	platform = "ios"
-	appname  = "aiera.sneaker.snkrs.shoe"
-	salt     = "5c33494d1b277902d1b78f98093f6fd4"
-)
+//const (
+//	Host     = "https://api.aichaoliuapp.cn"
+//	timeOut  = 60 * time.Second
+//	version  = "31850"
+//	channel  = "010100"
+//	platform = "ios"
+//	appname  = "aiera.sneaker.snkrs.shoe"
+//	salt     = "5c33494d1b277902d1b78f98093f6fd4"
+//)
