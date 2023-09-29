@@ -167,7 +167,7 @@ var (
 )
 
 const (
-	TimeSpace   = 80      //间隔时间
+	TimeSpace   = 100     //间隔时间
 	BuyNum      = 2       //购买数量
 	ProductName = "暗黑武装龙" //商品名称
 	//BuyToken    = "65d7760dfcb14c449ec27d85ba93526d" //购买token
