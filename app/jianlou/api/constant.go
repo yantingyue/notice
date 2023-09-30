@@ -91,9 +91,9 @@ var (
 )
 
 const (
-	TimeSpace   = 100     //间隔时间
-	BuyNum      = 2       //购买数量
-	ProductName = "暗黑武装龙" //商品名称
+	TimeSpace   = 100    //间隔时间
+	BuyNum      = 1      //购买数量
+	ProductName = "垓下之围" //商品名称
 	//BuyToken    = "65d7760dfcb14c449ec27d85ba93526d" //购买token
 	BuyToken = "29720b3f8529452fbf2831f738d2a9ec" //购买token
 	//BuyToken = "0db20208ef454d0aae633319b4863dae" //购买token ytf
