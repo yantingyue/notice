@@ -40,6 +40,7 @@ const (
 	UserId19 = 4737193     //jerry
 	UserId20 = 6058408     //冰淇淋
 	UserId21 = 75959685490 //蜥蜴小号
+	UserId22 = 13571132013 //铁蛋
 )
 
 const (
