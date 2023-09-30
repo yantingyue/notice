@@ -12,7 +12,6 @@ var (
 		"764c670817f54ff4ae66f42fe730f178",
 		"c4e2012afb1d4d9298bc608ef907e8f1",
 		"e80572f6caef4888a31fdcb5ebd180e0",
-		"4da5f9663dfd46eaa2d7014cb12cd2b0",
 		"50ac8fcc1e64413a8df87415ba2ff354",
 		"b4722a5b153e4995a56a28f0435c4ad4",
 		"49168be055ca4e1facaea68adcb6b3d4",
@@ -64,20 +63,17 @@ var (
 		"dca173b5cae6444cad5c8293a68b08f7",
 		"9ef29250fba747109e4d46723087c5ec",
 		"19e87ca0ad7e4d5dab6e67265ece07bb",
-		"ced5fdc13cac4138b8389afb94705072",
 		"c963e8d508a34fc6b302ed77258678d8",
 		"f9386cd28615405687db62ea79ca5bfe",
 		"b7d6a84982d442eb85f26ff12407abbb",
 		"4803e503a2264ce380b2ae7388dbdedf",
 		"9b6f97f741d84b7d955ad7c76efc659b",
-		"82392f35d98f4cc59c22c857da97e02b",
 		"002495f4ba5e4130885c174e99a20b79",
 		"da49c9246b4944d59cb733df7b3e32c0",
 		"f04d74703fac4a7eb13c7230b8522d49",
 		"4f126fe91e9c41ee9889490e1ac780b7",
 		"90faba3daba94e399a96e4dc55e769ba",
 		"d5839e3d10104381b5f95107fcf3c066",
-		"6444270f9d774f8a8c63b1cd0636bdd8",
 	}
 	Urls = []string{
 		"/aiera/ai_match_trading/nft_second/sell_product/list",       //寄售列表
@@ -95,17 +91,19 @@ const (
 	BuyNum      = 1      //购买数量
 	ProductName = "垓下之围" //商品名称
 	//BuyToken    = "65d7760dfcb14c449ec27d85ba93526d" //购买token
-	BuyToken = "29720b3f8529452fbf2831f738d2a9ec" //购买token
+	//BuyToken = "29720b3f8529452fbf2831f738d2a9ec" //购买token
 	//BuyToken = "0db20208ef454d0aae633319b4863dae" //购买token ytf
 	//BuyToken = "b86a373641414866912d2cb93c71f6c7" //购买token pz
 	//BuyToken = "fcb5e5ab940a4db5bf7641b3ad6fa16c" //购买token yp
 	//BuyToken = "406fed690c9a43f1a151cf2783a24561" //购买token zyw
+	BuyToken = "997182afa5a5436f89632f90c80b089c" //购买token ytj
 
 	PageSize = 2
 	PayType  = 2 //1零钱2快付通
 	//Pwd      = "DVqBnIG8tFOmfbFp+tIXisluxkZDahm5Gk6MVvg4tY9td7tfjTvu5JiCDBmW39mUhgjY0z6zzlfj6Jc0/YDyaGLLB8n/wRXHoPRv6qlOyMleQw1iU5Y10MfF0jYylh2EJtiVd8VQWwOWgAuYmCIYUNqoy4IhjYxMs9Bj82l/rts="
-	Pwd = "kSmIyvNXdGWlnTJBfmhtkTmvJc/sB8Bu78UrgHpj4+I3DsNaUpLRQccpEaBpKpG9+DeJOsgCwrK9iL1JG99GjUxaL+loiCDcm/UM1EZDPmveXq1XQeyLhMjbyPEGGUnJUp0fwZUAddRpQ9Zanbq6gk4/lEftFxFWz4wIHsfgJQI="
+	//Pwd = "kSmIyvNXdGWlnTJBfmhtkTmvJc/sB8Bu78UrgHpj4+I3DsNaUpLRQccpEaBpKpG9+DeJOsgCwrK9iL1JG99GjUxaL+loiCDcm/UM1EZDPmveXq1XQeyLhMjbyPEGGUnJUp0fwZUAddRpQ9Zanbq6gk4/lEftFxFWz4wIHsfgJQI="
 	//Pwd = "oYM0g+TEQ7ToqmcDXpBKbEspk3H/buLHmBNu3Y5mqFuVPx57gjznAI6HYzCv+evM1DbKjdWHmHirGX0KhNkuk+Wjp6gw+0Jz2AeRLz8u5ChQHv+SHW9Ff1CaNUOyusBtJcg2JDDA17KCaJ0vCFYjVdQXJCX+BWWUwBP7zjHrUNI="
 	//Pwd = "JLI38dg4HN9dAnw89eChytrWE+PmWQfxAf8u2tgIlAmZ2u/WCxYiB0p1MoeMH/qosVwXzY53Ck+zfK58Ox8Sl+MY+0kGstkApiLema+rAbPA0inMU6jlFGTtpUOKHaw0Wts6AjMTSG6aXyReh/3LuZFQfcGLyczTlF1egqZDsgk="
 	//Pwd = "QcF6cbAHoMiEfH8okZX5Jug5wMI6gByX24Gj2m5rQBGpl/bqT8VLaIY982QtyIMkdyTz2SeFTJKPatFm8GFWsWFBkU4xc0lyEJiG9qkWjoJAdQ+R9gP8g0tfRy9cWrRtaKuEMhMd7dUQtIjoxo1v7xuRMyHCLC3NLywZSu8x7rg="
+	Pwd = "K+Hzexd6EHHeWIbKlVcU6jdGbALHlhw7N4a6TBvHeRt+RuJBYH9pntJIlR+g6koF1m9fQPgLl+Et6W18d5P2MfOHFxHwdEpC0fPT4zfXokDhOZY4xfHXtFWZTUntn2KFAW4C5NC+Ka/c/q0DozqWxrMONRwiEVr4vaVqrU21GrM="
 )
