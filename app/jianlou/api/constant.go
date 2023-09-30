@@ -115,7 +115,7 @@ var (
 
 const (
 	TimeSpace   = 100  //间隔时间
-	BuyNum      = 20   //购买数量
+	BuyNum      = 1    //购买数量
 	ProductName = "玄鸟" //商品名称
 	//BuyToken    = "65d7760dfcb14c449ec27d85ba93526d" //购买token
 	//BuyToken = "29720b3f8529452fbf2831f738d2a9ec" //购买token
