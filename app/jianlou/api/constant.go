@@ -232,15 +232,15 @@ var (
 )
 
 const (
-	TimeSpace   = 50       //间隔时间
-	BuyNum      = 10       //购买数量
-	ProductName = "圣堂武士议会" //商品名称
-	//BuyToken    = "65d7760dfcb14c449ec27d85ba93526d" //购买token
+	TimeSpace   = 50                                 //间隔时间
+	BuyNum      = 10                                 //购买数量
+	ProductName = "圣堂武士议会"                           //商品名称
+	BuyToken    = "65d7760dfcb14c449ec27d85ba93526d" //购买token
 	//BuyToken = "29720b3f8529452fbf2831f738d2a9ec" //购买token
 	//BuyToken = "0db20208ef454d0aae633319b4863dae" //购买token ytf
 	//BuyToken = "b86a373641414866912d2cb93c71f6c7" //购买token pz
 	//BuyToken = "fcb5e5ab940a4db5bf7641b3ad6fa16c" //购买token yp
-	BuyToken = "b4a80265074a45f09e307f7a85da6019" //购买token zyw
+	//BuyToken = "b4a80265074a45f09e307f7a85da6019" //购买token zyw
 	//BuyToken = "997182afa5a5436f89632f90c80b089c" //购买token ytj
 
 	PageSize = 2
