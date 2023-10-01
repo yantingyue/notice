@@ -232,7 +232,7 @@ var (
 )
 
 const (
-	TimeSpace   = 50    //间隔时间
+	TimeSpace   = 10    //间隔时间
 	BuyNum      = 1     //购买数量
 	ProductName = "妙音门" //商品名称
 	//BuyToken    = "65d7760dfcb14c449ec27d85ba93526d" //购买token
