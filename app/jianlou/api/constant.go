@@ -130,7 +130,7 @@ var (
 )
 
 const (
-	TimeSpace   = 100      //间隔时间
+	TimeSpace   = 85       //间隔时间
 	BuyNum      = 10       //购买数量
 	ProductName = "圣堂武士议会" //商品名称
 	//BuyToken    = "65d7760dfcb14c449ec27d85ba93526d" //购买token
