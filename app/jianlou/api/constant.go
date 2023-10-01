@@ -233,8 +233,8 @@ var (
 
 const (
 	TimeSpace   = 50                                 //间隔时间
-	BuyNum      = 2                                  //购买数量
-	ProductName = "圣堂武士议会"                           //商品名称
+	BuyNum      = 10                                 //购买数量
+	ProductName = "尤达"                               //商品名称
 	BuyToken    = "65d7760dfcb14c449ec27d85ba93526d" //购买token
 	//BuyToken = "29720b3f8529452fbf2831f738d2a9ec" //购买token
 	//BuyToken = "0db20208ef454d0aae633319b4863dae" //购买token ytf
