@@ -348,13 +348,13 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 			case 1:
 				for i := 0; i < 2; i++ {
 					go func() {
-						CreateOrderWallet(ctx, sellInfo.SecondId)
+						CreateOrderWallet(ctx, "65d7760dfcb14c449ec27d85ba93526d", sellInfo.SecondId)
 					}()
 				}
 			case 2:
 				for i := 0; i < 2; i++ {
 					go func() {
-						CreateOrderKft(ctx, sellInfo.SecondId)
+						CreateOrderKft(ctx, BuyToken, sellInfo.SecondId)
 					}()
 				}
 				//go func() {
@@ -364,14 +364,14 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 		}
 	}
 }
-func CreateOrderWallet(ctx context.Context, secondId uint64) {
+func CreateOrderWallet(ctx context.Context, token string, secondId uint64) {
 	crOrderReq := map[string]interface{}{
 		"operate_type":   "buy",
 		"second_id":      secondId,
 		"user_coupon_id": 0,
 	}
 	//下单
-	crOrderResp := requestOrder(BuyToken, crOrderReq, Urls[1])
+	crOrderResp := requestOrder(token, crOrderReq, Urls[1])
 	createOrderResp := CreateOrderResp{}
 	json.Unmarshal(crOrderResp, &createOrderResp)
 	if createOrderResp.Code == 0 && createOrderResp.Data.OrderId > 0 {
@@ -380,7 +380,7 @@ func CreateOrderWallet(ctx context.Context, secondId uint64) {
 			"pay_pwd":  Pwd,
 			"order_id": createOrderResp.Data.OrderId,
 		}
-		payResp := request(BuyToken, payReq, Urls[4])
+		payResp := request(token, payReq, Urls[4])
 		paySuccess := PayOrderResp{}
 		json.Unmarshal(payResp, &paySuccess)
 		if paySuccess.Code == 0 {
@@ -392,14 +392,14 @@ func CreateOrderWallet(ctx context.Context, secondId uint64) {
 	}
 }
 
-func CreateOrderKft(ctx context.Context, secondId uint64) {
+func CreateOrderKft(ctx context.Context, token string, secondId uint64) {
 	crOrderReq := map[string]interface{}{
 		"operate_type":   "buy",
 		"second_id":      secondId,
 		"user_coupon_id": 0,
 	}
 	//下单
-	crOrderResp := requestOrder(BuyToken, crOrderReq, Urls[1])
+	crOrderResp := requestOrder(token, crOrderReq, Urls[1])
 	createOrderResp := CreateOrderResp{}
 	json.Unmarshal(crOrderResp, &createOrderResp)
 	if createOrderResp.Code == 0 && createOrderResp.Data.OrderId > 0 {
@@ -408,7 +408,7 @@ func CreateOrderKft(ctx context.Context, secondId uint64) {
 			"pay_channel": 4,
 			"order_id":    createOrderResp.Data.OrderId,
 		}
-		prePayResp := request(BuyToken, prePayReq, Urls[2])
+		prePayResp := request(token, prePayReq, Urls[2])
 		prePayOrderResp := PrePayOrderResp{}
 		json.Unmarshal(prePayResp, &prePayOrderResp)
 		if prePayOrderResp.Code == 0 && prePayOrderResp.Data.OrderNo != "" {
@@ -419,7 +419,7 @@ func CreateOrderKft(ctx context.Context, secondId uint64) {
 				"pay_channel":  4,
 				"pay_pwd":      Pwd,
 			}
-			payOrderResp := request(BuyToken, payReq, Urls[3])
+			payOrderResp := request(token, payReq, Urls[3])
 			paySuccess := PayOrderResp{}
 			json.Unmarshal(payOrderResp, &paySuccess)
 			if paySuccess.Code == 0 {
