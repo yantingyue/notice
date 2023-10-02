@@ -232,8 +232,8 @@ var (
 )
 
 const (
-	TimeSpace   = 50    //间隔时间
-	BuyNum      = 35    //购买数量
+	TimeSpace   = 35    //间隔时间
+	BuyNum      = 15    //购买数量
 	ProductName = "补天丹" //商品名称
 	//BuyToken    = "4d2eac8cf1384ec4b699856e030d036c" //购买token
 	//BuyToken = "29720b3f8529452fbf2831f738d2a9ec" //购买token
