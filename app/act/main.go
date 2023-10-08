@@ -205,15 +205,16 @@ var (
 		"7e6a52eedbfb4319ae5ea55613030bcb",
 	}
 	buyTokens = []string{
-		"4d2eac8cf1384ec4b699856e030d036c", //yty
-		"bdf4f7de26014e8998c1e9bb7f2b0068", //pz
-		"29720b3f8529452fbf2831f738d2a9ec", //zqq
+		//"4d2eac8cf1384ec4b699856e030d036c", //yty
+		//"bdf4f7de26014e8998c1e9bb7f2b0068", //pz
+		//"29720b3f8529452fbf2831f738d2a9ec", //zqq
+		"47aa590705994433975afbe84437f451", //zqq
 	}
 )
 
 const (
 	b     = 1   //1是分解 2是置换
-	actId = 740 //活动id
+	actId = 741 //活动id
 )
 
 func main() {
