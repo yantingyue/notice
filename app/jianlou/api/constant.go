@@ -242,7 +242,7 @@ const (
 	//BuyToken = "fcb5e5ab940a4db5bf7641b3ad6fa16c" //购买token yp
 	//BuyToken = "91fe6da73a3e463dbf4428cba1a01fd2" //购买token ytj
 
-	PageSize = 2
+	PageSize = 5
 	PayType  = 2 //1零钱2快付通
 	Pwd      = "DVqBnIG8tFOmfbFp+tIXisluxkZDahm5Gk6MVvg4tY9td7tfjTvu5JiCDBmW39mUhgjY0z6zzlfj6Jc0/YDyaGLLB8n/wRXHoPRv6qlOyMleQw1iU5Y10MfF0jYylh2EJtiVd8VQWwOWgAuYmCIYUNqoy4IhjYxMs9Bj82l/rts="
 	//Pwd = "kSmIyvNXdGWlnTJBfmhtkTmvJc/sB8Bu78UrgHpj4+I3DsNaUpLRQccpEaBpKpG9+DeJOsgCwrK9iL1JG99GjUxaL+loiCDcm/UM1EZDPmveXq1XQeyLhMjbyPEGGUnJUp0fwZUAddRpQ9Zanbq6gk4/lEftFxFWz4wIHsfgJQI="
