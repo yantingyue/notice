@@ -232,7 +232,7 @@ var (
 )
 
 const (
-	TimeSpace   = 35                                 //间隔时间
+	TimeSpace   = 25                                 //间隔时间
 	BuyNum      = 1                                  //购买数量
 	ProductName = "始皇东巡"                             //商品名称
 	BuyToken    = "4d2eac8cf1384ec4b699856e030d036c" //购买token
