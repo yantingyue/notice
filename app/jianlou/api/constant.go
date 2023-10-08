@@ -240,7 +240,6 @@ const (
 	//BuyToken = "0db20208ef454d0aae633319b4863dae" //购买token ytf
 	//BuyToken = "bdf4f7de26014e8998c1e9bb7f2b0068" //购买token pz
 	//BuyToken = "fcb5e5ab940a4db5bf7641b3ad6fa16c" //购买token yp
-	//BuyToken = "b4a80265074a45f09e307f7a85da6019" //购买token zyw
 	//BuyToken = "91fe6da73a3e463dbf4428cba1a01fd2" //购买token ytj
 
 	PageSize = 2

@@ -254,21 +254,23 @@ func Fj() {
 									for j, item := range v.Data {
 										if item.Type == "prop" {
 											if ReplaceProp(actId, item.PropUserUuid, k) {
-												rwMut.Lock() // 加写锁
-												if len(orderInfo[k].Data) > 1 {
-													v.Data = orderInfo[k].Data[j+1:]
-													orderInfo[k] = v
-												}
-												rwMut.Unlock() // 解写锁
+												fmt.Println(j)
+												//rwMut.Lock() // 加写锁
+												//if len(orderInfo[k].Data) > 1 {
+												//	v.Data = orderInfo[k].Data[j+1:]
+												//	orderInfo[k] = v
+												//}
+												//rwMut.Unlock() // 解写锁
 											}
 										} else {
 											if Replace(actId, item.OrderID, k) {
-												rwMut.Lock() // 加写锁
-												if len(orderInfo[k].Data) > 1 {
-													v.Data = orderInfo[k].Data[j+1:]
-													orderInfo[k] = v
-												}
-												rwMut.Unlock() // 解写锁
+												fmt.Println(j)
+												//rwMut.Lock() // 加写锁
+												//if len(orderInfo[k].Data) > 1 {
+												//	v.Data = orderInfo[k].Data[j+1:]
+												//	orderInfo[k] = v
+												//}
+												//rwMut.Unlock() // 解写锁
 											}
 										}
 									}
