@@ -339,9 +339,9 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 				if len(SecondIdMap) >= 20 {
 					SecondIdMap = make(map[uint64]int)
 				}
-				if SecondIdMap[sellInfo.SecondId] >= 2 {
-					break
-				}
+				//if SecondIdMap[sellInfo.SecondId] >= 2 {
+				//	break
+				//}
 			}
 			SecondIdMap[sellInfo.SecondId] += 1
 			switch PayType {
