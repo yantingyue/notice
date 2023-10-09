@@ -232,9 +232,9 @@ var (
 )
 
 const (
-	TimeSpace   = 25     //间隔时间
-	BuyNum      = 1      //购买数量
-	ProductName = "御风剑术" //商品名称
+	TimeSpace   = 25   //间隔时间
+	BuyNum      = 1    //购买数量
+	ProductName = "诗魔" //商品名称
 	//BuyToken    = "4d2eac8cf1384ec4b699856e030d036c" //购买token
 	//BuyToken = "29720b3f8529452fbf2831f738d2a9ec" //购买token
 	//BuyToken = "0db20208ef454d0aae633319b4863dae" //购买token ytf
