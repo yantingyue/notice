@@ -214,7 +214,7 @@ var (
 
 const (
 	b     = 1   //1是分解 2是置换
-	actId = 741 //活动id
+	actId = 742 //活动id
 )
 
 func main() {
