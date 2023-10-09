@@ -238,7 +238,7 @@ const (
 	//BuyToken    = "4d2eac8cf1384ec4b699856e030d036c" //购买token
 	//BuyToken = "29720b3f8529452fbf2831f738d2a9ec" //购买token
 	//BuyToken = "0db20208ef454d0aae633319b4863dae" //购买token ytf
-	BuyToken = "bdf4f7de26014e8998c1e9bb7f2b0068" //购买token pz
+	BuyToken = "57099c9dfe074484829ce872aa67e613" //购买token pz
 	//BuyToken = "fcb5e5ab940a4db5bf7641b3ad6fa16c" //购买token yp
 	//BuyToken = "91fe6da73a3e463dbf4428cba1a01fd2" //购买token ytj
 
