@@ -208,7 +208,7 @@ var (
 		"4d2eac8cf1384ec4b699856e030d036c", //yty
 		"57099c9dfe074484829ce872aa67e613", //pz
 		"29720b3f8529452fbf2831f738d2a9ec", //zqq
-		"e87709b4dee94ae794109deec9058f5d", //sq
+		//"e87709b4dee94ae794109deec9058f5d", //sq
 		"b05ae67513f64651a003627e3280ffc6", //ytf
 		//"47aa590705994433975afbe84437f451", //myr
 	}
@@ -216,7 +216,7 @@ var (
 
 const (
 	b     = 1   //1是分解 2是置换
-	actId = 743 //活动id
+	actId = 746 //活动id
 )
 
 func main() {
@@ -268,12 +268,12 @@ func Fj() {
 										} else {
 											if Replace(actId, item.OrderID, k) {
 												fmt.Println(j)
-												//rwMut.Lock() // 加写锁
-												//if len(orderInfo[k].Data) > 1 {
-												//	v.Data = orderInfo[k].Data[j+1:]
-												//	orderInfo[k] = v
-												//}
-												//rwMut.Unlock() // 解写锁
+												rwMut.Lock() // 加写锁
+												if len(orderInfo[k].Data) > 1 {
+													v.Data = orderInfo[k].Data[j+1:]
+													orderInfo[k] = v
+												}
+												rwMut.Unlock() // 解写锁
 											}
 										}
 									}
