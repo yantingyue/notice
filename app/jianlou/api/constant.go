@@ -232,7 +232,7 @@ var (
 )
 
 const (
-	TimeSpace   = 15                                 //间隔时间
+	TimeSpace   = 25                                 //间隔时间
 	BuyNum      = 20                                 //购买数量
 	ProductName = "血玉"                               //商品名称
 	BuyToken    = "4d2eac8cf1384ec4b699856e030d036c" //购买token
@@ -243,7 +243,7 @@ const (
 	//BuyToken = "91fe6da73a3e463dbf4428cba1a01fd2" //购买token ytj
 
 	PageSize = 5
-	PayType  = 2 //1零钱2快付通
+	PayType  = 1 //1零钱2快付通
 	Pwd      = "DVqBnIG8tFOmfbFp+tIXisluxkZDahm5Gk6MVvg4tY9td7tfjTvu5JiCDBmW39mUhgjY0z6zzlfj6Jc0/YDyaGLLB8n/wRXHoPRv6qlOyMleQw1iU5Y10MfF0jYylh2EJtiVd8VQWwOWgAuYmCIYUNqoy4IhjYxMs9Bj82l/rts="
 	//Pwd = "kSmIyvNXdGWlnTJBfmhtkTmvJc/sB8Bu78UrgHpj4+I3DsNaUpLRQccpEaBpKpG9+DeJOsgCwrK9iL1JG99GjUxaL+loiCDcm/UM1EZDPmveXq1XQeyLhMjbyPEGGUnJUp0fwZUAddRpQ9Zanbq6gk4/lEftFxFWz4wIHsfgJQI="
 	//Pwd = "oYM0g+TEQ7ToqmcDXpBKbEspk3H/buLHmBNu3Y5mqFuVPx57gjznAI6HYzCv+evM1DbKjdWHmHirGX0KhNkuk+Wjp6gw+0Jz2AeRLz8u5ChQHv+SHW9Ff1CaNUOyusBtJcg2JDDA17KCaJ0vCFYjVdQXJCX+BWWUwBP7zjHrUNI="
