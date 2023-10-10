@@ -258,7 +258,7 @@ func Fj() {
 										if item.Type == "prop" {
 											if ReplaceProp(actId, item.PropUserUuid, k) {
 												fmt.Println(j)
-												//rwMut.Lock() // 加写锁
+												rwMut.Lock() // 加写锁
 												//if len(orderInfo[k].Data) > 1 {
 												//	v.Data = orderInfo[k].Data[j+1:]
 												//	orderInfo[k] = v
