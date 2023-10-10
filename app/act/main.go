@@ -216,7 +216,7 @@ var (
 
 const (
 	b     = 1   //1是分解 2是置换
-	actId = 746 //活动id
+	actId = 747 //活动id
 )
 
 func main() {
@@ -281,7 +281,7 @@ func Fj() {
 							}
 						}
 					}()
-					time.Sleep(time.Millisecond * 20)
+					time.Sleep(time.Millisecond * 10)
 				}
 			}
 			//置换
