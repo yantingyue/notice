@@ -206,17 +206,17 @@ var (
 	}
 	buyTokens = []string{
 		"4d2eac8cf1384ec4b699856e030d036c", //yty
-		"5bcfe5f55d5a47ed8a3997d31ba37c3a", //pz
-		//"29720b3f8529452fbf2831f738d2a9ec", //zqq
+		"220ffeda95ec4789b26a03a903a0f939", //pz
+		"29720b3f8529452fbf2831f738d2a9ec", //zqq
 		"b05ae67513f64651a003627e3280ffc6", //ytf
-		"e87709b4dee94ae794109deec9058f5d", //sq
+		//"e87709b4dee94ae794109deec9058f5d", //sq
 		//"47aa590705994433975afbe84437f451", //myr
 	}
 )
 
 const (
 	b     = 1   //1是分解 2是置换
-	actId = 748 //活动id
+	actId = 752 //活动id
 )
 
 func main() {
@@ -303,12 +303,12 @@ func Fj() {
 										}
 									} else {
 										if Replace(actId, item.OrderID, k) {
-											rwMut.Lock() // 加写锁
-											if len(orderInfo[k].Data) > 1 {
-												v.Data = orderInfo[k].Data[j+1:]
-												orderInfo[k] = v
-											}
-											rwMut.Unlock() // 解写锁
+											//rwMut.Lock() // 加写锁
+											//if len(orderInfo[k].Data) > 1 {
+											//	v.Data = orderInfo[k].Data[j+1:]
+											//	orderInfo[k] = v
+											//}
+											//rwMut.Unlock() // 解写锁
 										}
 									}
 								}
