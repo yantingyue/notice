@@ -232,7 +232,7 @@ var (
 )
 
 const (
-	TimeSpace   = 15                                 //间隔时间
+	TimeSpace   = 10                                 //间隔时间
 	BuyNum      = 2                                  //购买数量
 	ProductName = "火焰兵"                              //商品名称
 	BuyToken    = "4d2eac8cf1384ec4b699856e030d036c" //购买token
