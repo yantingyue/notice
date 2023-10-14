@@ -215,8 +215,8 @@ var (
 )
 
 const (
-	b     = 1   //1是分解 2是置换
-	actId = 752 //活动id
+	b     = 2   //1是分解 2是置换
+	actId = 753 //活动id
 )
 
 func main() {
@@ -258,7 +258,7 @@ func Fj() {
 										if item.Type == "prop" {
 											if ReplaceProp(actId, item.PropUserUuid, k) {
 												fmt.Println(j)
-												rwMut.Lock() // 加写锁
+												//rwMut.Lock() // 加写锁
 												//if len(orderInfo[k].Data) > 1 {
 												//	v.Data = orderInfo[k].Data[j+1:]
 												//	orderInfo[k] = v
@@ -387,7 +387,7 @@ func ReplaceDetail(id uint64, token string) bool {
 	//resDetail.Data.StartTimeTimestamp = 1689605160000
 	diffTime := resDetail.Data.StartTimeTimestamp - resTime.CurrentMilliTime
 	log.Println(resDetail.Data.StartTimeTimestamp, resTime.CurrentMilliTime, diffTime)
-	if diffTime < 100 && diffTime > 0 {
+	if diffTime < 50 && diffTime > 0 {
 		//time.Sleep(time.Millisecond * time.Duration(diffTime))
 		log.Println(diffTime, resTime.CurrentMilliTime, resDetail.Data.StartTimeTimestamp, time.Now().UnixMilli())
 		return true
