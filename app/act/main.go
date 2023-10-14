@@ -303,12 +303,12 @@ func Fj() {
 										}
 									} else {
 										if Replace(actId, item.OrderID, k) {
-											//rwMut.Lock() // 加写锁
-											//if len(orderInfo[k].Data) > 1 {
-											//	v.Data = orderInfo[k].Data[j+1:]
-											//	orderInfo[k] = v
-											//}
-											//rwMut.Unlock() // 解写锁
+											rwMut.Lock() // 加写锁
+											if len(orderInfo[k].Data) > 1 {
+												v.Data = orderInfo[k].Data[j+1:]
+												orderInfo[k] = v
+											}
+											rwMut.Unlock() // 解写锁
 										}
 									}
 								}
