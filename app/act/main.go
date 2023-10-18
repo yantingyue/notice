@@ -281,7 +281,7 @@ func Fj() {
 							}
 						}
 					}()
-					time.Sleep(time.Millisecond * 10)
+					time.Sleep(time.Millisecond * 20)
 				}
 			}
 			//置换
