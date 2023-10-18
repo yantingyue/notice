@@ -205,7 +205,7 @@ var (
 		"7e6a52eedbfb4319ae5ea55613030bcb",
 	}
 	buyTokens = []string{
-		"d3b1e79f3e1144a8998e9aeaa21e335d", //yty
+		"1bdaa7860f2c499082d7e58005e26002", //yty
 		//"fb8bbacf113049289b4fd8024002efa4 ", //pz
 		"29720b3f8529452fbf2831f738d2a9ec", //zqq
 		//"b05ae67513f64651a003627e3280ffc6",  //ytf
