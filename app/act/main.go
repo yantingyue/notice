@@ -210,7 +210,7 @@ var (
 		"29720b3f8529452fbf2831f738d2a9ec", //zqq
 		//"b05ae67513f64651a003627e3280ffc6",  //ytf
 		//"e87709b4dee94ae794109deec9058f5d",  //sq
-		//"220ffeda95ec4789b26a03a903a0f939",  //myr
+		"220ffeda95ec4789b26a03a903a0f939", //myr
 	}
 )
 
