@@ -435,16 +435,16 @@ var (
 )
 
 const (
-	TimeSpace   = 5                                  //间隔时间
-	BuyNum      = 2                                  //购买数量
-	ProductName = "元婴傀儡"                             //商品名称
-	BuyToken    = "13034f6671db405da46c5877b28f24f3" //购买token
+	TimeSpace   = 5      //间隔时间
+	BuyNum      = 2      //购买数量
+	ProductName = "元婴傀儡" //商品名称
+	//BuyToken    = "13034f6671db405da46c5877b28f24f3" //购买token
 	//BuyToken = "29720b3f8529452fbf2831f738d2a9ec" //购买token
 	//BuyToken = "0db20208ef454d0aae633319b4863dae" //购买token ytf
 	//BuyToken = "e422851472034a7e94722001848e72dd" //购买token pz
 	//BuyToken = "fcb5e5ab940a4db5bf7641b3ad6fa16c" //购买token yp
 	//BuyToken = "91fe6da73a3e463dbf4428cba1a01fd2" //购买token ytj
-	//BuyToken = "2f1d8f127e19490e872012b9206ba220" //购买token bin
+	BuyToken = "2f1d8f127e19490e872012b9206ba220" //购买token bin
 
 	PageSize = 5
 	PayType  = 2 //1零钱2快付通
