@@ -435,7 +435,7 @@ var (
 )
 
 const (
-	TimeSpace   = 5      //间隔时间
+	TimeSpace   = 10     //间隔时间
 	BuyNum      = 2      //购买数量
 	ProductName = "元婴傀儡" //商品名称
 	//BuyToken    = "13034f6671db405da46c5877b28f24f3" //购买token
