@@ -233,9 +233,9 @@ var (
 
 const (
 	TimeSpace   = 10                                 //间隔时间
-	BuyNum      = 2                                  //购买数量
-	ProductName = "火焰兵"                              //商品名称
-	BuyToken    = "4d2eac8cf1384ec4b699856e030d036c" //购买token
+	BuyNum      = 12                                 //购买数量
+	ProductName = "元婴傀儡"                             //商品名称
+	BuyToken    = "13034f6671db405da46c5877b28f24f3" //购买token
 	//BuyToken = "29720b3f8529452fbf2831f738d2a9ec" //购买token
 	//BuyToken = "0db20208ef454d0aae633319b4863dae" //购买token ytf
 	//BuyToken = "57099c9dfe074484829ce872aa67e613" //购买token pz
