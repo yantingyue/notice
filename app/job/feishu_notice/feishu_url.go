@@ -111,6 +111,9 @@ var (
 		UserId26: []string{
 			"https://open.feishu.cn/open-apis/bot/v2/hook/679db88d-7e31-4990-837c-52e88c83861d",
 		},
+		UserId27: []string{
+			"https://open.feishu.cn/open-apis/bot/v2/hook/679db88d-7e31-4990-837c-52e88c83861d",
+		},
 	}
 )
 

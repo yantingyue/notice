@@ -45,6 +45,7 @@ const (
 	UserId24 = 75959740316 //谜语人小号
 	UserId25 = 75958858370 //王晓芳
 	UserId26 = 110110      //test
+	UserId27 = 110111      //test
 )
 
 const (
