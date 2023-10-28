@@ -265,7 +265,6 @@ var (
 		"0746da069d514a429661b7b67359c65b",
 		"b09623f40f864958a1e2fa36ecd4b0a2",
 		"fa0f4a31ce054e94b261d3dad75b7430",
-		"ad3d10545100473aadd563c1be5b783f",
 		"a5510e6d144248ff8315631e54d2dd57",
 		"549d8a5a52cf40cf92b99b54beca15c1",
 		"442a8047777449c89e190fa9e57f648b",
@@ -439,7 +438,7 @@ const (
 	BuyNum      = 2                                  //购买数量
 	ProductName = "神威天将马超"                           //商品名称
 	BuyToken    = "bd0d1fc9c2ba42aa85a738b3ce600a97" //购买token
-	//BuyToken = "29720b3f8529452fbf2831f738d2a9ec" //购买token
+	//BuyToken = "f457f3597a04467bafe6172832ebe84d" //购买token
 	//BuyToken = "0db20208ef454d0aae633319b4863dae" //购买token ytf
 	//BuyToken = "e422851472034a7e94722001848e72dd" //购买token pz
 	//BuyToken = "fcb5e5ab940a4db5bf7641b3ad6fa16c" //购买token yp
