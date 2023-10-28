@@ -329,7 +329,7 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 	resp := request(token, body, Urls[0])
 	sellList := SellListResp{}
 	json.Unmarshal(resp, &sellList)
-	if (sellList.Code == 410 || sellList.Code == 401) && tempToken == token {
+	if (sellList.Code == 410 || sellList.Code == 401 || sellList.Code == 700336) && tempToken == token {
 		ch <- 1
 	}
 	if sellList.Code == 0 && len(sellList.Data.Res) > 0 {
