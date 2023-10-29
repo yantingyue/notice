@@ -406,11 +406,10 @@ var (
 )
 
 const (
-	TimeSpace   = 25       //间隔时间
-	BuyNum      = 2        //购买数量
-	ProductName = "神威天将马超" //商品名称
-	//ProductName = "龙谭" //商品名称
-	BuyToken = "bd0d1fc9c2ba42aa85a738b3ce600a97" //购买token
+	TimeSpace   = 15                                 //间隔时间
+	BuyNum      = 2                                  //购买数量
+	ProductName = "神威天将马超"                           //商品名称
+	BuyToken    = "bd0d1fc9c2ba42aa85a738b3ce600a97" //购买token
 	//BuyToken = "f457f3597a04467bafe6172832ebe84d" //购买token
 	//BuyToken = "0db20208ef454d0aae633319b4863dae" //购买token ytf
 	//BuyToken = "e422851472034a7e94722001848e72dd" //购买token pz
