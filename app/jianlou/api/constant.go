@@ -196,27 +196,17 @@ var (
 		"f2a78c70e5164f1b9fc3c7fc04713ea5",
 		"9987cf3ec44c42619bd58dc410d14754",
 		"99059e268b4b48aba5d7f158b2570f15",
-		"7d3729ac3d1a4c4082490116a1c14408",
 		"7e9d4d1e1b3d43abb982ffdfdca0040f",
-		"aa29ba752dc54016bd0331a7633cc06a",
-		"2116224d68ba4e058ff750709019d3a4",
 		"dbfe344053b1417184194416bec851d4",
 		"982ee2d3d18f4e5b9e1ea773ac444c84",
-		"f4d7dd051fe24cf98bc29e294d6268bd",
 		"b6c51269e6e742099f21d39755d29483",
 		"203c788e19014efc9215e67ea99040b5",
 		"c672c0f0033b4248876a38466f4a4c0d",
-		"ce58c9310069479f96f69093f99b3193",
-		"a2a5e9af46d7457ba76fde5f0e21e2e4",
 		"d631ccbe13664b5e9fb72b6705e5efb4",
 		"e6cf5069d53a4528b6a7f36e9867bb9e",
-		"2617f1d456054b9cb573f82330c6c146",
-		"dca173b5cae6444cad5c8293a68b08f7",
-		"19e87ca0ad7e4d5dab6e67265ece07bb",
 		"f9386cd28615405687db62ea79ca5bfe",
 		"b7d6a84982d442eb85f26ff12407abbb",
 		"9b6f97f741d84b7d955ad7c76efc659b",
-		"002495f4ba5e4130885c174e99a20b79",
 		"da49c9246b4944d59cb733df7b3e32c0",
 
 		//老周
@@ -435,7 +425,7 @@ var (
 const (
 	TimeSpace   = 25                                 //间隔时间
 	BuyNum      = 2                                  //购买数量
-	ProductName = "神威天将马超"                           //商品名称
+	ProductName = "致命滑彩"                             //商品名称
 	BuyToken    = "bd0d1fc9c2ba42aa85a738b3ce600a97" //购买token
 	//BuyToken = "f457f3597a04467bafe6172832ebe84d" //购买token
 	//BuyToken = "0db20208ef454d0aae633319b4863dae" //购买token ytf
