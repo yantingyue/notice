@@ -135,7 +135,6 @@ var (
 		"a39b36161b1e44e9acf37ac87179f3db",
 		"eabc481029b6467c9040f51309e8434f",
 		"2aac43bdebd344f09825ced1222d5e57",
-		"4eb878199a6d4040a3a5ed629ca1e399",
 		"4fac98e7ff1d4bee8a94b7744147e180",
 		"be908846e6334ad7a1cdc49d0071e5e4",
 		"97fd8bbc7f2342299e2c539233e04cad",
@@ -143,7 +142,6 @@ var (
 		"823546c5ba0f411cbab9c45366c2a70c",
 		"4375a98921b94e27a8ba74d2d45decc1",
 		"0307ccbb543f4e7a8c985f150236550a",
-		"daaa50e6f81a4a019f8146ec799c8076",
 		"a28eb0125cb145cf9d56da765a40f0b4",
 		"33eb59e7b85d4e16bb63aa34c9b58ffb",
 		"965e99cfb8d94599896a68504c084947",
@@ -211,7 +209,6 @@ var (
 		"7a55cd893c1c4eaaad98b423db315e1c",
 		"7ff20057b2644d88b0bc59d97ad8e8e3",
 		"7c5f873a51164a0997cfc18002a373e5",
-		"c6e3ffddfac24aaaa4138dd14f42cb57",
 		"2c825d86639841c1b64d6e4b27da9c05",
 		"20908d87c481477ca648020d1184f487",
 		"33c31f403b0947f0ae408c60fced07ef",
@@ -414,11 +411,11 @@ var (
 )
 
 const (
-	TimeSpace   = 35                                 //间隔时间
-	BuyNum      = 2                                  //购买数量
-	ProductName = "神威天将马超"                           //商品名称
-	BuyToken    = "bd0d1fc9c2ba42aa85a738b3ce600a97" //购买token
-	//BuyToken = "f457f3597a04467bafe6172832ebe84d" //购买token
+	TimeSpace   = 35       //间隔时间
+	BuyNum      = 2        //购买数量
+	ProductName = "神威天将马超" //商品名称
+	//BuyToken    = "bd0d1fc9c2ba42aa85a738b3ce600a97" //购买token
+	BuyToken = "f457f3597a04467bafe6172832ebe84d" //购买token
 	//BuyToken = "0db20208ef454d0aae633319b4863dae" //购买token ytf
 	//BuyToken = "e422851472034a7e94722001848e72dd" //购买token pz
 	//BuyToken = "fcb5e5ab940a4db5bf7641b3ad6fa16c" //购买token yp
@@ -428,8 +425,8 @@ const (
 
 	PageSize = 5
 	PayType  = 2 //1零钱2快付通
-	Pwd      = "DVqBnIG8tFOmfbFp+tIXisluxkZDahm5Gk6MVvg4tY9td7tfjTvu5JiCDBmW39mUhgjY0z6zzlfj6Jc0/YDyaGLLB8n/wRXHoPRv6qlOyMleQw1iU5Y10MfF0jYylh2EJtiVd8VQWwOWgAuYmCIYUNqoy4IhjYxMs9Bj82l/rts="
-	//Pwd = "kSmIyvNXdGWlnTJBfmhtkTmvJc/sB8Bu78UrgHpj4+I3DsNaUpLRQccpEaBpKpG9+DeJOsgCwrK9iL1JG99GjUxaL+loiCDcm/UM1EZDPmveXq1XQeyLhMjbyPEGGUnJUp0fwZUAddRpQ9Zanbq6gk4/lEftFxFWz4wIHsfgJQI="
+	//Pwd      = "DVqBnIG8tFOmfbFp+tIXisluxkZDahm5Gk6MVvg4tY9td7tfjTvu5JiCDBmW39mUhgjY0z6zzlfj6Jc0/YDyaGLLB8n/wRXHoPRv6qlOyMleQw1iU5Y10MfF0jYylh2EJtiVd8VQWwOWgAuYmCIYUNqoy4IhjYxMs9Bj82l/rts="
+	Pwd = "kSmIyvNXdGWlnTJBfmhtkTmvJc/sB8Bu78UrgHpj4+I3DsNaUpLRQccpEaBpKpG9+DeJOsgCwrK9iL1JG99GjUxaL+loiCDcm/UM1EZDPmveXq1XQeyLhMjbyPEGGUnJUp0fwZUAddRpQ9Zanbq6gk4/lEftFxFWz4wIHsfgJQI="
 	//Pwd = "oYM0g+TEQ7ToqmcDXpBKbEspk3H/buLHmBNu3Y5mqFuVPx57gjznAI6HYzCv+evM1DbKjdWHmHirGX0KhNkuk+Wjp6gw+0Jz2AeRLz8u5ChQHv+SHW9Ff1CaNUOyusBtJcg2JDDA17KCaJ0vCFYjVdQXJCX+BWWUwBP7zjHrUNI="
 	//Pwd = "JLI38dg4HN9dAnw89eChytrWE+PmWQfxAf8u2tgIlAmZ2u/WCxYiB0p1MoeMH/qosVwXzY53Ck+zfK58Ox8Sl+MY+0kGstkApiLema+rAbPA0inMU6jlFGTtpUOKHaw0Wts6AjMTSG6aXyReh/3LuZFQfcGLyczTlF1egqZDsgk="
 	//Pwd = "QcF6cbAHoMiEfH8okZX5Jug5wMI6gByX24Gj2m5rQBGpl/bqT8VLaIY982QtyIMkdyTz2SeFTJKPatFm8GFWsWFBkU4xc0lyEJiG9qkWjoJAdQ+R9gP8g0tfRy9cWrRtaKuEMhMd7dUQtIjoxo1v7xuRMyHCLC3NLywZSu8x7rg="
