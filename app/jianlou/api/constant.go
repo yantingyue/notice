@@ -406,9 +406,10 @@ var (
 )
 
 const (
-	TimeSpace   = 35                                 //间隔时间
-	BuyNum      = 2                                  //购买数量
-	ProductName = "神威天将马超"                           //商品名称
+	TimeSpace = 35 //间隔时间
+	BuyNum    = 2  //购买数量
+	//ProductName = "神威天将马超"                           //商品名称
+	ProductName = "龙谭"                               //商品名称
 	BuyToken    = "bd0d1fc9c2ba42aa85a738b3ce600a97" //购买token
 	//BuyToken = "f457f3597a04467bafe6172832ebe84d" //购买token
 	//BuyToken = "0db20208ef454d0aae633319b4863dae" //购买token ytf
@@ -416,7 +417,7 @@ const (
 	//BuyToken = "fcb5e5ab940a4db5bf7641b3ad6fa16c" //购买token yp
 	//BuyToken = "91fe6da73a3e463dbf4428cba1a01fd2" //购买token ytj
 	//BuyToken = "2f1d8f127e19490e872012b9206ba220" //购买token bin
-	//BuyToken = "5d737a754f5e4397a527f3ef67d685da" //购买token myr
+	//BuyToken = "b57599e09368437481868fa4e1900da2" //购买token myr
 
 	PageSize = 5
 	PayType  = 2 //1零钱2快付通
