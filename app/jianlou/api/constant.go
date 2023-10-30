@@ -406,13 +406,13 @@ var (
 )
 
 const (
-	TimeSpace   = 15    //间隔时间
-	BuyNum      = 2     //购买数量
-	ProductName = "魔云腾" //商品名称
-	//BuyToken    = "bd0d1fc9c2ba42aa85a738b3ce600a97" //购买token
+	TimeSpace   = 15                                 //间隔时间
+	BuyNum      = 2                                  //购买数量
+	ProductName = "魔云腾"                              //商品名称
+	BuyToken    = "bd0d1fc9c2ba42aa85a738b3ce600a97" //购买token
 	//BuyToken = "f457f3597a04467bafe6172832ebe84d" //购买token
 	//BuyToken = "0db20208ef454d0aae633319b4863dae" //购买token ytf
-	BuyToken = "1a158f0854b44607b4a6fe7dc6043c85" //购买token pz
+	//BuyToken = "1a158f0854b44607b4a6fe7dc6043c85" //购买token pz
 	//BuyToken = "fcb5e5ab940a4db5bf7641b3ad6fa16c" //购买token yp
 	//BuyToken = "91fe6da73a3e463dbf4428cba1a01fd2" //购买token ytj
 	//BuyToken = "2f1d8f127e19490e872012b9206ba220" //购买token bin
@@ -420,10 +420,10 @@ const (
 
 	PageSize = 5
 	PayType  = 2 //1零钱2快付通
-	//Pwd      = "DVqBnIG8tFOmfbFp+tIXisluxkZDahm5Gk6MVvg4tY9td7tfjTvu5JiCDBmW39mUhgjY0z6zzlfj6Jc0/YDyaGLLB8n/wRXHoPRv6qlOyMleQw1iU5Y10MfF0jYylh2EJtiVd8VQWwOWgAuYmCIYUNqoy4IhjYxMs9Bj82l/rts="
+	Pwd      = "DVqBnIG8tFOmfbFp+tIXisluxkZDahm5Gk6MVvg4tY9td7tfjTvu5JiCDBmW39mUhgjY0z6zzlfj6Jc0/YDyaGLLB8n/wRXHoPRv6qlOyMleQw1iU5Y10MfF0jYylh2EJtiVd8VQWwOWgAuYmCIYUNqoy4IhjYxMs9Bj82l/rts="
 	//Pwd = "kSmIyvNXdGWlnTJBfmhtkTmvJc/sB8Bu78UrgHpj4+I3DsNaUpLRQccpEaBpKpG9+DeJOsgCwrK9iL1JG99GjUxaL+loiCDcm/UM1EZDPmveXq1XQeyLhMjbyPEGGUnJUp0fwZUAddRpQ9Zanbq6gk4/lEftFxFWz4wIHsfgJQI="
 	//Pwd = "oYM0g+TEQ7ToqmcDXpBKbEspk3H/buLHmBNu3Y5mqFuVPx57gjznAI6HYzCv+evM1DbKjdWHmHirGX0KhNkuk+Wjp6gw+0Jz2AeRLz8u5ChQHv+SHW9Ff1CaNUOyusBtJcg2JDDA17KCaJ0vCFYjVdQXJCX+BWWUwBP7zjHrUNI="
-	Pwd = "JLI38dg4HN9dAnw89eChytrWE+PmWQfxAf8u2tgIlAmZ2u/WCxYiB0p1MoeMH/qosVwXzY53Ck+zfK58Ox8Sl+MY+0kGstkApiLema+rAbPA0inMU6jlFGTtpUOKHaw0Wts6AjMTSG6aXyReh/3LuZFQfcGLyczTlF1egqZDsgk="
+	//Pwd = "JLI38dg4HN9dAnw89eChytrWE+PmWQfxAf8u2tgIlAmZ2u/WCxYiB0p1MoeMH/qosVwXzY53Ck+zfK58Ox8Sl+MY+0kGstkApiLema+rAbPA0inMU6jlFGTtpUOKHaw0Wts6AjMTSG6aXyReh/3LuZFQfcGLyczTlF1egqZDsgk="
 	//Pwd = "QcF6cbAHoMiEfH8okZX5Jug5wMI6gByX24Gj2m5rQBGpl/bqT8VLaIY982QtyIMkdyTz2SeFTJKPatFm8GFWsWFBkU4xc0lyEJiG9qkWjoJAdQ+R9gP8g0tfRy9cWrRtaKuEMhMd7dUQtIjoxo1v7xuRMyHCLC3NLywZSu8x7rg="
 	//Pwd = "K+Hzexd6EHHeWIbKlVcU6jdGbALHlhw7N4a6TBvHeRt+RuJBYH9pntJIlR+g6koF1m9fQPgLl+Et6W18d5P2MfOHFxHwdEpC0fPT4zfXokDhOZY4xfHXtFWZTUntn2KFAW4C5NC+Ka/c/q0DozqWxrMONRwiEVr4vaVqrU21GrM="
 	//Pwd = "x2/7vi3UY72uTJOOEl7aLomy2zpbDE0NA4FvzX9KBP6hhi2igpknXWHcvxYY/h8Of2cEByBdMm6PbGDY+aSP1gm7nho59lqvYurgf8Wgz+VFyRE7mUT8ooye/sbYNhZCEPt11nYcaQhTyxnWiKnQJNdVJV5e/pa4H8Ora12eV/M="
