@@ -458,7 +458,7 @@ var (
 )
 
 const (
-	TimeSpace   = 30                                 //间隔时间
+	TimeSpace   = 20                                 //间隔时间
 	BuyNum      = 2                                  //购买数量
 	ProductName = "黑神套装"                             //商品名称
 	BuyToken    = "bd0d1fc9c2ba42aa85a738b3ce600a97" //购买token
