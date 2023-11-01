@@ -354,7 +354,10 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 			case 2:
 				for i := 0; i < 2; i++ {
 					go func() {
-						CreateOrderKft(ctx, BuyToken, sellInfo.SecondId)
+						CreateOrderKft(ctx, BuyToken, sellInfo.SecondId, Pwd)
+					}()
+					go func() {
+						CreateOrderKft(ctx, "8e50edd3447249658d294b910819ea92", sellInfo.SecondId, Pwd1)
 					}()
 				}
 				//go func() {
@@ -392,7 +395,7 @@ func CreateOrderWallet(ctx context.Context, token string, secondId uint64) {
 	}
 }
 
-func CreateOrderKft(ctx context.Context, token string, secondId uint64) {
+func CreateOrderKft(ctx context.Context, token string, secondId uint64, pwd string) {
 	crOrderReq := map[string]interface{}{
 		"operate_type":   "buy",
 		"second_id":      secondId,
@@ -417,7 +420,7 @@ func CreateOrderKft(ctx context.Context, token string, secondId uint64) {
 				"order_no":     prePayOrderResp.Data.OrderNo,
 				"confirm_flag": "1",
 				"pay_channel":  4,
-				"pay_pwd":      Pwd,
+				"pay_pwd":      pwd,
 			}
 			payOrderResp := request(token, payReq, Urls[3])
 			paySuccess := PayOrderResp{}
