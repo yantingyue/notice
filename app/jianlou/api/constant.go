@@ -459,7 +459,7 @@ var (
 
 const (
 	TimeSpace   = 10    //间隔时间
-	BuyNum      = 3     //购买数量
+	BuyNum      = 2     //购买数量
 	ProductName = "酒神咒" //商品名称
 	//BuyToken    = "bd0d1fc9c2ba42aa85a738b3ce600a97" //购买token
 	//BuyToken = "f457f3597a04467bafe6172832ebe84d" //购买token
@@ -471,7 +471,7 @@ const (
 	//BuyToken = "7f166ff3b826415984dda61bf95646a3" //购买token myr
 	BuyToken = "761c8046e89e45a6b6ed380508c3c8b8" //购买token myrxh
 
-	PageSize = 2
+	PageSize = 10
 	PayType  = 2 //1零钱2快付通
 	//Pwd      = "DVqBnIG8tFOmfbFp+tIXisluxkZDahm5Gk6MVvg4tY9td7tfjTvu5JiCDBmW39mUhgjY0z6zzlfj6Jc0/YDyaGLLB8n/wRXHoPRv6qlOyMleQw1iU5Y10MfF0jYylh2EJtiVd8VQWwOWgAuYmCIYUNqoy4IhjYxMs9Bj82l/rts="
 	//Pwd = "kSmIyvNXdGWlnTJBfmhtkTmvJc/sB8Bu78UrgHpj4+I3DsNaUpLRQccpEaBpKpG9+DeJOsgCwrK9iL1JG99GjUxaL+loiCDcm/UM1EZDPmveXq1XQeyLhMjbyPEGGUnJUp0fwZUAddRpQ9Zanbq6gk4/lEftFxFWz4wIHsfgJQI="
