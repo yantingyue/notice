@@ -468,7 +468,8 @@ const (
 	//BuyToken = "fcb5e5ab940a4db5bf7641b3ad6fa16c" //购买token yp
 	//BuyToken = "91fe6da73a3e463dbf4428cba1a01fd2" //购买token ytj
 	//BuyToken = "2f1d8f127e19490e872012b9206ba220" //购买token bin
-	BuyToken = "7f166ff3b826415984dda61bf95646a3" //购买token myr
+	//BuyToken = "7f166ff3b826415984dda61bf95646a3" //购买token myr
+	BuyToken = "761c8046e89e45a6b6ed380508c3c8b8" //购买token myrxh
 
 	PageSize = 2
 	PayType  = 2 //1零钱2快付通
