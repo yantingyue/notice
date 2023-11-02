@@ -459,7 +459,7 @@ var (
 
 const (
 	TimeSpace   = 5     //间隔时间
-	BuyNum      = 1     //购买数量
+	BuyNum      = 3     //购买数量
 	ProductName = "酒神咒" //商品名称
 	//BuyToken    = "bd0d1fc9c2ba42aa85a738b3ce600a97" //购买token
 	//BuyToken = "f457f3597a04467bafe6172832ebe84d" //购买token
