@@ -16,7 +16,6 @@ import (
 func MotorNotice(name string, userId uint64) {
 	ctx := context.Background()
 	token, _ := cli.RedisClient.Get(ctx, cast.ToString(userId)).Result()
-	fmt.Println(token)
 	if token == "" {
 		//tokens := requestToken(userId)
 		//text := fmt.Sprintf("获取token失败了")
@@ -45,10 +44,10 @@ func handle(ctx context.Context, token string, name string, userId uint64) {
 		resultMap := make(map[uint64]struct{})
 		for _, v := range res.Data.Result {
 			resultMap[v.ProductId] = struct{}{}
-			if v.ProductId == 1019723 || v.ProductId == 1019287 || v.ProductId == 1019119 || v.ProductId == 1019555 || v.ProductId == 1020901 {
-				continue
-			}
-			noticeKey := fmt.Sprintf("%s:%d", name, v.ProductId)
+			//if v.ProductId == 1019723 || v.ProductId == 1019287 || v.ProductId == 1019119 || v.ProductId == 1019555 || v.ProductId == 1020901 {
+			//	continue
+			//}
+			noticeKey := fmt.Sprintf("%s:%d:%d", name, v.ProductId, v.NftProductSizeId)
 			cacheAll, err := cli.RedisClient.HGetAll(ctx, noticeKey).Result()
 			if err != nil && err != redis.Nil {
 				return
@@ -96,7 +95,7 @@ func handle(ctx context.Context, token string, name string, userId uint64) {
 			for _, v := range nftList.Data.Result {
 				if _, ok := resultMap[v.ProductId]; !ok {
 					text = fmt.Sprintf("《%s》卖光了", v.ProductTitle)
-					cli.RedisClient.Del(ctx, fmt.Sprintf("%s:%d", name, v.ProductId))
+					cli.RedisClient.Del(ctx, fmt.Sprintf("%s:%d:%d", name, v.ProductId, v.NftProductSizeId))
 					FeiShuUrl(text, userId)
 				}
 			}
@@ -109,11 +108,12 @@ type NftList struct {
 	Msg  string `json:"msg"`
 	Data struct {
 		Result []struct {
-			Id           uint64 `json:"id"`
-			IsOnSale     uint32 `json:"is_on_sale"`
-			C            uint32 `json:"c"`
-			ProductTitle string `json:"product_title"`
-			ProductId    uint64 `json:"product_id"`
+			Id               uint64 `json:"id"`
+			IsOnSale         uint32 `json:"is_on_sale"`
+			C                uint32 `json:"c"`
+			ProductTitle     string `json:"product_title"`
+			ProductId        uint64 `json:"product_id"`
+			NftProductSizeId uint64 `json:"nft_product_size_id"`
 		} `json:"result"`
 	} `json:"data"`
 }
