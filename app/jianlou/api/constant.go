@@ -202,49 +202,6 @@ var (
 		"6948c557f4bd49f5a4eeeb113db4b15c",
 		"67ef2272d30c454aa6349b490173996f",
 
-		////老周
-		//"b33d6005d6bd4cb6bcfd459a0a14e8f9",
-		//"266687b3f5dd46bc9b62a94be443a1bc",
-		//"54edb4cf4ae8489fa33a996b8d8d70f6",
-		//"e98009dd52b64d409b880435225e4ec7",
-		//"b69d0cbc6d8a4d1f9e1f54c3fc0cf5e2",
-		//"0c104d9e9acb4914af9594e52d2937f6",
-		//"764c670817f54ff4ae66f42fe730f178",
-		//"c4e2012afb1d4d9298bc608ef907e8f1",
-		//"b4722a5b153e4995a56a28f0435c4ad4",
-		//"49168be055ca4e1facaea68adcb6b3d4",
-		//"426f112405264d80bf8b5ed914918e53",
-		//"6f64be79f80045548af7e7d35ae8f270",
-		//"de8f18bc08044bff8dc15e75067bd02d",
-		//"bb113b46885e44e89a1c3a6e634f78be",
-		//"029c15b20d4b4e2da2fb30d8a134e256",
-		//"9f4a75657c254edeae616941a63fe202",
-		//"43e3f5d57ef04a87af032b7900b0be05",
-		//"ba5770eb354f41b9bb172c8736150d77",
-		//"4c6901c2f9344089b3e4de747ed912c5",
-		//"506037d343b944438d058ba043045a8a",
-		//"deb67356c1204353983e410af519c72a",
-		//"d00acd2b51b34ed094c875bee77bfaef",
-		//"535b368f983e4e8ea06dd7899eb5e16c",
-		//"32347dde469149209d833bcc811ee2f6",
-		//"d101f4af6602449d96ffdbec4dd7606f",
-		//"bbe347fb36f04f52804d8732443543b9",
-		//"629f4c8e865e44ab955f18ef90c30040",
-		//"f442cff75d6d4b4cbffcb519a0d8287a",
-		//"939a812e0c744f10b53be95babc6f482",
-		//"d73e76ff686e4fa0aa842d715015a694",
-		//"d3ebe5eee0c54ea1b19ff05f86397543",
-		//"a5be1036ab7442ae8f5ef90a0e73fe1e",
-		//"e80b77f63c6e4ca7b78355c4164668b6",
-		//"f2a78c70e5164f1b9fc3c7fc04713ea5",
-		//"9987cf3ec44c42619bd58dc410d14754",
-		//"99059e268b4b48aba5d7f158b2570f15",
-		//"7e9d4d1e1b3d43abb982ffdfdca0040f",
-		//"dbfe344053b1417184194416bec851d4",
-		//"982ee2d3d18f4e5b9e1ea773ac444c84",
-		//"b6c51269e6e742099f21d39755d29483",
-		//"203c788e19014efc9215e67ea99040b5",
-		//"e6cf5069d53a4528b6a7f36e9867bb9e",
 
 		//老周
 		"05c43169ca834ee6bb01ab091bdd2a56",
@@ -458,7 +415,7 @@ var (
 )
 
 const (
-	TimeSpace   = 3        //间隔时间
+	TimeSpace   = 7        //间隔时间
 	BuyNum      = 3        //购买数量
 	ProductName = "双剑灵魂残片" //商品名称
 	//BuyToken    = "bd0d1fc9c2ba42aa85a738b3ce600a97" //购买token
