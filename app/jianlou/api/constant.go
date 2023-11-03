@@ -458,9 +458,9 @@ var (
 )
 
 const (
-	TimeSpace   = 10    //间隔时间
-	BuyNum      = 2     //购买数量
-	ProductName = "酒神咒" //商品名称
+	TimeSpace   = 10       //间隔时间
+	BuyNum      = 3        //购买数量
+	ProductName = "双剑灵魂残片" //商品名称
 	//BuyToken    = "bd0d1fc9c2ba42aa85a738b3ce600a97" //购买token
 	//BuyToken = "f457f3597a04467bafe6172832ebe84d" //购买token
 	//BuyToken = "0db20208ef454d0aae633319b4863dae" //购买token ytf
@@ -469,7 +469,8 @@ const (
 	//BuyToken = "91fe6da73a3e463dbf4428cba1a01fd2" //购买token ytj
 	//BuyToken = "2f1d8f127e19490e872012b9206ba220" //购买token bin
 	//BuyToken = "7f166ff3b826415984dda61bf95646a3" //购买token myr
-	BuyToken = "761c8046e89e45a6b6ed380508c3c8b8" //购买token myrxh
+	//BuyToken = "761c8046e89e45a6b6ed380508c3c8b8" //购买token myrxh
+	BuyToken = "71eeb9397620490aaa5bea50c916c2c4" //购买token pzxh
 
 	PageSize = 10
 	PayType  = 2 //1零钱2快付通
@@ -480,5 +481,6 @@ const (
 	//Pwd = "QcF6cbAHoMiEfH8okZX5Jug5wMI6gByX24Gj2m5rQBGpl/bqT8VLaIY982QtyIMkdyTz2SeFTJKPatFm8GFWsWFBkU4xc0lyEJiG9qkWjoJAdQ+R9gP8g0tfRy9cWrRtaKuEMhMd7dUQtIjoxo1v7xuRMyHCLC3NLywZSu8x7rg="
 	//Pwd = "K+Hzexd6EHHeWIbKlVcU6jdGbALHlhw7N4a6TBvHeRt+RuJBYH9pntJIlR+g6koF1m9fQPgLl+Et6W18d5P2MfOHFxHwdEpC0fPT4zfXokDhOZY4xfHXtFWZTUntn2KFAW4C5NC+Ka/c/q0DozqWxrMONRwiEVr4vaVqrU21GrM="
 	//Pwd = "x2/7vi3UY72uTJOOEl7aLomy2zpbDE0NA4FvzX9KBP6hhi2igpknXWHcvxYY/h8Of2cEByBdMm6PbGDY+aSP1gm7nho59lqvYurgf8Wgz+VFyRE7mUT8ooye/sbYNhZCEPt11nYcaQhTyxnWiKnQJNdVJV5e/pa4H8Ora12eV/M="
-	Pwd = "Dh0QIIpN4rtkl9dW/t4kjMdznrKGT+eBocygeQAm+uTmvs/6+x18Hk5oqNhuhEf6RLm9VwRyjfcZgFMk6/ebJGCbE4bmyaiYY0ZkE3ajHS9k1TCPxOsE1zUbH04fg+7rqbM3XHgYWB8o7oY4AojaIJUfEBwmEuZZy6C9quisVDM="
+	//Pwd = "Dh0QIIpN4rtkl9dW/t4kjMdznrKGT+eBocygeQAm+uTmvs/6+x18Hk5oqNhuhEf6RLm9VwRyjfcZgFMk6/ebJGCbE4bmyaiYY0ZkE3ajHS9k1TCPxOsE1zUbH04fg+7rqbM3XHgYWB8o7oY4AojaIJUfEBwmEuZZy6C9quisVDM="
+	Pwd = "JLI38dg4HN9dAnw89eChytrWE+PmWQfxAf8u2tgIlAmZ2u/WCxYiB0p1MoeMH/qosVwXzY53Ck+zfK58Ox8Sl+MY+0kGstkApiLema+rAbPA0inMU6jlFGTtpUOKHaw0Wts6AjMTSG6aXyReh/3LuZFQfcGLyczTlF1egqZDsgk="
 )
