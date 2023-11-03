@@ -138,6 +138,12 @@ func cronjob() {
 		panic(err)
 	}
 
+	if err := c.AddFunc("*/5 * * * * *", func() {
+		feishu_notice.MotorNotice("peizhixiaohao", feishu_notice.UserId27)
+	}); err != nil {
+		panic(err)
+	}
+
 	//if err := c.AddFunc("*/5 * * * * *", func() {
 	//	feishu_notice.MotorNotice("test", feishu_notice.UserId26)
 	//}); err != nil {
