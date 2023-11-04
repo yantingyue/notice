@@ -414,7 +414,7 @@ var (
 )
 
 const (
-	TimeSpace   = 5                                  //间隔时间
+	TimeSpace   = 10                                 //间隔时间
 	BuyNum      = 20                                 //购买数量
 	ProductName = "汉中太守"                             //商品名称
 	BuyToken    = "f8e6351734794a5395260118a7f9c5da" //购买token
