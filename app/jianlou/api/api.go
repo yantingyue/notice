@@ -231,7 +231,7 @@ func requestOrder(token string, body map[string]interface{}, url string) (resp [
 	jsonBytes, _ := json.Marshal(body)
 	resp, _ = cli.Post(fmt.Sprintf("%s%s", Host, url), header, jsonBytes)
 	//log.Println(url, string(resp))
-	list.AddNode(fmt.Sprintf("---%s---%s---%s", time.Now().Format("2006-01-02 15:04:05.000"), url, string(resp)))
+	list.AddNode(fmt.Sprintf("---%s---%s---%s---%s", time.Now().Format("2006-01-02 15:04:05.000"), url, string(resp), token))
 	if len(resp) == 0 {
 		return resp
 	}
