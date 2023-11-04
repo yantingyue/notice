@@ -416,7 +416,7 @@ var (
 const (
 	TimeSpace   = 7        //间隔时间
 	BuyNum      = 2        //购买数量
-	ProductName = "西乡候莽张飞" //商品名称
+	ProductName = "西乡侯莽张飞" //商品名称
 	//BuyToken    = "bd0d1fc9c2ba42aa85a738b3ce600a97" //购买token
 	BuyToken = "f457f3597a04467bafe6172832ebe84d" //购买token
 	//BuyToken = "0db20208ef454d0aae633319b4863dae" //购买token ytf
