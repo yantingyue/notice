@@ -120,7 +120,10 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 			case 1:
 				for i := 0; i < 2; i++ {
 					go func() {
-						CreateOrderWallet(ctx, BuyToken, sellInfo.SecondId)
+						CreateOrderWallet(ctx, BuyToken, sellInfo.SecondId, Pwd)
+					}()
+					go func() {
+						CreateOrderWallet(ctx, "f457f3597a04467bafe6172832ebe84d", sellInfo.SecondId, Pwd1)
 					}()
 				}
 			case 2:
@@ -145,7 +148,7 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 		}
 	}
 }
-func CreateOrderWallet(ctx context.Context, token string, secondId uint64) {
+func CreateOrderWallet(ctx context.Context, token string, secondId uint64, pwd string) {
 	crOrderReq := map[string]interface{}{
 		"operate_type":   "buy",
 		"second_id":      secondId,
@@ -158,7 +161,7 @@ func CreateOrderWallet(ctx context.Context, token string, secondId uint64) {
 	if createOrderResp.Code == 0 && createOrderResp.Data.OrderId > 0 {
 		//零钱支付
 		payReq := map[string]interface{}{
-			"pay_pwd":  Pwd,
+			"pay_pwd":  pwd,
 			"order_id": createOrderResp.Data.OrderId,
 		}
 		payResp := request(token, payReq, Urls[4])
