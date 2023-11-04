@@ -122,9 +122,9 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 					go func() {
 						CreateOrderWallet(ctx, BuyToken, sellInfo.SecondId, Pwd)
 					}()
-					//go func() {
-					//	CreateOrderWallet(ctx, "f457f3597a04467bafe6172832ebe84d", sellInfo.SecondId, Pwd1)
-					//}()
+					go func() {
+						CreateOrderWallet(ctx, "f457f3597a04467bafe6172832ebe84d", sellInfo.SecondId, Pwd1)
+					}()
 				}
 			case 2:
 				for i := 0; i < 2; i++ {
