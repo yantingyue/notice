@@ -318,7 +318,7 @@ func Fj() {
 							}
 						}
 					}()
-					time.Sleep(time.Millisecond * 20)
+					time.Sleep(time.Millisecond * 15)
 				}
 			}
 		}
