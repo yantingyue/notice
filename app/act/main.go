@@ -384,8 +384,7 @@ func ReplaceDetail(id uint64, token string) bool {
 	if len(resp1) == 0 || len(resp2) == 0 {
 		return false
 	}
-	fmt.Println(string(resp1))
-	fmt.Println(11111)
+
 	json.Unmarshal(resp1, &resDetail)
 	g, _ := json.Marshal(resp2)
 	json.Unmarshal(g, &resTime)
