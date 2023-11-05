@@ -516,7 +516,7 @@ var (
 
 const (
 	TimeSpace   = 8     //间隔时间
-	BuyNum      = 4     //购买数量
+	BuyNum      = 6     //购买数量
 	ProductName = "醉道士" //商品名称
 	//BuyToken    = "f8e6351734794a5395260118a7f9c5da" //购买token
 	//BuyToken = "f457f3597a04467bafe6172832ebe84d" //购买token
@@ -530,7 +530,7 @@ const (
 	//BuyToken = "71eeb9397620490aaa5bea50c916c2c4" //购买token pzxh
 
 	PageSize = 2
-	PayType  = 2 //1零钱2快付通
+	PayType  = 1 //1零钱2快付通
 	//Pwd      = "DVqBnIG8tFOmfbFp+tIXisluxkZDahm5Gk6MVvg4tY9td7tfjTvu5JiCDBmW39mUhgjY0z6zzlfj6Jc0/YDyaGLLB8n/wRXHoPRv6qlOyMleQw1iU5Y10MfF0jYylh2EJtiVd8VQWwOWgAuYmCIYUNqoy4IhjYxMs9Bj82l/rts="
 	//Pwd1     = "kSmIyvNXdGWlnTJBfmhtkTmvJc/sB8Bu78UrgHpj4+I3DsNaUpLRQccpEaBpKpG9+DeJOsgCwrK9iL1JG99GjUxaL+loiCDcm/UM1EZDPmveXq1XQeyLhMjbyPEGGUnJUp0fwZUAddRpQ9Zanbq6gk4/lEftFxFWz4wIHsfgJQI="
 	Pwd = "oYM0g+TEQ7ToqmcDXpBKbEspk3H/buLHmBNu3Y5mqFuVPx57gjznAI6HYzCv+evM1DbKjdWHmHirGX0KhNkuk+Wjp6gw+0Jz2AeRLz8u5ChQHv+SHW9Ff1CaNUOyusBtJcg2JDDA17KCaJ0vCFYjVdQXJCX+BWWUwBP7zjHrUNI="
