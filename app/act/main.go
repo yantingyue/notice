@@ -205,19 +205,20 @@ var (
 		"7e6a52eedbfb4319ae5ea55613030bcb",
 	}
 	buyTokens = []string{
-		"f8e6351734794a5395260118a7f9c5da",  //yty
-		"8e50edd3447249658d294b910819ea92 ", //pz
-		"c1555a1c07e0430a8a0137474d023025 ", //pz
-		"f457f3597a04467bafe6172832ebe84d",  //zqq
+		//"f8e6351734794a5395260118a7f9c5da",  //yty
+		//"8e50edd3447249658d294b910819ea92 ", //pz
+		//"c1555a1c07e0430a8a0137474d023025 ", //pz
+		//"f457f3597a04467bafe6172832ebe84d",  //zqq
 		//"b05ae67513f64651a003627e3280ffc6",  //ytf
 		//"e87709b4dee94ae794109deec9058f5d",  //sq
 		//"220ffeda95ec4789b26a03a903a0f939", //myr
+		"426e9061bce24034a9e73cbc80cc1d6e", //145 hxz
 	}
 )
 
 const (
-	b     = 1   //1是分解 2是置换
-	actId = 839 //活动id
+	b     = 2   //1是分解 2是置换
+	actId = 844 //活动id
 )
 
 func main() {
@@ -293,23 +294,24 @@ func Fj() {
 							//颜庭跃
 							for k, v := range orderInfo {
 								for j, item := range v.Data {
+									fmt.Println(j)
 									if item.Type == "prop" {
 										if ReplaceProp(actId, item.PropUserUuid, k) {
-											rwMut.Lock() // 加写锁
-											if len(orderInfo[k].Data) > 1 {
-												v.Data = orderInfo[k].Data[j+1:]
-												orderInfo[k] = v
-											}
-											rwMut.Unlock() // 解写锁
+											//rwMut.Lock() // 加写锁
+											//if len(orderInfo[k].Data) > 1 {
+											//	v.Data = orderInfo[k].Data[j+1:]
+											//	orderInfo[k] = v
+											//}
+											//rwMut.Unlock() // 解写锁
 										}
 									} else {
 										if Replace(actId, item.OrderID, k) {
-											rwMut.Lock() // 加写锁
-											if len(orderInfo[k].Data) > 1 {
-												v.Data = orderInfo[k].Data[j+1:]
-												orderInfo[k] = v
-											}
-											rwMut.Unlock() // 解写锁
+											//rwMut.Lock() // 加写锁
+											//if len(orderInfo[k].Data) > 1 {
+											//	v.Data = orderInfo[k].Data[j+1:]
+											//	orderInfo[k] = v
+											//}
+											//rwMut.Unlock() // 解写锁
 										}
 									}
 								}
