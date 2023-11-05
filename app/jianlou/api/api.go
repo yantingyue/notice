@@ -122,24 +122,28 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 					go func() {
 						CreateOrderWallet(ctx, BuyToken, sellInfo.SecondId, Pwd)
 					}()
-					go func() {
-						CreateOrderWallet(ctx, "f457f3597a04467bafe6172832ebe84d", sellInfo.SecondId, Pwd1)
-					}()
+					//go func() {
+					//	CreateOrderWallet(ctx, "f457f3597a04467bafe6172832ebe84d", sellInfo.SecondId, Pwd1)
+					//}()
 				}
 			case 2:
 				for i := 0; i < 2; i++ {
 					go func() {
 						CreateOrderKft(ctx, BuyToken, sellInfo.SecondId, Pwd)
 					}()
+					//go func() {
+					//	CreateOrderKft(ctx, "f457f3597a04467bafe6172832ebe84d", sellInfo.SecondId, Pwd1)
+					//}()
 					go func() {
-						CreateOrderKft(ctx, "f457f3597a04467bafe6172832ebe84d", sellInfo.SecondId, Pwd1)
+						CreateOrderKft(ctx, "7f0000f7b4dd4987a16f4acfc9449e66", sellInfo.SecondId, Pwdytj)
 					}()
+
 					//go func() {
 					//	CreateOrderKft(ctx, "c1555a1c07e0430a8a0137474d023025", sellInfo.SecondId, Pwd1)
 					//}()
-					go func() {
-						CreateOrderKft(ctx, "8e50edd3447249658d294b910819ea92", sellInfo.SecondId, Pwd2)
-					}()
+					//go func() {
+					//	CreateOrderKft(ctx, "8e50edd3447249658d294b910819ea92", sellInfo.SecondId, Pwd2)
+					//}()
 				}
 			}
 		}
