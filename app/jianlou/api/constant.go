@@ -515,7 +515,7 @@ var (
 )
 
 const (
-	TimeSpace   = 4                                  //间隔时间
+	TimeSpace   = 5                                  //间隔时间
 	BuyNum      = 30                                 //购买数量
 	ProductName = "乘风归"                              //商品名称
 	BuyToken    = "f8e6351734794a5395260118a7f9c5da" //购买token
