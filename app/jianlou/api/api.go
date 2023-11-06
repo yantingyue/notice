@@ -135,9 +135,9 @@ func Grab(ctx context.Context, token string, body map[string]interface{}, ch cha
 					go func() {
 						CreateOrderKft(ctx, BuyToken, sellInfo.SecondId, Pwd)
 					}()
-					//go func() {
-					//	CreateOrderKft(ctx, "7f0000f7b4dd4987a16f4acfc9449e66", sellInfo.SecondId, Pwdytj)
-					//}()
+					go func() {
+						CreateOrderKft(ctx, "f457f3597a04467bafe6172832ebe84d", sellInfo.SecondId, Pwd1)
+					}()
 				}
 			}
 		}
