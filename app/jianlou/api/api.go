@@ -72,17 +72,26 @@ func Begin() {
 	}
 	for {
 		for _, v := range TmpTokens {
-			ch := make(chan uint64, 1)
-			go func() {
-				for {
+			ch2 := make(chan uint64, 1)
+			for {
+				go func() {
+					ch := make(chan uint64, 1)
 					Grab(ctx, v, body, ch)
+					select {
+					case a := <-ch:
+						ch2 <- a
+						return
+					default:
+					}
+				}()
+				select {
+				case <-ch2:
+					goto hh
+				default:
 				}
-			}()
-			select {
-			case a := <-ch:
-				ch <- a
+				time.Sleep(time.Millisecond * TimeSpace)
 			}
-			time.Sleep(time.Millisecond * TimeSpace)
+		hh:
 			if buyNum >= BuyNum {
 				time.Sleep(time.Millisecond * 2000)
 				os.Exit(1)
