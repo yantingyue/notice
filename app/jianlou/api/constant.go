@@ -516,8 +516,8 @@ var (
 
 const (
 	TimeSpace   = 5                                  //间隔时间
-	BuyNum      = 5                                  //购买数量
-	ProductName = "水魔兽"                              //商品名称
+	BuyNum      = 20                                 //购买数量
+	ProductName = "乘风归"                              //商品名称
 	BuyToken    = "f8e6351734794a5395260118a7f9c5da" //购买token
 	//BuyToken = "f457f3597a04467bafe6172832ebe84d" //购买token
 	//BuyToken = "8b9d74e0145b48498b5bc704a9b045c8" //购买token ytf
