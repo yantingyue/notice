@@ -16,7 +16,6 @@ import (
 var (
 	SecondIdMap = make(map[uint64]int)
 	buyNum      int
-	ch          = make(chan uint64)
 	tempToken   string
 	list        = LinkedList{}
 )
@@ -25,6 +24,7 @@ func Begin() {
 	go func() {
 		for {
 			list.Traverse(func(data interface{}) {
+				time.Sleep(time.Millisecond * TimeSpace)
 				log.Println(data)
 				list.RemoveNode(data)
 			})
@@ -71,23 +71,18 @@ func Begin() {
 		"order_by":            "price",
 	}
 	for {
-		tempTokenMap := make(map[string]struct{})
 		for _, v := range TmpTokens {
-			tempToken = v
-			for {
-				go func() {
-					Grab(ctx, v, body)
-				}()
-				select {
-				case <-ch:
-					if _, ok := tempTokenMap[v]; !ok {
-						goto next
-					}
-				default:
+			ch := make(chan uint64, 1)
+			go func() {
+				for {
+					Grab(ctx, v, body, ch)
 				}
-				time.Sleep(time.Millisecond * TimeSpace)
+			}()
+			select {
+			case a := <-ch:
+				ch <- a
 			}
-		next:
+			time.Sleep(time.Millisecond * TimeSpace)
 			if buyNum >= BuyNum {
 				time.Sleep(time.Millisecond * 2000)
 				os.Exit(1)
@@ -96,13 +91,14 @@ func Begin() {
 	}
 }
 
-func Grab(ctx context.Context, token string, body map[string]interface{}) {
+func Grab(ctx context.Context, token string, body map[string]interface{}, ch chan uint64) {
 	//查询寄售列表
 	resp := request(token, body, Urls[0])
 	sellList := SellListResp{}
 	json.Unmarshal(resp, &sellList)
-	if (sellList.Code == 410 || sellList.Code == 401 || sellList.Code == 700336) && tempToken == token {
+	if sellList.Code == 410 || sellList.Code == 401 || sellList.Code == 700336 {
 		ch <- 1
+		return
 	}
 	if sellList.Code == 0 && len(sellList.Data.Res) > 0 {
 		for _, sellInfo := range sellList.Data.Res {
@@ -131,19 +127,9 @@ func Grab(ctx context.Context, token string, body map[string]interface{}) {
 					go func() {
 						CreateOrderKft(ctx, BuyToken, sellInfo.SecondId, Pwd)
 					}()
-					//go func() {
-					//	CreateOrderKft(ctx, "f457f3597a04467bafe6172832ebe84d", sellInfo.SecondId, Pwd1)
-					//}()
 					go func() {
 						CreateOrderKft(ctx, "7f0000f7b4dd4987a16f4acfc9449e66", sellInfo.SecondId, Pwdytj)
 					}()
-
-					//go func() {
-					//	CreateOrderKft(ctx, "c1555a1c07e0430a8a0137474d023025", sellInfo.SecondId, Pwd1)
-					//}()
-					//go func() {
-					//	CreateOrderKft(ctx, "8e50edd3447249658d294b910819ea92", sellInfo.SecondId, Pwd2)
-					//}()
 				}
 			}
 		}
@@ -221,7 +207,6 @@ func request(token string, body map[string]interface{}, url string) (resp []byte
 	jsonBytes, _ := json.Marshal(body)
 	resp, _ = cli.Post(fmt.Sprintf("%s%s", Host, url), header, jsonBytes)
 	list.AddNode(fmt.Sprintf("---%s---%s---%s", time.Now().Format("2006-01-02 15:04:05.000"), token, string(resp)))
-	//log.Println("------------------", string(resp), token)
 	if len(resp) == 0 {
 		return resp
 	}
