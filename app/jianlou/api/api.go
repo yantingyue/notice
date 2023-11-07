@@ -131,9 +131,9 @@ func Grab(ctx context.Context, token string, body map[string]interface{}, ch cha
 				}
 			case 2:
 				for i := 0; i < 2; i++ {
-					//go func() {
-					//	CreateOrderKft(ctx, BuyToken, sellInfo.SecondId, Pwd)
-					//}()
+					go func() {
+						CreateOrderKft(ctx, BuyToken, sellInfo.SecondId, Pwd)
+					}()
 					//go func() {
 					//	CreateOrderKft(ctx, "266ae13f69134b7e8171a2e370679aba", sellInfo.SecondId, Pwd1)
 					//}()
@@ -146,9 +146,9 @@ func Grab(ctx context.Context, token string, body map[string]interface{}, ch cha
 					//go func() {
 					//	CreateOrderKft(ctx, "d462f68a707b494fb9a6a22858caebad", sellInfo.SecondId, Pwdlz)
 					//}()
-					go func() {
-						CreateOrderKft(ctx, "d8f6252cc76644a2af586e6fd7c14fde", sellInfo.SecondId, "kRVl9epnSoL6vBjtrZaUWEssfBuFwNssdgViZxitA/ls9lCnc4FKCRQCYoBUasfylOkw45ABGs8KPCCGZtw22ksHUS7EgItI45Olt3MtnD3Q8WpeFZh1BAO31upewIwAsLhjK7bvVHlg2qOKyXB65izuGaGJotwHPeI6Syk0N88=")
-					}()
+					//go func() {
+					//	CreateOrderKft(ctx, "d8f6252cc76644a2af586e6fd7c14fde", sellInfo.SecondId, "kRVl9epnSoL6vBjtrZaUWEssfBuFwNssdgViZxitA/ls9lCnc4FKCRQCYoBUasfylOkw45ABGs8KPCCGZtw22ksHUS7EgItI45Olt3MtnD3Q8WpeFZh1BAO31upewIwAsLhjK7bvVHlg2qOKyXB65izuGaGJotwHPeI6Syk0N88=")
+					//}()
 				}
 			}
 		}
