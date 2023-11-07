@@ -137,9 +137,9 @@ func Grab(ctx context.Context, token string, body map[string]interface{}, ch cha
 					//go func() {
 					//	CreateOrderKft(ctx, "266ae13f69134b7e8171a2e370679aba", sellInfo.SecondId, Pwd1)
 					//}()
-					//go func() {
-					//	CreateOrderKft(ctx, "8e50edd3447249658d294b910819ea92", sellInfo.SecondId, Pwdpz)
-					//}()
+					go func() {
+						CreateOrderKft(ctx, "8e50edd3447249658d294b910819ea92", sellInfo.SecondId, Pwdpz)
+					}()
 					go func() {
 						CreateOrderKft(ctx, "f457f3597a04467bafe6172832ebe84d", sellInfo.SecondId, Pwd1)
 					}()
@@ -147,9 +147,9 @@ func Grab(ctx context.Context, token string, body map[string]interface{}, ch cha
 					//	CreateOrderKft(ctx, "d462f68a707b494fb9a6a22858caebad", sellInfo.SecondId, Pwdlz)
 					//}()
 
-					//go func() {
-					//	CreateOrderKft(ctx, "761c8046e89e45a6b6ed380508c3c8b8", sellInfo.SecondId, Pwdmyr)
-					//}()
+					go func() {
+						CreateOrderKft(ctx, "761c8046e89e45a6b6ed380508c3c8b8", sellInfo.SecondId, Pwdmyr)
+					}()
 					//go func() {
 					//	CreateOrderKft(ctx, "c2949a2704b4464f98694843d1148514", sellInfo.SecondId, Pwdyts)
 					//}()
