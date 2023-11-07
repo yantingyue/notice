@@ -131,9 +131,9 @@ func Grab(ctx context.Context, token string, body map[string]interface{}, ch cha
 				}
 			case 2:
 				for i := 0; i < 1; i++ {
-					//go func() {
-					//	CreateOrderKft(ctx, BuyToken, sellInfo.SecondId, Pwd)
-					//}()
+					go func() {
+						CreateOrderKft(ctx, BuyToken, sellInfo.SecondId, Pwd)
+					}()
 					//go func() {
 					//	CreateOrderKft(ctx, "266ae13f69134b7e8171a2e370679aba", sellInfo.SecondId, Pwd1)
 					//}()
@@ -146,10 +146,10 @@ func Grab(ctx context.Context, token string, body map[string]interface{}, ch cha
 					//go func() {
 					//	CreateOrderKft(ctx, "d462f68a707b494fb9a6a22858caebad", sellInfo.SecondId, Pwdlz)
 					//}()
-
-					go func() {
-						CreateOrderKft(ctx, "761c8046e89e45a6b6ed380508c3c8b8", sellInfo.SecondId, Pwdmyr)
-					}()
+					//
+					//go func() {
+					//	CreateOrderKft(ctx, "761c8046e89e45a6b6ed380508c3c8b8", sellInfo.SecondId, Pwdmyr)
+					//}()
 					//go func() {
 					//	CreateOrderKft(ctx, "c2949a2704b4464f98694843d1148514", sellInfo.SecondId, Pwdyts)
 					//}()
