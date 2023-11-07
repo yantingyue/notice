@@ -707,8 +707,8 @@ var (
 
 const (
 	TimeSpace   = 6                                  //间隔时间
-	BuyNum      = 1                                  //购买数量
-	ProductName = "乘风归"                              //商品名称
+	BuyNum      = 10                                 //购买数量
+	ProductName = "千杯不倒司徒钟"                          //商品名称
 	BuyToken    = "f8e6351734794a5395260118a7f9c5da" //购买token
 	//BuyToken = "f457f3597a04467bafe6172832ebe84d" //购买token
 	//BuyToken = "8b9d74e0145b48498b5bc704a9b045c8" //购买token ytf
@@ -730,6 +730,6 @@ const (
 	//Pwdytj = "K+Hzexd6EHHeWIbKlVcU6jdGbALHlhw7N4a6TBvHeRt+RuJBYH9pntJIlR+g6koF1m9fQPgLl+Et6W18d5P2MfOHFxHwdEpC0fPT4zfXokDhOZY4xfHXtFWZTUntn2KFAW4C5NC+Ka/c/q0DozqWxrMONRwiEVr4vaVqrU21GrM="
 	//Pwd = "x2/7vi3UY72uTJOOEl7aLomy2zpbDE0NA4FvzX9KBP6hhi2igpknXWHcvxYY/h8Of2cEByBdMm6PbGDY+aSP1gm7nho59lqvYurgf8Wgz+VFyRE7mUT8ooye/sbYNhZCEPt11nYcaQhTyxnWiKnQJNdVJV5e/pa4H8Ora12eV/M="
 	//Pwd = "Dh0QIIpN4rtkl9dW/t4kjMdznrKGT+eBocygeQAm+uTmvs/6+x18Hk5oqNhuhEf6RLm9VwRyjfcZgFMk6/ebJGCbE4bmyaiYY0ZkE3ajHS9k1TCPxOsE1zUbH04fg+7rqbM3XHgYWB8o7oY4AojaIJUfEBwmEuZZy6C9quisVDM="
-	//Pwd = "JLI38dg4HN9dAnw89eChytrWE+PmWQfxAf8u2tgIlAmZ2u/WCxYiB0p1MoeMH/qosVwXzY53Ck+zfK58Ox8Sl+MY+0kGstkApiLema+rAbPA0inMU6jlFGTtpUOKHaw0Wts6AjMTSG6aXyReh/3LuZFQfcGLyczTlF1egqZDsgk="
-	Pwdlz = "I7wL+SfmxAd5VcK1GvrlwqOmGqTU1YdoY/JgcFLv+RXfIGvVkD60Em6jjBNqyX0DQX34ROtvGgeYGotx9Qg9NQtqe+XF33KSZK+zTP8s+1zb21qeQDZi0AP+RjKMjX/F9MBFKbEWEoK4qtGt4KCUTNRPtsh/cp8KvqlPkDW8i+E="
+	Pwdmyr = "JLI38dg4HN9dAnw89eChytrWE+PmWQfxAf8u2tgIlAmZ2u/WCxYiB0p1MoeMH/qosVwXzY53Ck+zfK58Ox8Sl+MY+0kGstkApiLema+rAbPA0inMU6jlFGTtpUOKHaw0Wts6AjMTSG6aXyReh/3LuZFQfcGLyczTlF1egqZDsgk="
+	Pwdlz  = "I7wL+SfmxAd5VcK1GvrlwqOmGqTU1YdoY/JgcFLv+RXfIGvVkD60Em6jjBNqyX0DQX34ROtvGgeYGotx9Qg9NQtqe+XF33KSZK+zTP8s+1zb21qeQDZi0AP+RjKMjX/F9MBFKbEWEoK4qtGt4KCUTNRPtsh/cp8KvqlPkDW8i+E="
 )
