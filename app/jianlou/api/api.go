@@ -130,7 +130,7 @@ func Grab(ctx context.Context, token string, body map[string]interface{}, ch cha
 					//}()
 				}
 			case 2:
-				for i := 0; i < 2; i++ {
+				for i := 0; i < 1; i++ {
 					//go func() {
 					//	CreateOrderKft(ctx, BuyToken, sellInfo.SecondId, Pwd)
 					//}()
