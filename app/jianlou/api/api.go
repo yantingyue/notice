@@ -23,7 +23,6 @@ func Begin() {
 	go func() {
 		for {
 			list.Traverse(func(data interface{}) {
-				time.Sleep(time.Millisecond * TimeSpace)
 				log.Println(data)
 				list.RemoveNode(data)
 			})
