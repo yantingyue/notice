@@ -715,8 +715,8 @@ var (
 
 const (
 	TimeSpace   = 6                                  //间隔时间
-	BuyNum      = 10                                 //购买数量
-	ProductName = "千杯不倒司徒钟"                          //商品名称
+	BuyNum      = 4                                  //购买数量
+	ProductName = "无垢"                               //商品名称
 	BuyToken    = "f8e6351734794a5395260118a7f9c5da" //购买token
 	//BuyToken = "f457f3597a04467bafe6172832ebe84d" //购买token
 	//BuyToken = "8b9d74e0145b48498b5bc704a9b045c8" //购买token ytf
@@ -731,14 +731,14 @@ const (
 	PageSize = 5
 	PayType  = 2 //1零钱2快付通
 	Pwd      = "DVqBnIG8tFOmfbFp+tIXisluxkZDahm5Gk6MVvg4tY9td7tfjTvu5JiCDBmW39mUhgjY0z6zzlfj6Jc0/YDyaGLLB8n/wRXHoPRv6qlOyMleQw1iU5Y10MfF0jYylh2EJtiVd8VQWwOWgAuYmCIYUNqoy4IhjYxMs9Bj82l/rts="
-	Pwd1     = "kSmIyvNXdGWlnTJBfmhtkTmvJc/sB8Bu78UrgHpj4+I3DsNaUpLRQccpEaBpKpG9+DeJOsgCwrK9iL1JG99GjUxaL+loiCDcm/UM1EZDPmveXq1XQeyLhMjbyPEGGUnJUp0fwZUAddRpQ9Zanbq6gk4/lEftFxFWz4wIHsfgJQI="
+	Pwdzqq   = "kSmIyvNXdGWlnTJBfmhtkTmvJc/sB8Bu78UrgHpj4+I3DsNaUpLRQccpEaBpKpG9+DeJOsgCwrK9iL1JG99GjUxaL+loiCDcm/UM1EZDPmveXq1XQeyLhMjbyPEGGUnJUp0fwZUAddRpQ9Zanbq6gk4/lEftFxFWz4wIHsfgJQI="
 	//Pwd = "oYM0g+TEQ7ToqmcDXpBKbEspk3H/buLHmBNu3Y5mqFuVPx57gjznAI6HYzCv+evM1DbKjdWHmHirGX0KhNkuk+Wjp6gw+0Jz2AeRLz8u5ChQHv+SHW9Ff1CaNUOyusBtJcg2JDDA17KCaJ0vCFYjVdQXJCX+BWWUwBP7zjHrUNI="
 	Pwdpz = "JLI38dg4HN9dAnw89eChytrWE+PmWQfxAf8u2tgIlAmZ2u/WCxYiB0p1MoeMH/qosVwXzY53Ck+zfK58Ox8Sl+MY+0kGstkApiLema+rAbPA0inMU6jlFGTtpUOKHaw0Wts6AjMTSG6aXyReh/3LuZFQfcGLyczTlF1egqZDsgk="
 	//Pwd = "QcF6cbAHoMiEfH8okZX5Jug5wMI6gByX24Gj2m5rQBGpl/bqT8VLaIY982QtyIMkdyTz2SeFTJKPatFm8GFWsWFBkU4xc0lyEJiG9qkWjoJAdQ+R9gP8g0tfRy9cWrRtaKuEMhMd7dUQtIjoxo1v7xuRMyHCLC3NLywZSu8x7rg="
 	//Pwdytj = "K+Hzexd6EHHeWIbKlVcU6jdGbALHlhw7N4a6TBvHeRt+RuJBYH9pntJIlR+g6koF1m9fQPgLl+Et6W18d5P2MfOHFxHwdEpC0fPT4zfXokDhOZY4xfHXtFWZTUntn2KFAW4C5NC+Ka/c/q0DozqWxrMONRwiEVr4vaVqrU21GrM="
 	//Pwd = "x2/7vi3UY72uTJOOEl7aLomy2zpbDE0NA4FvzX9KBP6hhi2igpknXWHcvxYY/h8Of2cEByBdMm6PbGDY+aSP1gm7nho59lqvYurgf8Wgz+VFyRE7mUT8ooye/sbYNhZCEPt11nYcaQhTyxnWiKnQJNdVJV5e/pa4H8Ora12eV/M="
 	Pwdmyr = "Dh0QIIpN4rtkl9dW/t4kjMdznrKGT+eBocygeQAm+uTmvs/6+x18Hk5oqNhuhEf6RLm9VwRyjfcZgFMk6/ebJGCbE4bmyaiYY0ZkE3ajHS9k1TCPxOsE1zUbH04fg+7rqbM3XHgYWB8o7oY4AojaIJUfEBwmEuZZy6C9quisVDM="
-	//Pwdmyr = "JLI38dg4HN9dAnw89eChytrWE+PmWQfxAf8u2tgIlAmZ2u/WCxYiB0p1MoeMH/qosVwXzY53Ck+zfK58Ox8Sl+MY+0kGstkApiLema+rAbPA0inMU6jlFGTtpUOKHaw0Wts6AjMTSG6aXyReh/3LuZFQfcGLyczTlF1egqZDsgk="
+	//Pwd = "JLI38dg4HN9dAnw89eChytrWE+PmWQfxAf8u2tgIlAmZ2u/WCxYiB0p1MoeMH/qosVwXzY53Ck+zfK58Ox8Sl+MY+0kGstkApiLema+rAbPA0inMU6jlFGTtpUOKHaw0Wts6AjMTSG6aXyReh/3LuZFQfcGLyczTlF1egqZDsgk="
 	Pwdlz  = "I7wL+SfmxAd5VcK1GvrlwqOmGqTU1YdoY/JgcFLv+RXfIGvVkD60Em6jjBNqyX0DQX34ROtvGgeYGotx9Qg9NQtqe+XF33KSZK+zTP8s+1zb21qeQDZi0AP+RjKMjX/F9MBFKbEWEoK4qtGt4KCUTNRPtsh/cp8KvqlPkDW8i+E="
 	Pwdyts = "Lty6SJcAippAo5k0DniOGgOFmti+GgPAMoTZntzBdQfC2+S2p0XwOqTofTYZdJaQh4KfnLdFrA/oLE15jfvvObJldfFOZni1pEtbrzuvSxC/e2AERTq1uuwylkcV4Sy0OL4g710Rlo3RVvx8vBPPBkGAQcYp96nT2chD/IclKhY="
 )
