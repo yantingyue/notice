@@ -211,7 +211,7 @@ var (
 		//"f457f3597a04467bafe6172832ebe84d",  //zqq
 		//"b05ae67513f64651a003627e3280ffc6",  //ytf
 		//"e87709b4dee94ae794109deec9058f5d",  //sq
-		//"220ffeda95ec4789b26a03a903a0f939", //myr
+		"761c8046e89e45a6b6ed380508c3c8b8", //myr
 		//"426e9061bce24034a9e73cbc80cc1d6e", //145 hxz
 	}
 )
