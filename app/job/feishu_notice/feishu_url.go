@@ -58,6 +58,7 @@ var (
 		}, //门童
 		UserId9: []string{
 			"https://open.feishu.cn/open-apis/bot/v2/hook/728f1f66-b232-4f09-a98b-b7b25aaf513b",
+			"https://open.feishu.cn/open-apis/bot/v2/hook/e1b4f2ef-7052-48cb-85c3-0e225bec83d1",
 		}, //富豪小号
 		UserId10: []string{
 			"https://open.feishu.cn/open-apis/bot/v2/hook/736ada58-1ce4-4b26-a6e1-c1b6ccc62667",
