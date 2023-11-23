@@ -13,6 +13,98 @@ import (
 	"time"
 )
 
+/*
+*糖果通知
+ */
+func CandyNotice(name string, userId uint64) {
+	ctx := context.Background()
+	token, _ := cli.RedisClient.Get(ctx, cast.ToString(userId)).Result()
+	if token == "" {
+		//tokens := requestToken(userId)
+		//text := fmt.Sprintf("获取token失败了")
+		//FeiShuUrl(text, userId)
+		return
+	}
+	handleCandy(ctx, token, name, userId)
+}
+func handleCandy(ctx context.Context, token string, name string, userId uint64) {
+	pageSize := 50
+	if name == "xiyijueyuanti" {
+		pageSize = 100
+	}
+	body := map[string]interface{}{
+		"pageSize":   pageSize,
+		"pageNumber": 1,
+		"page_type":  "candy_box",
+	}
+	var text string
+	fmt.Println("========================================", name, "=========================================")
+	vv, res := request(token, body, userId)
+	fmt.Println("========================================", name, "=============================================")
+	fmt.Println("\n")
+	if vv && len(res.Data.Result) > 0 {
+		resultMap := make(map[uint64]struct{})
+		for _, v := range res.Data.Result {
+			resultMap[v.ProductId] = struct{}{}
+			//if v.ProductId == 1019723 || v.ProductId == 1019287 || v.ProductId == 1019119 || v.ProductId == 1019555 || v.ProductId == 1020901 {
+			//	continue
+			//}
+			noticeKey := fmt.Sprintf("%s:%d:%d", name, v.ProductId, v.NftProductSizeId)
+			cacheAll, err := cli.RedisClient.HGetAll(ctx, noticeKey).Result()
+			if err != nil && err != redis.Nil {
+				return
+			}
+			cli.RedisClient.HMSet(ctx, noticeKey, map[string]interface{}{
+				"id":         v.Id,
+				"c":          v.C,
+				"is_on_sale": v.IsOnSale,
+				"product_id": v.ProductId,
+			})
+			if len(cacheAll) == 0 {
+				text = fmt.Sprintf("糖果类购买了《%s》总量%d个", v.ProductTitle, v.C)
+				FeiShuUrl(text, userId)
+				continue
+			} else {
+				if v.C < cast.ToUint32(cacheAll["c"]) {
+					text = fmt.Sprintf("糖果类《%s》卖出了1个了,剩余%d个", v.ProductTitle, v.C)
+					FeiShuUrl(text, userId)
+				} else if v.C > cast.ToUint32(cacheAll["c"]) {
+					text = fmt.Sprintf("购买了糖果类《%s》总量%d个", v.ProductTitle, v.C)
+					FeiShuUrl(text, userId)
+				}
+				if v.IsOnSale != cast.ToUint32(cacheAll["is_on_sale"]) {
+					switch v.IsOnSale {
+					case 0:
+						text = fmt.Sprintf("糖果类《%s》暂无寄售,剩余%d个", v.ProductTitle, v.C)
+					case 1:
+						text = fmt.Sprintf("糖果类《%s》寄售中,剩余%d个", v.ProductTitle, v.C)
+					}
+					FeiShuUrl(text, userId)
+				}
+			}
+
+		}
+
+		cacheJson, err := cli.RedisClient.Get(ctx, name).Result()
+		if err != nil && err != redis.Nil {
+			return
+		}
+		b, _ := json.Marshal(res)
+		cli.RedisClient.Set(ctx, name, string(b), 0)
+		if cacheJson != "" {
+			nftList := &NftList{}
+			json.Unmarshal([]byte(cacheJson), &nftList)
+			for _, v := range nftList.Data.Result {
+				if _, ok := resultMap[v.ProductId]; !ok {
+					text = fmt.Sprintf("《%s》卖光了", v.ProductTitle)
+					cli.RedisClient.Del(ctx, fmt.Sprintf("%s:%d:%d", name, v.ProductId, v.NftProductSizeId))
+					FeiShuUrl(text, userId)
+				}
+			}
+		}
+	}
+}
+
 func MotorNotice(name string, userId uint64) {
 	ctx := context.Background()
 	token, _ := cli.RedisClient.Get(ctx, cast.ToString(userId)).Result()
