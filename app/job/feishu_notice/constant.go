@@ -46,6 +46,7 @@ const (
 	UserId25 = 75958858370 //王晓芳
 	UserId26 = 110111      //test
 	UserId27 = 75960013534 //配置小号
+	UserId28 = 68621       //新策划小李子
 )
 
 const (
