@@ -117,6 +117,9 @@ var (
 		UserId27: []string{
 			"https://open.feishu.cn/open-apis/bot/v2/hook/bb1a01e8-8dc2-4305-8aea-d10fea92be99",
 		},
+		UserId28: []string{
+			"https://open.feishu.cn/open-apis/bot/v2/hook/cf6d1481-d03c-4c2a-8502-b21f76cb1565",
+		},
 	}
 )
 
