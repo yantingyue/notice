@@ -47,6 +47,7 @@ const (
 	UserId26 = 110111      //test
 	UserId27 = 75960013534 //配置小号
 	UserId28 = 68621       //新策划小李子
+	UserId29 = 18896848353 //山海经大佬
 )
 
 const (
