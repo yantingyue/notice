@@ -61,9 +61,7 @@ var (
 			"https://open.feishu.cn/open-apis/bot/v2/hook/e1b4f2ef-7052-48cb-85c3-0e225bec83d1",
 		}, //富豪小号
 		UserId10: []string{
-			"https://open.feishu.cn/open-apis/bot/v2/hook/736ada58-1ce4-4b26-a6e1-c1b6ccc62667",
-			"https://open.feishu.cn/open-apis/bot/v2/hook/630c830f-20f0-4885-9c0c-642245ac8e05",
-			"https://open.feishu.cn/open-apis/bot/v2/hook/cd3fd2cd-6760-4264-8749-f81973ae03ca",
+			"https://open.feishu.cn/open-apis/bot/v2/hook/75b64def-18db-4f70-8cbc-9a770bec45fc",
 		}, //蜥蜴绝缘体
 		UserId11: []string{
 			"https://open.feishu.cn/open-apis/bot/v2/hook/9f4cf5e0-581d-4358-9722-8484e88346f1",
@@ -88,7 +86,7 @@ var (
 			"https://open.feishu.cn/open-apis/bot/v2/hook/14910cd3-e362-4f92-a208-47ca43ceb5a1",
 		},
 		UserId18: []string{
-			"https://open.feishu.cn/open-apis/bot/v2/hook/d617e083-5412-481f-b9cb-dd53d63de8bc",
+			"https://open.feishu.cn/open-apis/bot/v2/hook/124d8a3f-e69a-43f9-a649-b83bb0671b2d",
 		},
 		UserId19: []string{
 			"https://open.feishu.cn/open-apis/bot/v2/hook/ebc3317a-654a-4e13-9d22-408df8202352",
