@@ -65,6 +65,7 @@ var (
 		}, //蜥蜴绝缘体
 		UserId11: []string{
 			"https://open.feishu.cn/open-apis/bot/v2/hook/9f4cf5e0-581d-4358-9722-8484e88346f1",
+			"https://open.feishu.cn/open-apis/bot/v2/hook/7eb2eefc-b889-4d50-b60a-c27ff4efd1c2",
 		}, //法典人
 		UserId13: []string{
 			"https://open.feishu.cn/open-apis/bot/v2/hook/bc05ffbb-f5f6-4e4a-9c0d-e4c02d3a3154",
