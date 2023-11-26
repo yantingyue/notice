@@ -715,8 +715,8 @@ var (
 
 const (
 	TimeSpace   = 6                                  //间隔时间
-	BuyNum      = 100                                //购买数量
-	ProductName = "杏花仕女图"                            //商品名称
+	BuyNum      = 5                                  //购买数量
+	ProductName = "踏云寻剑"                             //商品名称
 	BuyToken    = "33d09980a89442fcbb9bd1dbb75fa1fe" //购买token
 	//BuyToken = "f457f3597a04467bafe6172832ebe84d" //购买token
 	//BuyToken = "8b9d74e0145b48498b5bc704a9b045c8" //购买token ytf
