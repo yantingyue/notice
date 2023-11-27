@@ -409,7 +409,7 @@ func Replace(id, orderId uint64, token string) bool {
 	}
 	jsonBytes, _ := json.Marshal(body)
 	resp, _ := Post("https://api.aichaoliuapp.cn/aiera/ai_match_trading/nft/replace/active/exchange", header, jsonBytes)
-
+	//resp, _ := Post("https://api.aichaoliuapp.cn/aiera/v2/hotdog/activity/displace/batch", header, jsonBytes)
 	log.Println(orderId, string(resp), token)
 	if len(resp) == 0 {
 		return false
