@@ -130,6 +130,7 @@ var (
 	nicetokenUrlMap = map[string][]string{
 		"wEaOgGs2ulepxrsMlvimPoQSMxE3r3HO": []string{
 			"https://open.feishu.cn/open-apis/bot/v2/hook/67a15492-f561-4456-b1ec-ce042d420f12",
+			"https://open.feishu.cn/open-apis/bot/v2/hook/210fc163-5720-4620-aa9b-32ac028bac3d",
 		},
 	}
 )
@@ -161,9 +162,12 @@ func FeiShuUrlNice(text string, token string) {
 		MsgType: "text",
 		Content: fmt.Sprintf("{\"text\":\"%s\"}", text),
 	}
+	fmt.Println(payload)
+	fmt.Println(token)
 	jsonBytes, _ := json.Marshal(payload)
 	if _, ok := nicetokenUrlMap[token]; ok {
 		for _, v := range nicetokenUrlMap[token] {
+			fmt.Println(v)
 			_, err := cli.Post(v, nil, jsonBytes)
 			if err != nil {
 				log.Println(err)

@@ -11,20 +11,7 @@ import (
 )
 
 func B() {
-	sign := "nice-sign-v1://c7caf4947a00b1bed5b17db04fbc5a95:cSnkcyuV9R8qWHdc/{\"button_type\":\"purchase\",\"id\":\"852749\",\"sort\":\"common\"}"
-	RequeatList("R4KPSXOgbJTwJmeqpleWPiS8YeiBKuv_", sign, product_id)
-	return
-	for _, v := range TmpTokens {
-		i := 0
-		for {
-			RequeatList(v, sign, product_id)
-			i++
-			if i == 3 {
-				break
-			}
-			//time.Sleep(time.Millisecond * TimeSpace)
-		}
-	}
+
 }
 func ReqList() {
 	client := &http.Client{}
@@ -73,22 +60,19 @@ type GoodsResp struct {
 	} `json:"data"`
 }
 
-func RequeatList(token string, sign string, id int) {
+func RequeatList() {
 	client := &http.Client{}
-	//d := fmt.Sprintf("%s{\"token\":\"%s\",\"id\":\"%d\",\"key\":\"\",\"button_type\":\"purchase\",\"sort\":\"common\",\"nextkey\":\"\"}", sign, token, id)
-	var data = strings.NewReader(sign)
-	//url := `https://api.oneniceapp.com/Sneakerpurchase/priceInfosV3?a_x=0.109711&a_y=-0.664032&a_z=-0.703842&abroad=no&appv=5.9.28.21&ch=AppStore_6.9.28.21&did=d5401cf612846e7cd15a2318039d67b8&dn=iPhone&dt=iPhone15%2C3&g_x=-0.001249&g_y=-0.004777&g_z=-0.001727&geoacc=0&la=cn&lm=mobile&lp=-1.000000&n_bssid=&n_dns=192.168.2.1&n_ssid=&net=0-0-wifi&osn=iOS&osv=17.1.1&seid=837a9674a115bfffeaf0672ada417a62&sh=932.000000&sm_dt=2023112716423167b3d97f0dbec012f88c9d3b7e14ea5b01800fe81deb8019&src=goods_detail&sw=430.000000&token=` + fmt.Sprintf("%s&ts=1701273008134", token)
-	req, err := http.NewRequest("POST", "https://api.oneniceapp.com/Sneakerpurchase/priceInfosV3?a_x=-0.002670&a_y=-0.037247&a_z=-0.991714&abroad=no&appv=5.9.28.21&ch=AppStore_6.9.28.21&did=d5401cf612846e7cd15a2318039d67b8&dn=iPhone&dt=iPhone15%2C3&g_x=-0.255785&g_y=0.096176&g_z=-0.166534&geoacc=0&la=cn&lm=mobile&lp=-1.000000&n_bssid=&n_dns=114.114.114.114&n_ssid=&net=0-0-wifi&osn=iOS&osv=17.1.1&seid=20e3bc4fc4c83303e14fca7478b2f582&sh=932.000000&sm_dt=2023112716423167b3d97f0dbec012f88c9d3b7e14ea5b01800fe81deb8019&src=goods_detail&sw=430.000000&token=R4KPSXOgbJTwJmeqpleWPiS8YeiBKuv_&ts=1701400608069", data)
-
+	var data = strings.NewReader(`nice-sign-v1://401c193b2f2715209aab131e412af6f7:0ycdnrLGjAYbiLia/{"nextkey":"","token":"wEaOgGs2ulepxrsMlvimPoQSMxE3r3HO","search_key":"","type":"storage2goat","tag":"all","messageid":""}`)
+	req, err := http.NewRequest("POST", "https://api.oneniceapp.com/Sneakerstorage/list?a_x=-0.004639&a_y=-0.132797&a_z=-0.994324&abroad=no&appv=5.9.28.21&ch=AppStore_6.9.28.21&did=bbcf06361390f61d0489cc98326bc9e9&dn=iPhone&dt=iPhone15%2C3&g_x=-0.000251&g_y=-0.003805&g_z=-0.002095&geoacc=0&la=cn&lm=mobile&lp=-1.000000&n_bssid=&n_dns=114.114.114.114&n_ssid=&net=0-0-wifi&osn=iOS&osv=17.1.1&seid=bfdef08dfc679e139106a883572da64a&sh=932.000000&sm_dt=2023112716423167b3d97f0dbec012f88c9d3b7e14ea5b01800fe81deb8019&src=me&sw=430.000000&token=wEaOgGs2ulepxrsMlvimPoQSMxE3r3HO&ts=1701429097319", data)
 	if err != nil {
 		log.Fatal(err)
 	}
 	req.Header.Set("Host", "api.oneniceapp.com")
-	req.Header.Set("Connection", "keep-alive")
-	req.Header.Set("Accept", "*/*")
-	req.Header.Set("User-Agent", "KKShopping/5.9.28 (iPhone 14 Pro Max; iOS 17.1.1; Scale/3.00)")
-	req.Header.Set("Accept-Language", "zh-Hans-CN;q=1")
-	req.Header.Set("Content-Type", "application/json; charset=utf-8")
+	req.Header.Set("Cookie", "acw_tc=0bd17c0a17014290753238695ee575e01c791be703c77874f1377c37fc995f")
+	req.Header.Set("accept", "*/*")
+	req.Header.Set("content-type", "application/json; charset=utf-8")
+	req.Header.Set("user-agent", "KKShopping/5.9.28 (iPhone 14 Pro Max; iOS 17.1.1; Scale/3.00)")
+	req.Header.Set("accept-language", "zh-Hans-CN;q=1")
 	resp, err := client.Do(req)
 	if err != nil {
 		log.Fatal(err)
