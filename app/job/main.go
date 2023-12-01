@@ -187,5 +187,10 @@ func cronjob() {
 	//	panic(err)
 	//}
 
+	if err := c.AddFunc("*/5 * * * * *", func() {
+		feishu_notice.NiceNotice("WXxr7urByMoVbnsdIsToPfTNwOl2W7k6")
+	}); err != nil {
+		panic(err)
+	}
 	c.Start()
 }

@@ -126,6 +126,10 @@ var (
 			"https://open.feishu.cn/open-apis/bot/v2/hook/ea0c24ab-5567-485e-a054-986176d6220c",
 		},
 	}
+
+	nicetokenUrlMap = map[string][]string{
+		"wEaOgGs2ulepxrsMlvimPoQSMxE3r3HO": []string{},
+	}
 )
 
 func FeiShuUrl(text string, userId uint64) {
@@ -145,6 +149,23 @@ func FeiShuUrl(text string, userId uint64) {
 				log.Println(err)
 			}
 			//}()
+
+		}
+	}
+}
+
+func FeiShuUrlNice(text string, token string) {
+	payload := &FeishuReq{
+		MsgType: "text",
+		Content: fmt.Sprintf("{\"text\":\"%s\"}", text),
+	}
+	jsonBytes, _ := json.Marshal(payload)
+	if _, ok := nicetokenUrlMap[token]; ok {
+		for _, v := range nicetokenUrlMap[token] {
+			_, err := cli.Post(v, nil, jsonBytes)
+			if err != nil {
+				log.Println(err)
+			}
 
 		}
 	}
