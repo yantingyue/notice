@@ -128,7 +128,9 @@ var (
 	}
 
 	nicetokenUrlMap = map[string][]string{
-		"wEaOgGs2ulepxrsMlvimPoQSMxE3r3HO": []string{},
+		"wEaOgGs2ulepxrsMlvimPoQSMxE3r3HO": []string{
+			"https://open.feishu.cn/open-apis/bot/v2/hook/67a15492-f561-4456-b1ec-ce042d420f12",
+		},
 	}
 )
 
