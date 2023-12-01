@@ -43,7 +43,7 @@ func Begin() {
 			go func() {
 				priceInfosV3(token, did)
 			}()
-			time.Sleep(time.Second * 2)
+			time.Sleep(time.Millisecond * 1200)
 		}
 	}
 }
