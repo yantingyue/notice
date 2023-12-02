@@ -167,7 +167,6 @@ func FeiShuUrlNice(text string, token string) {
 	jsonBytes, _ := json.Marshal(payload)
 	if _, ok := nicetokenUrlMap[token]; ok {
 		for _, v := range nicetokenUrlMap[token] {
-			fmt.Println(v)
 			_, err := cli.Post(v, nil, jsonBytes)
 			if err != nil {
 				log.Println(err)

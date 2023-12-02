@@ -16,6 +16,8 @@ func main() {
 }
 
 func cronjob() {
+	//feishu_notice.NiceNotice("wEaOgGs2ulepxrsMlvimPoQSMxE3r3HO")
+	//return
 	c := cron.New()
 
 	if err := c.AddFunc("*/5 * * * * *", func() {

@@ -69,7 +69,7 @@ func ReqList(token string) {
 				continue
 			} else {
 				if v.Total.Num < cacheAll["c"] {
-					text = fmt.Sprintf("购买了《%s》卖出了1个了,剩余%s个", v.GoodsInfo.Name, v.Total.Num)
+					text = fmt.Sprintf("《%s》卖出了1个了,剩余%s个", v.GoodsInfo.Name, v.Total.Num)
 					FeiShuUrlNice(text, token)
 				} else if v.Total.Num > cacheAll["c"] {
 					text = fmt.Sprintf("购买了《%s》总量%s个", v.GoodsInfo.Name, v.Total.Num)
@@ -87,23 +87,22 @@ func ReqList(token string) {
 			}
 
 		}
-		//cacheJson, err := cli.RedisClient.Get(ctx, token).Result()
-		//if err != nil && err != redis.Nil {
-		//	return
-		//}
-		//b, _ := json.Marshal(res)
-		//cli.RedisClient.Set(ctx, name, string(b), 0)
-		//if cacheJson != "" {
-		//	nftList := &NftList{}
-		//	json.Unmarshal([]byte(cacheJson), &nftList)
-		//	for _, v := range nftList.Data.Result {
-		//		if _, ok := resultMap[v.ProductId]; !ok {
-		//			text = fmt.Sprintf("《%s》卖光了", v.ProductTitle)
-		//			cli.RedisClient.Del(ctx, fmt.Sprintf("%s:%d:%d", name, v.ProductId, v.NftProductSizeId))
-		//			FeiShuUrl(text, userId)
-		//		}
-		//	}
-		//}
+		cacheJson, err := cli.RedisClient.Get(ctx, token).Result()
+		if err != nil && err != redis.Nil {
+			return
+		}
+		cli.RedisClient.Set(ctx, token, bodyText, 0)
+		if cacheJson != "" {
+			goodResp = GoodsResp{}
+			json.Unmarshal(bodyText, &goodResp)
+			for _, v := range goodResp.Data.List {
+				if _, ok := resultMap[v.GoodsInfo.Id]; !ok {
+					text = fmt.Sprintf("《%s》卖光了", v.GoodsInfo.Name)
+					cli.RedisClient.Del(ctx, fmt.Sprintf("%s:%s", token, v.GoodsInfo.Id))
+					FeiShuUrlNice(text, token)
+				}
+			}
+		}
 	}
 }
 
