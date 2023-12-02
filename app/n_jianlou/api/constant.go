@@ -2,7 +2,7 @@ package api
 
 const (
 	Host       = "https://api.oneniceapp.com"
-	BuyToken   = "WXxr7urByMoVbnsdIsToPfTNwOl2W7k6"
+	BuyToken   = "rH_R-m5BVEs8r_pkgjy-PXTb0gQjyTrT"
 	BuyDid     = "d5401cf612846e7cd15a2318039d67b8"
 	product_id = 852926
 	TimeSpace  = 6 //间隔时间
@@ -11,9 +11,9 @@ const (
 
 var (
 	TmpTokens = map[string]string{
-		"WXxr7urByMoVbnsdIsToPfTNwOl2W7k6": "d5401cf612846e7cd15a2318039d67b8",
-		"9i27L8kbQi-ui2eubJJiP4gAj_MMyy-U": "d5401cf612846e7cd15a2318039d67b8",
-		"nuWOco5j4NzwJwe-fkDZPoJ8279jYnnC": "2b97c4dc689f2df3e26104f807438379", //zqq
+		"rH_R-m5BVEs8r_pkgjy-PXTb0gQjyTrT": "d5401cf612846e7cd15a2318039d67b8",
+		"jkHmrdtnGqzpIiHeg2XwPX7jxDhRKZMt": "d5401cf612846e7cd15a2318039d67b8",
+		//"nuWOco5j4NzwJwe-fkDZPoJ8279jYnnC": "2b97c4dc689f2df3e26104f807438379", //zqq
 	}
 	Urls = []string{
 		"https://api.oneniceapp.com/Sneakerpurchase/priceInfosV3", //寄售列表
