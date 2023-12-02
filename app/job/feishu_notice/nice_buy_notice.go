@@ -94,7 +94,7 @@ func ReqList(token string) {
 		cli.RedisClient.Set(ctx, token, bodyText, 0)
 		if cacheJson != "" {
 			goodResp = GoodsResp{}
-			json.Unmarshal(bodyText, &goodResp)
+			json.Unmarshal([]byte(cacheJson), &goodResp)
 			for _, v := range goodResp.Data.List {
 				if _, ok := resultMap[v.GoodsInfo.Id]; !ok {
 					text = fmt.Sprintf("《%s》卖光了", v.GoodsInfo.Name)
