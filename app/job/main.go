@@ -189,7 +189,7 @@ func cronjob() {
 	}
 
 	if err := c.AddFunc("*/5 * * * * *", func() {
-		feishu_notice.NiceNotice("wEaOgGs2ulepxrsMlvimPoQSMxE3r3HO")
+		//feishu_notice.NiceNotice("wEaOgGs2ulepxrsMlvimPoQSMxE3r3HO")
 	}); err != nil {
 		panic(err)
 	}
