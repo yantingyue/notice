@@ -2,7 +2,7 @@ package api
 
 const (
 	Host       = "https://api.oneniceapp.com"
-	BuyToken   = "rH_R-m5BVEs8r_pkgjy-PXTb0gQjyTrT"
+	BuyToken   = "MwGcQTsTGXTmPwDmPvTnPXiNQkwc-Ar6"
 	BuyDid     = "d5401cf612846e7cd15a2318039d67b8"
 	product_id = 852926
 	TimeSpace  = 6 //间隔时间
@@ -11,7 +11,7 @@ const (
 
 var (
 	TmpTokens = map[string]string{
-		"rH_R-m5BVEs8r_pkgjy-PXTb0gQjyTrT": "d5401cf612846e7cd15a2318039d67b8",
+		"MwGcQTsTGXTmPwDmPvTnPXiNQkwc-Ar6": "d5401cf612846e7cd15a2318039d67b8",
 		"jkHmrdtnGqzpIiHeg2XwPX7jxDhRKZMt": "d5401cf612846e7cd15a2318039d67b8",
 		//"nuWOco5j4NzwJwe-fkDZPoJ8279jYnnC": "2b97c4dc689f2df3e26104f807438379", //zqq
 	}

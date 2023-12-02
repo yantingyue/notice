@@ -188,8 +188,13 @@ func cronjob() {
 		panic(err)
 	}
 
-	if err := c.AddFunc("*/5 * * * * *", func() {
-		feishu_notice.NiceNotice("wEaOgGs2ulepxrsMlvimPoQSMxE3r3HO")
+	//if err := c.AddFunc("*/15 * * * * *", func() {
+	//	feishu_notice.NiceNotice("wEaOgGs2ulepxrsMlvimPoQSMxE3r3HO")
+	//}); err != nil {
+	//	panic(err)
+	//}
+	if err := c.AddFunc("*/10 * * * * *", func() {
+		feishu_notice.NiceNotice("MwGcQTsTGXTmPwDmPvTnPXiNQkwc-Ar6")
 	}); err != nil {
 		panic(err)
 	}
