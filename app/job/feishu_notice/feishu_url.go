@@ -180,8 +180,9 @@ func FeiShuUrlNice(text string, token string) {
 		MsgType: "text",
 		Content: fmt.Sprintf("{\"text\":\"%s\"}", text),
 	}
+	fmt.Println(text)
 	jsonBytes, _ := json.Marshal(payload)
-	_, err := cli.Post("https://open.feishu.cn/open-apis/bot/v2/hook/2497c5bc-8d5a-47e3-8219-8656518a71a1", nil, jsonBytes)
+	_, err := cli.Post("https://open.feishu.cn/open-apis/bot/v2/hook/5e243fc2-ab6b-4ed7-8960-6a14e391224f", nil, jsonBytes)
 	fmt.Println(err)
 
 }
