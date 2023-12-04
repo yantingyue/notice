@@ -68,15 +68,15 @@ func ReqList(token string) {
 
 			if len(cacheAll) == 0 {
 				text = fmt.Sprintf("购买了《%s》总量%s个", v.GoodsInfo.Name, v.Total.Num)
-				FeiShuUrlNice(text, token)
+				FeiShuUrlNice2(text, token)
 				continue
 			} else {
 				if v.Total.Num < cacheAll["c"] {
 					text = fmt.Sprintf("《%s》卖出了1个了,剩余%s个", v.GoodsInfo.Name, v.Total.Num)
-					FeiShuUrlNice(text, token)
+					FeiShuUrlNice2(text, token)
 				} else if v.Total.Num > cacheAll["c"] {
 					text = fmt.Sprintf("购买了《%s》总量%s个", v.GoodsInfo.Name, v.Total.Num)
-					FeiShuUrlNice(text, token)
+					FeiShuUrlNice2(text, token)
 				}
 				if onsale != cacheAll["is_on_sale"] {
 					switch onsale {
@@ -85,7 +85,7 @@ func ReqList(token string) {
 					default:
 						text = fmt.Sprintf("《%s》寄售中,剩余%s个", v.GoodsInfo.Name, v.Total.Num)
 					}
-					FeiShuUrlNice(text, token)
+					FeiShuUrlNice2(text, token)
 				}
 			}
 
@@ -102,7 +102,7 @@ func ReqList(token string) {
 				if _, ok := resultMap[v.GoodsInfo.Id]; !ok {
 					text = fmt.Sprintf("《%s》卖光了", v.GoodsInfo.Name)
 					cli.RedisClient.Del(ctx, fmt.Sprintf("%s:%s", token, v.GoodsInfo.Id))
-					FeiShuUrlNice(text, token)
+					FeiShuUrlNice2(text, token)
 				}
 			}
 		}

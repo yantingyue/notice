@@ -16,7 +16,6 @@ func main() {
 }
 
 func cronjob() {
-
 	c := cron.New()
 
 	if err := c.AddFunc("*/5 * * * * *", func() {
@@ -192,11 +191,15 @@ func cronjob() {
 	//}); err != nil {
 	//	panic(err)
 	//}
+	//if err := c.AddFunc("*/10 * * * * *", func() {
+	//	feishu_notice.NiceNotice("MwGcQTsTGXTmPwDmPvTnPXiNQkwc-Ar6")
+	//}); err != nil {
+	//	panic(err)
+	//}
 	if err := c.AddFunc("*/10 * * * * *", func() {
-		feishu_notice.NiceNotice("MwGcQTsTGXTmPwDmPvTnPXiNQkwc-Ar6")
+		feishu_notice.DTList("MwGcQTsTGXTmPwDmPvTnPXiNQkwc-Ar6")
 	}); err != nil {
 		panic(err)
 	}
-
 	c.Start()
 }

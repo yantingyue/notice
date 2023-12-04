@@ -130,7 +130,11 @@ var (
 	nicetokenUrlMap = map[string][]string{
 		"wEaOgGs2ulepxrsMlvimPoQSMxE3r3HO": []string{
 			"https://open.feishu.cn/open-apis/bot/v2/hook/a3745359-72f0-47cf-8261-2b5e83af5ed6",
-			"https://open.feishu.cn/open-apis/bot/v2/hook/1af401a5-7b68-499c-93dd-8c1ce59aab0c",
+			"https://open.feishu.cn/open-apis/bot/v2/hook/0107fc1c-c65c-4c27-b2db-c76703f3891d",
+		},
+		"testFuhao": []string{
+			"https://open.feishu.cn/open-apis/bot/v2/hook/a3745359-72f0-47cf-8261-2b5e83af5ed6",
+			"https://open.feishu.cn/open-apis/bot/v2/hook/0107fc1c-c65c-4c27-b2db-c76703f3891d",
 		},
 	}
 )
@@ -157,25 +161,25 @@ func FeiShuUrl(text string, userId uint64) {
 	}
 }
 
-//	func FeiShuUrlNice(text string, token string) {
-//		payload := &FeishuReq{
-//			MsgType: "text",
-//			Content: fmt.Sprintf("{\"text\":\"%s\"}", text),
-//		}
-//		fmt.Println(payload)
-//		fmt.Println(token)
-//		jsonBytes, _ := json.Marshal(payload)
-//		if _, ok := nicetokenUrlMap[token]; ok {
-//			for _, v := range nicetokenUrlMap[token] {
-//				_, err := cli.Post(v, nil, jsonBytes)
-//				if err != nil {
-//					log.Println(err)
-//				}
-//
-//			}
-//		}
-//	}
 func FeiShuUrlNice(text string, token string) {
+	payload := &FeishuReq{
+		MsgType: "text",
+		Content: fmt.Sprintf("{\"text\":\"%s\"}", text),
+	}
+	fmt.Println(payload)
+	fmt.Println(token)
+	jsonBytes, _ := json.Marshal(payload)
+	if _, ok := nicetokenUrlMap[token]; ok {
+		for _, v := range nicetokenUrlMap[token] {
+			_, err := cli.Post(v, nil, jsonBytes)
+			if err != nil {
+				log.Println(err)
+			}
+
+		}
+	}
+}
+func FeiShuUrlNice2(text string, token string) {
 	payload := &FeishuReq{
 		MsgType: "text",
 		Content: fmt.Sprintf("{\"text\":\"%s\"}", text),
