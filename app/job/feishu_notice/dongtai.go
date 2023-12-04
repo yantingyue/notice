@@ -48,7 +48,7 @@ func DTList(token string) {
 		if i != "" {
 			return
 		}
-		cli.RedisClient.Set(ctx, cast.ToString(goodResp.Data.Timeline[0].TradeDynamic.Id), "", time.Second*86400*10)
+		cli.RedisClient.Set(ctx, cast.ToString(goodResp.Data.Timeline[0].TradeDynamic.Id), "1", time.Second*86400*10)
 		FeiShuUrlNice(fmt.Sprintf("个人动态购买了《%s》价格%s元", goodResp.Data.Timeline[0].TradeDynamic.SizeLabel, goodResp.Data.Timeline[0].TradeDynamic.Price), "testFuhao")
 	}
 }
