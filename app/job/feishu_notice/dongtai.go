@@ -44,12 +44,14 @@ func DTList(token string) {
 	json.Unmarshal(bodyText, &goodResp)
 	if goodResp.Code == 0 && len(goodResp.Data.Timeline) > 0 {
 		ctx := context.Background()
-		i, _ := cli.RedisClient.Get(ctx, cast.ToString(goodResp.Data.Timeline[0].TradeDynamic.Id)).Result()
-		if i != "" {
-			return
+		for _, v := range goodResp.Data.Timeline {
+			i, _ := cli.RedisClient.Get(ctx, cast.ToString(v.TradeDynamic.Id)).Result()
+			if i != "" {
+				continue
+			}
+			cli.RedisClient.Set(ctx, cast.ToString(v.TradeDynamic.Id), "1", time.Second*86400*10)
+			FeiShuUrlNice(fmt.Sprintf("个人动态购买了《%s》价格%s元", v.TradeDynamic.SizeLabel, v.TradeDynamic.Price), "testFuhao")
 		}
-		cli.RedisClient.Set(ctx, cast.ToString(goodResp.Data.Timeline[0].TradeDynamic.Id), "1", time.Second*86400*10)
-		FeiShuUrlNice(fmt.Sprintf("个人动态购买了《%s》价格%s元", goodResp.Data.Timeline[0].TradeDynamic.SizeLabel, goodResp.Data.Timeline[0].TradeDynamic.Price), "testFuhao")
 	}
 }
 
