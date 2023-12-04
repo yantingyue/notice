@@ -38,6 +38,9 @@ func ReqList(token string) {
 	if err != nil {
 		log.Fatal(err)
 	}
+	if len(bodyText) == 0 {
+		return
+	}
 	goodResp := GoodsResp{}
 	json.Unmarshal(bodyText, &goodResp)
 	fmt.Printf("%s\n", bodyText)
