@@ -38,3 +38,15 @@ type PrepubResp struct {
 	Code int32  `json:"code"`
 	Msg  string `json:"msg"`
 }
+
+type ListRest struct {
+	Code int32  `json:"code"`
+	Msg  string `json:"msg"`
+	Data struct {
+		List []struct {
+			Id    uint64 `json:"id"`
+			Name  string `json:"name"`
+			Price string `json:"price"`
+		} `json:"list"`
+	} `json:"data"`
+}

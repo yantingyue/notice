@@ -191,11 +191,11 @@ func cronjob() {
 	//}); err != nil {
 	//	panic(err)
 	//}
-	//if err := c.AddFunc("*/10 * * * * *", func() {
-	//	feishu_notice.NiceNotice("MwGcQTsTGXTmPwDmPvTnPXiNQkwc-Ar6")
-	//}); err != nil {
-	//	panic(err)
-	//}
+	if err := c.AddFunc("*/20 * * * * *", func() {
+		feishu_notice.NiceNotice("MwGcQTsTGXTmPwDmPvTnPXiNQkwc-Ar6")
+	}); err != nil {
+		panic(err)
+	}
 	if err := c.AddFunc("*/10 * * * * *", func() {
 		feishu_notice.DTList("MwGcQTsTGXTmPwDmPvTnPXiNQkwc-Ar6")
 	}); err != nil {
