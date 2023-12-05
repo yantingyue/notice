@@ -15,7 +15,7 @@ var (
 func InitRedisClient() {
 	c := redis.NewClient(&redis.Options{
 		Addr:         fmt.Sprintf("%s:%s", "127.0.0.1", "6379"),
-		Password:     "case88",
+		Password:     "",
 		ReadTimeout:  time.Second * 2,
 		WriteTimeout: time.Second * 2,
 		DialTimeout:  time.Second * 2,
