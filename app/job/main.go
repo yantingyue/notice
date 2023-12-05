@@ -198,7 +198,7 @@ func cronjob() {
 	//	panic(err)
 	//}
 	if err := c.AddFunc("*/10 * * * * *", func() {
-		feishu_notice.DTList("MwGcQTsTGXTmPwDmPvTnPXiNQkwc-Ar6")
+		feishu_notice.DTList("nicefuhao")
 	}); err != nil {
 		panic(err)
 	}

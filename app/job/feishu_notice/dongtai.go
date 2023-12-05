@@ -14,6 +14,11 @@ import (
 )
 
 func DTList(token string) {
+	ctx := context.Background()
+	i, _ := cli.RedisClient.Get(ctx, token).Result()
+	if i == "" {
+		return
+	}
 	client := &http.Client{}
 	var data = strings.NewReader(`nice-sign-v1://1f459480a4a4d17481cf32b8efde309c:0aa003ab849069f6/{"uid":"47537233","nextkey":"","comments_sort":"asc","mcc":"65535","isnewsession":1,"timestamp":0,"openudid":"6fd27b323c1f7efdde8ae60166cec205","mnc":"65535","token":"gZro3dBSqaHSXwH_xeJ5PFJkiPn8sk26","mark_read_sid":"","density":3,"ua":"Mozilla\/5.0 (iPhone; CPU iPhone OS 17_1_2 like Mac OS X) AppleWebKit\/605.1.15 (KHTML, like Gecko) Mobile\/15E148"}`)
 	req, err := http.NewRequest("POST", "https://api.oneniceapp.com/feed/userCollect?a_x=-0.112137&a_y=-0.495331&a_z=-0.858841&abroad=no&appv=5.9.29.24&ch=AppStore_6.9.29.24&did=582b450952054561320f504965cf09a8&dn=iPhone&dt=iPhone15%2C3&g_x=-0.402609&g_y=0.665802&g_z=-0.068408&geoacc=0&la=cn&lm=weixin&lp=-1.000000&n_bssid=&n_dns=192.168.2.1&n_ssid=&net=0-0-wifi&osn=iOS&osv=17.1.2&pre_module_id=&seid=e8bba31fcea19b4c8f0adf3857c0ced5&sh=932.000000&sm_dt=2023112723373870c182acedc58a6bad8ab30e3d1d1e94013bb877a8737acb&sw=430.000000&token=gZro3dBSqaHSXwH_xeJ5PFJkiPn8sk26&tpid=user_profile&ts=1701746145402", data)
@@ -43,6 +48,11 @@ func DTList(token string) {
 	goodResp := DtResp{}
 	fmt.Println(goodResp)
 	json.Unmarshal(bodyText, &goodResp)
+	if goodResp.Code != 0 {
+		cli.RedisClient.Del(ctx, token)
+		FeiShuUrlNice("账号失效了", "testFuhao")
+		return
+	}
 	if goodResp.Code == 0 && len(goodResp.Data.Timeline) > 0 {
 		ctx := context.Background()
 		for _, v := range goodResp.Data.Timeline {
