@@ -18,16 +18,16 @@ func NiceNotice(token string) {
 
 func ReqList(token string) {
 	client := &http.Client{}
-	var data = strings.NewReader(`nice-sign-v1://b2d0044c2b7c7a541566d30265d08d4f:f069e3552d0a6d1e/{"nextkey":"","token":"MwGcQTsTGXTmPwDmPvTnPXiNQkwc-Ar6","search_key":"","type":"storage2goat","tag":"all","messageid":""}`)
-	req, err := http.NewRequest("POST", "https://api.oneniceapp.com/Sneakerstorage/list?a_x=-0.228592&a_y=-0.060287&a_z=-0.977768&abroad=no&appv=5.9.28.21&ch=AppStore_6.9.28.21&did=d5401cf612846e7cd15a2318039d67b8&dn=iPhone&dt=iPhone15%2C3&g_x=0.005967&g_y=-0.000289&g_z=-0.003649&geoacc=0&la=cn&lm=mobile&lp=-1.000000&n_bssid=&n_dns=192.168.2.1&n_ssid=&net=0-0-wifi&osn=iOS&osv=17.1.1&seid=3656ea5e3ea6bbdc22de96f3fe07dc17&sh=932.000000&sm_dt=2023112716423167b3d97f0dbec012f88c9d3b7e14ea5b01800fe81deb8019&src=me&sw=430.000000&token=MwGcQTsTGXTmPwDmPvTnPXiNQkwc-Ar6&ts=1701535108409", data)
+	var data = strings.NewReader(`nice-sign-v1://93371b4e2a014556bd972c2614b50710:6d2b4ddc4a50bde3/{"nextkey":"","token":"-jSRAt3QYLsjXm9WPkUTPIYPr9vBHECT","search_key":"","type":"storage2goat","tag":"all","messageid":""}`)
+	req, err := http.NewRequest("POST", "https://api.oneniceapp.com/Sneakerstorage/list?a_x=-0.005188&a_y=-0.043823&a_z=-0.991776&abroad=no&appv=5.9.29.24&ch=AppStore_6.9.29.24&did=d5401cf612846e7cd15a2318039d67b8&dn=iPhone&dt=iPhone15%2C3&g_x=-0.000484&g_y=-0.004872&g_z=-0.003553&geoacc=0&la=cn&lm=mobile&lp=-1.000000&n_bssid=&n_dns=114.114.114.114&n_ssid=&net=0-0-wifi&osn=iOS&osv=17.1.1&seid=20c54c3716fab85872319d521ee9637e&sh=932.000000&sm_dt=2023112716423167b3d97f0dbec012f88c9d3b7e14ea5b01800fe81deb8019&src=me&sw=430.000000&token=-jSRAt3QYLsjXm9WPkUTPIYPr9vBHECT&ts=1701739019434", data)
 	if err != nil {
 		log.Fatal(err)
 	}
 	req.Header.Set("Host", "api.oneniceapp.com")
-	req.Header.Set("Cookie", "acw_tc=0bd17c5e17015343503837594e77b5fd988c91994a16c34dce2003ca837ea3")
+	req.Header.Set("Cookie", "acw_tc=0bd17c0a17017388555616363ee55f83567c07fbef1130ecaf8dfdcc8e308e")
 	req.Header.Set("accept", "*/*")
 	req.Header.Set("content-type", "application/json; charset=utf-8")
-	req.Header.Set("user-agent", "KKShopping/5.9.28 (iPhone 14 Pro Max; iOS 17.1.1; Scale/3.00)")
+	req.Header.Set("user-agent", "KKShopping/5.9.29 (iPhone 14 Pro Max; iOS 17.1.1; Scale/3.00)")
 	req.Header.Set("accept-language", "zh-Hans-CN;q=1")
 	resp, err := client.Do(req)
 	if err != nil {
