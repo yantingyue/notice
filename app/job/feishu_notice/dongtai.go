@@ -15,17 +15,18 @@ import (
 
 func DTList(token string) {
 	client := &http.Client{}
-	var data = strings.NewReader(`nice-sign-v1://e01bded63ea0050d9daf9569f79f179e:0859f9aac490beac/{"uid":"47537233","token":"CwAjUVypXJ-UXkfPXu-tPFV9XGb_LnwT"}`)
-	req, err := http.NewRequest("POST", "https://api.oneniceapp.com/user/profile?a_x=-0.001648&a_y=-0.106033&a_z=-0.988388&abroad=no&appv=5.9.29.24&ch=AppStore_6.9.29.24&did=d5401cf612846e7cd15a2318039d67b8&dn=iPhone&dt=iPhone15%2C3&g_x=-0.002462&g_y=-0.003460&g_z=-0.001220&geoacc=0&la=cn&lm=mobile&lp=-1.000000&n_bssid=&n_dns=114.114.114.114&n_ssid=&net=0-0-wifi&osn=iOS&osv=17.1.1&pre_module_id=&seid=a4469022a3a79a4d437d80cd850a3542&sh=932.000000&sm_dt=2023112716423167b3d97f0dbec012f88c9d3b7e14ea5b01800fe81deb8019&sw=430.000000&token=CwAjUVypXJ-UXkfPXu-tPFV9XGb_LnwT&tpid=user_profile&ts=1701742433781", data)
+	var data = strings.NewReader(`nice-sign-v1://1f459480a4a4d17481cf32b8efde309c:0aa003ab849069f6/{"uid":"47537233","nextkey":"","comments_sort":"asc","mcc":"65535","isnewsession":1,"timestamp":0,"openudid":"6fd27b323c1f7efdde8ae60166cec205","mnc":"65535","token":"gZro3dBSqaHSXwH_xeJ5PFJkiPn8sk26","mark_read_sid":"","density":3,"ua":"Mozilla\/5.0 (iPhone; CPU iPhone OS 17_1_2 like Mac OS X) AppleWebKit\/605.1.15 (KHTML, like Gecko) Mobile\/15E148"}`)
+	req, err := http.NewRequest("POST", "https://api.oneniceapp.com/feed/userCollect?a_x=-0.112137&a_y=-0.495331&a_z=-0.858841&abroad=no&appv=5.9.29.24&ch=AppStore_6.9.29.24&did=582b450952054561320f504965cf09a8&dn=iPhone&dt=iPhone15%2C3&g_x=-0.402609&g_y=0.665802&g_z=-0.068408&geoacc=0&la=cn&lm=weixin&lp=-1.000000&n_bssid=&n_dns=192.168.2.1&n_ssid=&net=0-0-wifi&osn=iOS&osv=17.1.2&pre_module_id=&seid=e8bba31fcea19b4c8f0adf3857c0ced5&sh=932.000000&sm_dt=2023112723373870c182acedc58a6bad8ab30e3d1d1e94013bb877a8737acb&sw=430.000000&token=gZro3dBSqaHSXwH_xeJ5PFJkiPn8sk26&tpid=user_profile&ts=1701746145402", data)
 	if err != nil {
 		log.Fatal(err)
 	}
 	req.Header.Set("Host", "api.oneniceapp.com")
-	req.Header.Set("Cookie", "acw_tc=0bdd347217017417794283825e10bdc876d647f792c59c6c918245e73be047")
-	req.Header.Set("accept", "*/*")
-	req.Header.Set("content-type", "application/json; charset=utf-8")
-	req.Header.Set("user-agent", "KKShopping/5.9.29 (iPhone 14 Pro Max; iOS 17.1.1; Scale/3.00)")
-	req.Header.Set("accept-language", "zh-Hans-CN;q=1")
+	req.Header.Set("Connection", "keep-alive")
+	req.Header.Set("Accept", "*/*")
+	req.Header.Set("User-Agent", "KKShopping/5.9.29 (iPhone 14 Pro Max; iOS 17.1.2; Scale/3.00)")
+	req.Header.Set("Accept-Language", "zh-Hans-CN;q=1")
+	req.Header.Set("Content-Type", "application/json; charset=utf-8")
+	req.Header.Set("Cookie", "acw_tc=0bd17c5e17017457794617457e77b83e706399d6883c1d07eae335b86e9d86")
 	resp, err := client.Do(req)
 	if err != nil {
 		log.Fatal(err)
