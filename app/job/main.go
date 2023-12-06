@@ -16,7 +16,6 @@ func main() {
 }
 
 func cronjob() {
-
 	c := cron.New()
 
 	if err := c.AddFunc("*/5 * * * * *", func() {

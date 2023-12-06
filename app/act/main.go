@@ -44,6 +44,16 @@ type ResponseData struct {
 		Weight       int    `json:"weight"`
 	} `json:"data"`
 }
+type ResponseDataOrder struct {
+	OrderID      uint64 `json:"order_id"`
+	Title        string `json:"title"`
+	Picture      string `json:"picture"`
+	UpdateTime   string `json:"update_time"`
+	SubTitle     string `json:"sub_title"`
+	PropUserUuid string `json:"prop_user_uuid"`
+	Type         string `json:"type"`
+	Weight       int    `json:"weight"`
+}
 
 var (
 	rwMut     sync.RWMutex
@@ -152,15 +162,26 @@ var (
 		"967c6d7775da409fa299f52d530ed682",
 	}
 	buyTokens = []string{
-		"5dc91a4f8ebc4ffdb7de75c86433eb47", //yty
-		"12186e8a5fd84bd78e0a9269181605e6", //pz
-		//"f457f3597a04467bafe6172832ebe84d",  //zqq
+		yty, //yty
+		//zqq, //zqq
+		//lz, //lz
+		//ytj, //ytj
+	}
+	passWord = map[string]string{
+		yty: "DVqBnIG8tFOmfbFp+tIXisluxkZDahm5Gk6MVvg4tY9td7tfjTvu5JiCDBmW39mUhgjY0z6zzlfj6Jc0/YDyaGLLB8n/wRXHoPRv6qlOyMleQw1iU5Y10MfF0jYylh2EJtiVd8VQWwOWgAuYmCIYUNqoy4IhjYxMs9Bj82l/rts=", //yty
+		zqq: "kSmIyvNXdGWlnTJBfmhtkTmvJc/sB8Bu78UrgHpj4+I3DsNaUpLRQccpEaBpKpG9+DeJOsgCwrK9iL1JG99GjUxaL+loiCDcm/UM1EZDPmveXq1XQeyLhMjbyPEGGUnJUp0fwZUAddRpQ9Zanbq6gk4/lEftFxFWz4wIHsfgJQI=", //zqq
+		lz:  "I7wL+SfmxAd5VcK1GvrlwqOmGqTU1YdoY/JgcFLv+RXfIGvVkD60Em6jjBNqyX0DQX34ROtvGgeYGotx9Qg9NQtqe+XF33KSZK+zTP8s+1zb21qeQDZi0AP+RjKMjX/F9MBFKbEWEoK4qtGt4KCUTNRPtsh/cp8KvqlPkDW8i+E=", //lz
+		ytj: "K+Hzexd6EHHeWIbKlVcU6jdGbALHlhw7N4a6TBvHeRt+RuJBYH9pntJIlR+g6koF1m9fQPgLl+Et6W18d5P2MfOHFxHwdEpC0fPT4zfXokDhOZY4xfHXtFWZTUntn2KFAW4C5NC+Ka/c/q0DozqWxrMONRwiEVr4vaVqrU21GrM=", //ytj
 	}
 )
 
 const (
 	b     = 1   //1是分解 2是置换
-	actId = 970 //活动id
+	actId = 973 //活动id
+	yty   = "5dc91a4f8ebc4ffdb7de75c86433eb47"
+	zqq   = "49a74725d22e40ccb4056512e9686141"
+	lz    = "5e66d6758d9c4c028580d1e84766b38d"
+	ytj   = "d179ad0f08f1435b92c898007c24bf84"
 )
 
 func main() {
@@ -196,33 +217,33 @@ func Fj() {
 					go func() {
 						if FjDetail(actId, token) {
 							//颜庭跃
+
 							for k, v := range orderInfo {
 								go func() {
-									for j, item := range v.Data {
+									var (
+										orderIds  []uint64
+										propUuids []string
+										nftType   = false
+									)
+									for _, item := range v.Data {
 										if item.Type == "prop" {
-											if ReplaceProp(actId, item.PropUserUuid, k) {
-												fmt.Println(j)
-												//rwMut.Lock() // 加写锁
-												//if len(orderInfo[k].Data) > 1 {
-												//	v.Data = orderInfo[k].Data[j+1:]
-												//	orderInfo[k] = v
-												//}
-												//rwMut.Unlock() // 解写锁
-											}
+											nftType = true
+											propUuids = append(propUuids, item.PropUserUuid)
 										} else {
-											if Replace(actId, item.OrderID, k) {
-												//fmt.Println(j)
-												//rwMut.Lock() // 加写锁
-												//if len(orderInfo[k].Data) > 1 {
-												//	v.Data = orderInfo[k].Data[j+1:]
-												//	orderInfo[k] = v
-												//}
-												//rwMut.Unlock() // 解写锁
-											}
+											orderIds = append(orderIds, item.OrderID)
+										}
+									}
+									if nftType {
+										if ReplaceProp(actId, propUuids, k) {
+										}
+									} else {
+										if Replace(actId, orderIds, k) {
 										}
 									}
 								}()
 							}
+						} else {
+
 						}
 					}()
 					time.Sleep(time.Millisecond * 10)
@@ -235,28 +256,28 @@ func Fj() {
 						if ReplaceDetail(actId, token) {
 							//颜庭跃
 							for k, v := range orderInfo {
-								for j, item := range v.Data {
-									fmt.Println(j)
-									if item.Type == "prop" {
-										if ReplaceProp(actId, item.PropUserUuid, k) {
-											//rwMut.Lock() // 加写锁
-											//if len(orderInfo[k].Data) > 1 {
-											//	v.Data = orderInfo[k].Data[j+1:]
-											//	orderInfo[k] = v
-											//}
-											//rwMut.Unlock() // 解写锁
-										}
-									} else {
-										if Replace(actId, item.OrderID, k) {
-											//rwMut.Lock() // 加写锁
-											//if len(orderInfo[k].Data) > 1 {
-											//	v.Data = orderInfo[k].Data[j+1:]
-											//	orderInfo[k] = v
-											//}
-											//rwMut.Unlock() // 解写锁
+								go func() {
+									var (
+										orderIds  []uint64
+										propUuids []string
+										nftType   = false
+									)
+									for _, item := range v.Data {
+										if item.Type == "prop" {
+											nftType = true
+											propUuids = append(propUuids, item.PropUserUuid)
+										} else {
+											orderIds = append(orderIds, item.OrderID)
 										}
 									}
-								}
+									if nftType {
+										if ReplaceProp(actId, propUuids, k) {
+										}
+									} else {
+										if Replace(actId, orderIds, k) {
+										}
+									}
+								}()
 							}
 						}
 					}()
@@ -272,7 +293,7 @@ func GetOrderInfo(id uint64, token string) (res ResponseData) {
 	body := map[string]interface{}{
 		"replace_id": id,
 		"pageNumber": 1,
-		"pageSize":   50,
+		"pageSize":   30,
 	}
 	jsonBytes, _ := json.Marshal(body)
 	resp, _ := Post("https://api.aichaoliuapp.cn/aiera/ai_match_trading/nft/combination/choice/material", header, jsonBytes)
@@ -343,16 +364,16 @@ func ReplaceDetail(id uint64, token string) bool {
 	}
 	return false
 }
-func Replace(id, orderId uint64, token string) bool {
+func Replace(id int, orderIds []uint64, token string) bool {
 	header := GenerateHeader1(token)
 	body := map[string]interface{}{
-		"order_id":   orderId,
-		"replace_id": id,
+		"order_id":    orderIds,
+		"activity_id": id,
+		"password":    passWord[token],
 	}
 	jsonBytes, _ := json.Marshal(body)
-	resp, _ := Post("https://api.aichaoliuapp.cn/aiera/ai_match_trading/nft/replace/active/exchange", header, jsonBytes)
-	//resp, _ := Post("https://api.aichaoliuapp.cn/aiera/v2/hotdog/activity/displace/batch", header, jsonBytes)
-	log.Println(orderId, string(resp), token)
+	resp, _ := Post("https://api.aichaoliuapp.cn/aiera/v2/hotdog/activity/displace/batch", header, jsonBytes)
+	log.Println(orderIds, string(resp), token, body)
 	if len(resp) == 0 {
 		return false
 	}
@@ -363,12 +384,16 @@ func Replace(id, orderId uint64, token string) bool {
 	}
 	return false
 }
-func ReplaceProp(id int, propUUid string, token string) bool {
+func ReplaceProp(id int, propUUid []string, token string) bool {
+	fmt.Println(111111)
 	header := GenerateHeader1(token)
 	body := map[string]interface{}{
-		"replace_prop_uuid": propUUid,
-		"replace_id":        id,
+		"prop_user_uuids": propUUid,
+		"activity_id":     id,
+		"password":        passWord[token],
 	}
+	fmt.Println(body)
+	fmt.Println(2222)
 	jsonBytes, _ := json.Marshal(body)
 	resp, _ := Post("https://api.aichaoliuapp.cn/aiera/ai_match_trading/nft/replace/active/exchange", header, jsonBytes)
 
@@ -440,7 +465,6 @@ func Post(host string, header map[string]string, payload []byte) (body []byte, e
 	}
 
 	req.SetBody(payload)
-
 	resp := &fasthttp.Response{}
 	client := &fasthttp.Client{}
 	if err = client.DoTimeout(req, resp, timeOut); err != nil {

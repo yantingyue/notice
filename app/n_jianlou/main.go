@@ -5,5 +5,7 @@ import (
 )
 
 func main() {
-	api.Begin()
+	//api.Begin()
+	//api.Test()
+	api.NiceSign()
 }
