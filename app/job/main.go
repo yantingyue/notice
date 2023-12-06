@@ -197,10 +197,10 @@ func cronjob() {
 	//}); err != nil {
 	//	panic(err)
 	//}
-	if err := c.AddFunc("*/10 * * * * *", func() {
-		feishu_notice.DTList("nicefuhao")
-	}); err != nil {
-		panic(err)
-	}
-	c.Start()
+	//if err := c.AddFunc("*/10 * * * * *", func() {
+	//	feishu_notice.DTList("nicefuhao")
+	//}); err != nil {
+	//	panic(err)
+	//}
+	//c.Start()
 }
