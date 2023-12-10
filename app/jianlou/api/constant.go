@@ -315,7 +315,7 @@ var (
 )
 
 const (
-	TimeSpace   = 15                                 //间隔时间
+	TimeSpace   = 10                                 //间隔时间
 	BuyNum      = 5                                  //购买数量
 	ProductName = "赛博·蛟龙双鞭"                          //商品名称
 	BuyToken    = "5dc91a4f8ebc4ffdb7de75c86433eb47" //购买token
