@@ -186,6 +186,7 @@ func cronjob() {
 		panic(err)
 	}
 	if err := c.AddFunc("*/5 * * * * *", func() {
+		feishu_notice.MotorNotice("jjdw", feishu_notice.UserId30)
 		feishu_notice.MotorNotice("金蛟大王", feishu_notice.UserId30)
 	}); err != nil {
 		panic(err)
