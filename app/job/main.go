@@ -192,20 +192,5 @@ func cronjob() {
 		panic(err)
 	}
 
-	//if err := c.AddFunc("*/15 * * * * *", func() {
-	//	feishu_notice.NiceNotice("wEaOgGs2ulepxrsMlvimPoQSMxE3r3HO")
-	//}); err != nil {
-	//	panic(err)
-	//}
-	//if err := c.AddFunc("*/20 * * * * *", func() {
-	//	feishu_notice.NiceNotice("MwGcQTsTGXTmPwDmPvTnPXiNQkwc-Ar6")
-	//}); err != nil {
-	//	panic(err)
-	//}
-	if err := c.AddFunc("*/10 * * * * *", func() {
-		feishu_notice.DTList("nicefuhao")
-	}); err != nil {
-		panic(err)
-	}
 	c.Start()
 }

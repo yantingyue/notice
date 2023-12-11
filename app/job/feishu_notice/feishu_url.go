@@ -126,7 +126,7 @@ var (
 			"https://open.feishu.cn/open-apis/bot/v2/hook/ea0c24ab-5567-485e-a054-986176d6220c",
 		},
 		UserId30: []string{
-			"https://open.feishu.cn/open-apis/bot/v2/hook/e82bdeab-0f5b-4df8-8fda-c6583c56f225",
+			"https://open.feishu.cn/open-apis/bot/v2/hook/d36214c2-5d91-4b88-aa2c-61070277dffe",
 		},
 	}
 
