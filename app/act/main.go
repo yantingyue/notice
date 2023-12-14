@@ -163,8 +163,8 @@ var (
 	}
 	buyTokens = []string{
 		yty, //yty
-		//zqq, //zqq
-		lz, //lz
+		zqq, //zqq
+		lz,  //lz
 		//ytj, //ytj
 	}
 	passWord = map[string]string{
