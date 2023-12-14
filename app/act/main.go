@@ -163,9 +163,9 @@ var (
 	}
 	buyTokens = []string{
 		yty, //yty
-		//zqq, //zqq
-		//lz,  //lz
-		//ytj, //ytj
+		zqq, //zqq
+		lz,  //lz
+		ytj, //ytj
 	}
 	passWord = map[string]string{
 		yty: "DVqBnIG8tFOmfbFp+tIXisluxkZDahm5Gk6MVvg4tY9td7tfjTvu5JiCDBmW39mUhgjY0z6zzlfj6Jc0/YDyaGLLB8n/wRXHoPRv6qlOyMleQw1iU5Y10MfF0jYylh2EJtiVd8VQWwOWgAuYmCIYUNqoy4IhjYxMs9Bj82l/rts=", //yty
