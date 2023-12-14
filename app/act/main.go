@@ -164,7 +164,7 @@ var (
 	buyTokens = []string{
 		yty, //yty
 		//zqq, //zqq
-		//lz, //lz
+		//lz,  //lz
 		//ytj, //ytj
 	}
 	passWord = map[string]string{
@@ -177,10 +177,10 @@ var (
 
 const (
 	b     = 1   //1是分解 2是置换
-	actId = 973 //活动id
+	actId = 995 //活动id
 	yty   = "5dc91a4f8ebc4ffdb7de75c86433eb47"
 	zqq   = "49a74725d22e40ccb4056512e9686141"
-	lz    = "5e66d6758d9c4c028580d1e84766b38d"
+	lz    = "05bfc53089174c5591f339bd12118142"
 	ytj   = "d179ad0f08f1435b92c898007c24bf84"
 )
 
@@ -205,7 +205,6 @@ func Begin() {
 		fmt.Println("材料不足")
 		time.Sleep(time.Millisecond * 1000)
 	}
-
 }
 
 func Fj() {
@@ -367,7 +366,7 @@ func ReplaceDetail(id uint64, token string) bool {
 func Replace(id int, orderIds []uint64, token string) bool {
 	header := GenerateHeader1(token)
 	body := map[string]interface{}{
-		"order_id":    orderIds,
+		"order_ids":   orderIds,
 		"activity_id": id,
 		"password":    passWord[token],
 	}
@@ -408,7 +407,7 @@ func ReplaceProp(id int, propUUid []string, token string) bool {
 
 const (
 	timeOut  = 60 * time.Second
-	version  = "31850"
+	version  = "1111111111"
 	channel  = "010100"
 	platform = "ios"
 	appname  = "aiera.sneaker.snkrs.shoe"
