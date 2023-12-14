@@ -385,15 +385,12 @@ func Replace(id int, orderIds []uint64, token string) bool {
 	return false
 }
 func ReplaceProp(id int, propUUid []string, token string) bool {
-	fmt.Println(111111)
 	header := GenerateHeader1(token)
 	body := map[string]interface{}{
 		"prop_user_uuids": propUUid,
 		"activity_id":     id,
 		"password":        passWord[token],
 	}
-	fmt.Println(body)
-	fmt.Println(2222)
 	jsonBytes, _ := json.Marshal(body)
 	resp, _ := Post("https://api.aichaoliuapp.cn/aiera/ai_match_trading/nft/replace/active/exchange", header, jsonBytes)
 
