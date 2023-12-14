@@ -177,7 +177,7 @@ var (
 
 const (
 	b     = 1   //1是分解 2是置换
-	actId = 995 //活动id
+	actId = 996 //活动id
 	yty   = "5dc91a4f8ebc4ffdb7de75c86433eb47"
 	zqq   = "49a74725d22e40ccb4056512e9686141"
 	lz    = "05bfc53089174c5591f339bd12118142"
