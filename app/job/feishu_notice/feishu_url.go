@@ -90,7 +90,7 @@ var (
 			"https://open.feishu.cn/open-apis/bot/v2/hook/124d8a3f-e69a-43f9-a649-b83bb0671b2d",
 		},
 		UserId19: []string{
-			"https://open.feishu.cn/open-apis/bot/v2/hook/ebc3317a-654a-4e13-9d22-408df8202352",
+			"https://open.feishu.cn/open-apis/bot/v2/hook/8500c14a-1f49-4fb1-9c03-b8c03182dbae",
 		},
 		UserId20: []string{
 			"https://open.feishu.cn/open-apis/bot/v2/hook/309fed83-2159-432e-8727-9c965b639316",
@@ -152,4 +152,3 @@ func FeiShuUrl(text string, userId uint64) {
 		}
 	}
 }
-
