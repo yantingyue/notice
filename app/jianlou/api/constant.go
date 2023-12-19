@@ -317,7 +317,7 @@ var (
 const (
 	TimeSpace   = 10                                 //间隔时间
 	BuyNum      = 50                                 //购买数量
-	ProductName = "姜太公"                              //商品名称
+	ProductName = "芮娜"                               //商品名称
 	BuyToken    = "5dc91a4f8ebc4ffdb7de75c86433eb47" //购买token
 	//BuyToken = "f457f3597a04467bafe6172832ebe84d" //购买token
 	//BuyToken = "8b9d74e0145b48498b5bc704a9b045c8" //购买token ytf
