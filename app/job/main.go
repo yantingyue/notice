@@ -193,8 +193,8 @@ func cronjob() {
 	}
 
 	if err := c.AddFunc("*/5 * * * * *", func() {
-		feishu_notice.MotorNotice("xincehua", feishu_notice.UserId31)
-		feishu_notice.CandyNotice("新策划", feishu_notice.UserId31)
+		feishu_notice.MotorNotice("xiaoqi", feishu_notice.UserId31)
+		feishu_notice.CandyNotice("小七", feishu_notice.UserId31)
 	}); err != nil {
 		panic(err)
 	}
