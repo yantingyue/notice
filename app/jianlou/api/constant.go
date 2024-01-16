@@ -316,8 +316,8 @@ var (
 
 const (
 	TimeSpace   = 10                                 //间隔时间
-	BuyNum      = 2                                  //购买数量
-	ProductName = "元戎弩"                              //商品名称
+	BuyNum      = 6                                  //购买数量
+	ProductName = "武典"                               //商品名称
 	BuyToken    = "5dc91a4f8ebc4ffdb7de75c86433eb47" //购买token
 	//BuyToken = "f457f3597a04467bafe6172832ebe84d" //购买token
 	//BuyToken = "8b9d74e0145b48498b5bc704a9b045c8" //购买token ytf
@@ -328,6 +328,7 @@ const (
 	//BuyToken = "7f166ff3b826415984dda61bf95646a3" //购买token myr
 	//BuyToken = "761c8046e89e45a6b6ed380508c3c8b8" //购买token myrxh
 	//BuyToken = "71eeb9397620490aaa5bea50c916c2c4" //购买token pzxh
+	//BuyToken = "43ea8d6de21149bf9cdefd0474f2c99d" //购买token yx
 
 	PageSize = 5
 	PayType  = 2 //1零钱2快付通
@@ -342,4 +343,5 @@ const (
 	//Pwd = "JLI38dg4HN9dAnw89eChytrWE+PmWQfxAf8u2tgIlAmZ2u/WCxYiB0p1MoeMH/qosVwXzY53Ck+zfK58Ox8Sl+MY+0kGstkApiLema+rAbPA0inMU6jlFGTtpUOKHaw0Wts6AjMTSG6aXyReh/3LuZFQfcGLyczTlF1egqZDsgk="
 	Pwdlz  = "I7wL+SfmxAd5VcK1GvrlwqOmGqTU1YdoY/JgcFLv+RXfIGvVkD60Em6jjBNqyX0DQX34ROtvGgeYGotx9Qg9NQtqe+XF33KSZK+zTP8s+1zb21qeQDZi0AP+RjKMjX/F9MBFKbEWEoK4qtGt4KCUTNRPtsh/cp8KvqlPkDW8i+E="
 	Pwdyts = "Lty6SJcAippAo5k0DniOGgOFmti+GgPAMoTZntzBdQfC2+S2p0XwOqTofTYZdJaQh4KfnLdFrA/oLE15jfvvObJldfFOZni1pEtbrzuvSxC/e2AERTq1uuwylkcV4Sy0OL4g710Rlo3RVvx8vBPPBkGAQcYp96nT2chD/IclKhY="
+	Pwdyz  = "HkQRaAQle+mGyrbTxori/hZtK7MyukqsZtZ40Gm+nQG2jBBluSJn/yMNLz37RspHnrXMv+C8RsQ6rIFdl0wDThzIpm9wONxXFi4mOMMf4Q3wjGWPkd3BiIJMVkS5c9rhh6dfVhaiuZl0NNmQJeDuPcFgp68t6Vihw4jJm+tlnSY="
 )
